@@ -10,4996 +10,772 @@
   <data key="d3">1.0</data>
 </node>
 <node id="1">
-  <data key="d0">10 anos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="2">
-  <data key="d0">14 anos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="3">
-  <data key="d0">18 anos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="4">
-  <data key="d0">19 anos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.975</data>
-</node>
-<node id="5">
-  <data key="d0">5 anos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="6">
-  <data key="d0">6 meses</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.959</data>
-</node>
-<node id="7">
-  <data key="d0">60 anos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="8">
-  <data key="d0">Aedes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="9">
-  <data key="d0">Alagoas</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.909</data>
-</node>
-<node id="10">
-  <data key="d0">Alexandre Padilha</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="11">
-  <data key="d0">Amanhã</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="12">
-  <data key="d0">Amazônia</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="13">
   <data key="d0">Anvisa</data>
   <data key="d1">0.021</data>
   <data key="d2">0.021</data>
   <data key="d3">0.983</data>
 </node>
-<node id="14">
-  <data key="d0">Assista</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="15">
+<node id="2">
   <data key="d0">Astrazeneca</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.967</data>
 </node>
-<node id="16">
-  <data key="d0">Bh</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="17">
+<node id="3">
   <data key="d0">Bolsonaro</data>
   <data key="d1">0.022</data>
   <data key="d2">0.022</data>
   <data key="d3">0.943</data>
 </node>
-<node id="18">
+<node id="4">
   <data key="d0">Brasil</data>
   <data key="d1">0.055</data>
   <data key="d2">0.055</data>
   <data key="d3">0.967</data>
 </node>
-<node id="19">
-  <data key="d0">Butantan</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="20">
-  <data key="d0">Capitalnews</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="21">
-  <data key="d0">China</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.937</data>
-</node>
-<node id="22">
-  <data key="d0">Coronavac</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.844</data>
-</node>
-<node id="23">
+<node id="5">
   <data key="d0">Covid</data>
   <data key="d1">0.058</data>
   <data key="d2">0.058</data>
   <data key="d3">0.957</data>
 </node>
-<node id="24">
+<node id="6">
   <data key="d0">Covid-19</data>
   <data key="d1">0.054</data>
   <data key="d2">0.054</data>
   <data key="d3">0.981</data>
 </node>
-<node id="25">
-  <data key="d0">Covid19</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="26">
-  <data key="d0">Curitiba</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.831</data>
-</node>
-<node id="27">
-  <data key="d0">Dengue</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="28">
-  <data key="d0">Deus</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.918</data>
-</node>
-<node id="29">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="30">
-  <data key="d0">Estado</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="31">
-  <data key="d0">Eua</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="32">
-  <data key="d0">Fiocruz</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.978</data>
-</node>
-<node id="33">
-  <data key="d0">G1</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="34">
-  <data key="d0">Goiás</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.968</data>
-</node>
-<node id="35">
-  <data key="d0">Goiânia</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.906</data>
-</node>
-<node id="36">
-  <data key="d0">Governo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="37">
-  <data key="d0">Governo Federal</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="38">
-  <data key="d0">Hpv</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.981</data>
-</node>
-<node id="39">
-  <data key="d0">Influenza</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.975</data>
-</node>
-<node id="40">
-  <data key="d0">Instituto Butantan</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="41">
-  <data key="d0">João Pessoa</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="42">
-  <data key="d0">Leia</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="43">
-  <data key="d0">Lula</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.962</data>
-</node>
-<node id="44">
-  <data key="d0">Manaus</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="45">
-  <data key="d0">Meiahora</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="46">
+<node id="7">
   <data key="d0">Ministério Da Saúde</data>
   <data key="d1">0.031</data>
   <data key="d2">0.031</data>
   <data key="d3">1.0</data>
 </node>
-<node id="47">
-  <data key="d0">Oms</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.961</data>
-</node>
-<node id="48">
-  <data key="d0">Paraná</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="49">
+<node id="8">
   <data key="d0">Pfizer</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.951</data>
 </node>
-<node id="50">
-  <data key="d0">Pfizergate</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="51">
-  <data key="d0">Pgr</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="52">
-  <data key="d0">Portalr7</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="53">
-  <data key="d0">Porto Alegre</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="54">
-  <data key="d0">Prefeitura</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="55">
-  <data key="d0">R</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.943</data>
-</node>
-<node id="56">
-  <data key="d0">R7</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="57">
-  <data key="d0">Rio</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="58">
-  <data key="d0">Rs</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.982</data>
-</node>
-<node id="59">
+<node id="9">
   <data key="d0">Saúde</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">1.0</data>
 </node>
-<node id="60">
-  <data key="d0">Sp</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="61">
-  <data key="d0">Spike</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.905</data>
-</node>
-<node id="62">
-  <data key="d0">Sus</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.924</data>
-</node>
-<node id="63">
-  <data key="d0">São Paulo</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="64">
-  <data key="d0">Ultimasnoticias</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="65">
-  <data key="d0">Vachina</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="66">
-  <data key="d0">Vacina</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.949</data>
-</node>
-<node id="67">
-  <data key="d0">Vacinas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="68">
-  <data key="d0">Vacinação</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="69">
-  <data key="d0">acesso</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.982</data>
-</node>
-<node id="70">
-  <data key="d0">acordo</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="71">
-  <data key="d0">adesão</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.906</data>
-</node>
-<node id="72">
+<node id="10">
   <data key="d0">adolescentes</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.992</data>
 </node>
-<node id="73">
-  <data key="d0">adultos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.952</data>
-</node>
-<node id="74">
+<node id="11">
   <data key="d0">adversas</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.992</data>
 </node>
-<node id="75">
-  <data key="d0">aegypti</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="76">
-  <data key="d0">agenda</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.872</data>
-</node>
-<node id="77">
-  <data key="d0">alerta</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="78">
-  <data key="d0">alta</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="79">
+<node id="12">
   <data key="d0">amarela</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.984</data>
 </node>
-<node id="80">
-  <data key="d0">amigos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.951</data>
-</node>
-<node id="81">
-  <data key="d0">ampliação</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="82">
+<node id="13">
   <data key="d0">ano</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.965</data>
 </node>
-<node id="83">
-  <data key="d0">anos</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.95</data>
-</node>
-<node id="84">
-  <data key="d0">anvisa</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="85">
-  <data key="d0">análise</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="86">
-  <data key="d0">aplicação</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="87">
-  <data key="d0">apoio</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="88">
-  <data key="d0">aquecimento</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="89">
-  <data key="d0">arma</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="90">
-  <data key="d0">atendimento</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.962</data>
-</node>
-<node id="91">
-  <data key="d0">atenção</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="92">
+<node id="14">
   <data key="d0">aumento</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">0.947</data>
 </node>
-<node id="93">
-  <data key="d0">avanço</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="94">
-  <data key="d0">avc</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.903</data>
-</node>
-<node id="95">
-  <data key="d0">aves</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="96">
+<node id="15">
   <data key="d0">aviária</data>
   <data key="d1">0.029</data>
   <data key="d2">0.029</data>
   <data key="d3">0.992</data>
 </node>
-<node id="97">
-  <data key="d0">ação</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.985</data>
-</node>
-<node id="98">
-  <data key="d0">ações</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.982</data>
-</node>
-<node id="99">
-  <data key="d0">baixa</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="100">
-  <data key="d0">base</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="101">
-  <data key="d0">bebê</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.895</data>
-</node>
-<node id="102">
-  <data key="d0">bebês</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.981</data>
-</node>
-<node id="103">
-  <data key="d0">bivalente</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="104">
-  <data key="d0">boa</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="105">
-  <data key="d0">bom</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.983</data>
-</node>
-<node id="106">
-  <data key="d0">brasileira</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="107">
-  <data key="d0">brasileiro</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="108">
-  <data key="d0">brasileiros</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.985</data>
-</node>
-<node id="109">
-  <data key="d0">braço</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.962</data>
-</node>
-<node id="110">
-  <data key="d0">caderneta</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.971</data>
-</node>
-<node id="111">
-  <data key="d0">calendário</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.969</data>
-</node>
-<node id="112">
+<node id="16">
   <data key="d0">campanha</data>
   <data key="d1">0.035</data>
   <data key="d2">0.035</data>
   <data key="d3">0.964</data>
 </node>
-<node id="113">
-  <data key="d0">capital</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.983</data>
-</node>
-<node id="114">
-  <data key="d0">cara</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="115">
+<node id="17">
   <data key="d0">cartão</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.98</data>
 </node>
-<node id="116">
-  <data key="d0">casa</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="117">
+<node id="18">
   <data key="d0">caso</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.972</data>
 </node>
-<node id="118">
+<node id="19">
   <data key="d0">casos</data>
   <data key="d1">0.031</data>
   <data key="d2">0.031</data>
   <data key="d3">0.943</data>
 </node>
-<node id="119">
-  <data key="d0">catapora</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="120">
+<node id="20">
   <data key="d0">causa</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.953</data>
 </node>
-<node id="121">
-  <data key="d0">caxumba</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="122">
-  <data key="d0">chikungunya</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.938</data>
-</node>
-<node id="123">
-  <data key="d0">cidade</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.955</data>
-</node>
-<node id="124">
-  <data key="d0">cidades</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="125">
-  <data key="d0">cientistas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="126">
-  <data key="d0">ciência</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.957</data>
-</node>
-<node id="127">
-  <data key="d0">climáticas</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.898</data>
-</node>
-<node id="128">
+<node id="21">
   <data key="d0">cobertura</data>
   <data key="d1">0.016</data>
   <data key="d2">0.016</data>
   <data key="d3">0.965</data>
 </node>
-<node id="129">
-  <data key="d0">coisa</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.947</data>
-</node>
-<node id="130">
-  <data key="d0">coisas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="131">
-  <data key="d0">colaterais</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="132">
-  <data key="d0">colo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.939</data>
-</node>
-<node id="133">
-  <data key="d0">combate</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="134">
-  <data key="d0">comercial</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="135">
-  <data key="d0">comorbidades</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.966</data>
-</node>
-<node id="136">
-  <data key="d0">completo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="137">
-  <data key="d0">compra</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="138">
-  <data key="d0">conta</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="139">
-  <data key="d0">controle</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="140">
-  <data key="d0">coqueluche</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.97</data>
-</node>
-<node id="141">
-  <data key="d0">coronavírus</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="142">
-  <data key="d0">corpo</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.938</data>
-</node>
-<node id="143">
+<node id="22">
   <data key="d0">covid</data>
   <data key="d1">0.029</data>
   <data key="d2">0.029</data>
   <data key="d3">0.918</data>
 </node>
-<node id="144">
-  <data key="d0">cpi</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.923</data>
-</node>
-<node id="145">
-  <data key="d0">criança</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.91</data>
-</node>
-<node id="146">
+<node id="23">
   <data key="d0">crianças</data>
   <data key="d1">0.051</data>
   <data key="d2">0.051</data>
   <data key="d3">0.947</data>
 </node>
-<node id="147">
-  <data key="d0">cuidado</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="148">
-  <data key="d0">cuidados</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="149">
-  <data key="d0">culpa</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.895</data>
-</node>
-<node id="150">
+<node id="24">
   <data key="d0">câncer</data>
   <data key="d1">0.016</data>
   <data key="d2">0.016</data>
   <data key="d3">0.913</data>
 </node>
-<node id="151">
-  <data key="d0">cães</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.967</data>
-</node>
-<node id="152">
+<node id="25">
   <data key="d0">dados</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.947</data>
 </node>
-<node id="153">
-  <data key="d0">data</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="154">
-  <data key="d0">decisão</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.967</data>
-</node>
-<node id="155">
+<node id="26">
   <data key="d0">dengue</data>
   <data key="d1">0.074</data>
   <data key="d2">0.074</data>
   <data key="d3">0.924</data>
 </node>
-<node id="156">
-  <data key="d0">desenvolvimento</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="157">
+<node id="27">
   <data key="d0">dia</data>
   <data key="d1">0.035</data>
   <data key="d2">0.035</data>
   <data key="d3">0.912</data>
 </node>
-<node id="158">
-  <data key="d0">dias</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="159">
-  <data key="d0">diferença</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="160">
-  <data key="d0">dinheiro</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="161">
-  <data key="d0">direito</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.97</data>
-</node>
-<node id="162">
-  <data key="d0">disponíveis</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="163">
+<node id="28">
   <data key="d0">disponível</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.96</data>
 </node>
-<node id="164">
-  <data key="d0">distribuição</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="165">
+<node id="29">
   <data key="d0">doença</data>
   <data key="d1">0.027</data>
   <data key="d2">0.027</data>
   <data key="d3">0.963</data>
 </node>
-<node id="166">
+<node id="30">
   <data key="d0">doenças</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.96</data>
 </node>
-<node id="167">
-  <data key="d0">dor</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.935</data>
-</node>
-<node id="168">
+<node id="31">
   <data key="d0">dose</data>
   <data key="d1">0.034</data>
   <data key="d2">0.034</data>
   <data key="d3">0.948</data>
 </node>
-<node id="169">
+<node id="32">
   <data key="d0">doses</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.959</data>
 </node>
-<node id="170">
-  <data key="d0">duas doses</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="171">
-  <data key="d0">educação</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.97</data>
-</node>
-<node id="172">
+<node id="33">
   <data key="d0">efeitos</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.935</data>
 </node>
-<node id="173">
-  <data key="d0">eficaz</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="174">
-  <data key="d0">eficácia</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="175">
-  <data key="d0">emergência</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="176">
-  <data key="d0">epidemia</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.97</data>
-</node>
-<node id="177">
+<node id="34">
   <data key="d0">escolas</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.978</data>
 </node>
-<node id="178">
-  <data key="d0">especialistas</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="179">
-  <data key="d0">esperança</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="180">
-  <data key="d0">esquema</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.967</data>
-</node>
-<node id="181">
+<node id="35">
   <data key="d0">estado</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">0.965</data>
 </node>
-<node id="182">
-  <data key="d0">estados</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="183">
-  <data key="d0">estudo</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.927</data>
-</node>
-<node id="184">
-  <data key="d0">estudos</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.958</data>
-</node>
-<node id="185">
-  <data key="d0">etária</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="186">
-  <data key="d0">exames</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="187">
-  <data key="d0">experimental</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.956</data>
-</node>
-<node id="188">
-  <data key="d0">experimento</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="189">
-  <data key="d0">faixa</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="190">
-  <data key="d0">fake</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.951</data>
-</node>
-<node id="191">
+<node id="36">
   <data key="d0">falta</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">0.947</data>
 </node>
-<node id="192">
-  <data key="d0">família</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.965</data>
-</node>
-<node id="193">
-  <data key="d0">famílias</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="194">
-  <data key="d0">fase</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.967</data>
-</node>
-<node id="195">
-  <data key="d0">favor</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="196">
+<node id="37">
   <data key="d0">febre</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.969</data>
 </node>
-<node id="197">
-  <data key="d0">federal</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="198">
-  <data key="d0">fila</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.946</data>
-</node>
-<node id="199">
-  <data key="d0">filha</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="200">
-  <data key="d0">filho</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.925</data>
-</node>
-<node id="201">
-  <data key="d0">filhos</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.932</data>
-</node>
-<node id="202">
-  <data key="d0">fim</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="203">
-  <data key="d0">final</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.968</data>
-</node>
-<node id="204">
-  <data key="d0">foco</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="205">
-  <data key="d0">forma</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="206">
-  <data key="d0">frango</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.971</data>
-</node>
-<node id="207">
-  <data key="d0">fraude</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.982</data>
-</node>
-<node id="208">
-  <data key="d0">fraudemia</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="209">
-  <data key="d0">frente</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="210">
+<node id="38">
   <data key="d0">gente</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.921</data>
 </node>
-<node id="211">
+<node id="39">
   <data key="d0">genética</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.945</data>
 </node>
-<node id="212">
-  <data key="d0">geral</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="213">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.986</data>
-</node>
-<node id="214">
-  <data key="d0">gestão</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="215">
-  <data key="d0">global</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.955</data>
-</node>
-<node id="216">
-  <data key="d0">golpe</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="217">
-  <data key="d0">governador</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.969</data>
-</node>
-<node id="218">
+<node id="40">
   <data key="d0">governo</data>
   <data key="d1">0.027</data>
   <data key="d2">0.027</data>
   <data key="d3">0.961</data>
 </node>
-<node id="219">
+<node id="41">
   <data key="d0">grande</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.969</data>
 </node>
-<node id="220">
-  <data key="d0">granja</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="221">
-  <data key="d0">grave</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.957</data>
-</node>
-<node id="222">
-  <data key="d0">graves</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="223">
+<node id="42">
   <data key="d0">gripe</data>
   <data key="d1">0.113</data>
   <data key="d2">0.113</data>
   <data key="d3">0.967</data>
 </node>
-<node id="224">
-  <data key="d0">grupo</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.978</data>
-</node>
-<node id="225">
+<node id="43">
   <data key="d0">grupos</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.99</data>
 </node>
-<node id="226">
-  <data key="d0">gênica</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.953</data>
-</node>
-<node id="227">
-  <data key="d0">hepatite</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.944</data>
-</node>
-<node id="228">
-  <data key="d0">história</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="229">
-  <data key="d0">hiv</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="230">
-  <data key="d0">hospitais</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="231">
-  <data key="d0">hospital</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.966</data>
-</node>
-<node id="232">
-  <data key="d0">hpv</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.947</data>
-</node>
-<node id="233">
-  <data key="d0">humanos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="234">
+<node id="44">
   <data key="d0">idade</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.968</data>
 </node>
-<node id="235">
+<node id="45">
   <data key="d0">idosos</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.953</data>
 </node>
-<node id="236">
-  <data key="d0">importante</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.986</data>
-</node>
-<node id="237">
-  <data key="d0">importância</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.987</data>
-</node>
-<node id="238">
-  <data key="d0">imunidade</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.903</data>
-</node>
-<node id="239">
+<node id="46">
   <data key="d0">imunizante</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.989</data>
 </node>
-<node id="240">
-  <data key="d0">imunizantes</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="241">
+<node id="47">
   <data key="d0">imunização</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.97</data>
 </node>
-<node id="242">
-  <data key="d0">infantil</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="243">
-  <data key="d0">infecção</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.938</data>
-</node>
-<node id="244">
+<node id="48">
   <data key="d0">influenza</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.928</data>
 </node>
-<node id="245">
-  <data key="d0">informação</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="246">
-  <data key="d0">informações</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.979</data>
-</node>
-<node id="247">
-  <data key="d0">injeções</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.878</data>
-</node>
-<node id="248">
+<node id="49">
   <data key="d0">inoculação</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.99</data>
 </node>
-<node id="249">
-  <data key="d0">investigação</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="250">
+<node id="50">
   <data key="d0">início</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.989</data>
 </node>
-<node id="251">
-  <data key="d0">joias</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="252">
-  <data key="d0">jovens</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.955</data>
-</node>
-<node id="253">
-  <data key="d0">lado</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.914</data>
-</node>
-<node id="254">
-  <data key="d0">lei</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.922</data>
-</node>
-<node id="255">
-  <data key="d0">lista</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="256">
-  <data key="d0">livre</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="257">
-  <data key="d0">locais</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.979</data>
-</node>
-<node id="258">
-  <data key="d0">longo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="259">
-  <data key="d0">luta</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="260">
+<node id="51">
   <data key="d0">maior</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.961</data>
 </node>
-<node id="261">
-  <data key="d0">maiores</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="262">
-  <data key="d0">maioria</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="263">
-  <data key="d0">marca</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="264">
-  <data key="d0">massa</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="265">
-  <data key="d0">medicamento</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.957</data>
-</node>
-<node id="266">
-  <data key="d0">medicamentos</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.965</data>
-</node>
-<node id="267">
-  <data key="d0">medidas</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.979</data>
-</node>
-<node id="268">
-  <data key="d0">medo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.969</data>
-</node>
-<node id="269">
-  <data key="d0">meio</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.987</data>
-</node>
-<node id="270">
-  <data key="d0">melhor</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.982</data>
-</node>
-<node id="271">
-  <data key="d0">meningite</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="272">
-  <data key="d0">menores</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.971</data>
-</node>
-<node id="273">
-  <data key="d0">menos</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.94</data>
-</node>
-<node id="274">
-  <data key="d0">merda</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.946</data>
-</node>
-<node id="275">
-  <data key="d0">mesma</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="276">
-  <data key="d0">mesmo</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="277">
-  <data key="d0">meta</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.964</data>
-</node>
-<node id="278">
-  <data key="d0">milhares</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.943</data>
-</node>
-<node id="279">
-  <data key="d0">ministra</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.95</data>
-</node>
-<node id="280">
-  <data key="d0">ministro</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.922</data>
-</node>
-<node id="281">
-  <data key="d0">ministério</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="282">
-  <data key="d0">momento</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="283">
+<node id="52">
   <data key="d0">morte</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">0.957</data>
 </node>
-<node id="284">
+<node id="53">
   <data key="d0">mortes</data>
   <data key="d1">0.022</data>
   <data key="d2">0.022</data>
   <data key="d3">0.964</data>
 </node>
-<node id="285">
-  <data key="d0">mosquito</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.977</data>
-</node>
-<node id="286">
+<node id="54">
   <data key="d0">mrna</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.91</data>
 </node>
-<node id="287">
-  <data key="d0">mudança</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="288">
-  <data key="d0">mudanças</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.894</data>
-</node>
-<node id="289">
-  <data key="d0">mulher</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="290">
-  <data key="d0">mulheres</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.938</data>
-</node>
-<node id="291">
-  <data key="d0">mundial</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="292">
+<node id="55">
   <data key="d0">mundo</data>
   <data key="d1">0.023</data>
   <data key="d2">0.023</data>
   <data key="d3">0.956</data>
 </node>
-<node id="293">
-  <data key="d0">município</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="294">
-  <data key="d0">municípios</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.97</data>
-</node>
-<node id="295">
-  <data key="d0">máscara</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="296">
-  <data key="d0">mãe</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.906</data>
-</node>
-<node id="297">
-  <data key="d0">médica</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="298">
-  <data key="d0">médico</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.954</data>
-</node>
-<node id="299">
-  <data key="d0">médicos</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.959</data>
-</node>
-<node id="300">
-  <data key="d0">mês</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.966</data>
-</node>
-<node id="301">
+<node id="56">
   <data key="d0">nacional</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.99</data>
 </node>
-<node id="302">
-  <data key="d0">negacionismo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.853</data>
-</node>
-<node id="303">
-  <data key="d0">nome</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="304">
-  <data key="d0">normal</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="305">
-  <data key="d0">notícia</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="306">
-  <data key="d0">notícias</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="307">
+<node id="57">
   <data key="d0">nova</data>
   <data key="d1">0.014</data>
   <data key="d2">0.014</data>
   <data key="d3">0.976</data>
 </node>
-<node id="308">
-  <data key="d0">novas</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.985</data>
-</node>
-<node id="309">
+<node id="58">
   <data key="d0">novo</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">0.991</data>
 </node>
-<node id="310">
-  <data key="d0">novos</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.985</data>
-</node>
-<node id="311">
-  <data key="d0">número</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.986</data>
-</node>
-<node id="312">
-  <data key="d0">objetivo</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="313">
-  <data key="d0">obrigatoriedade</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="314">
-  <data key="d0">obrigatória</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="315">
-  <data key="d0">pacientes</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.959</data>
-</node>
-<node id="316">
-  <data key="d0">pai</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.921</data>
-</node>
-<node id="317">
+<node id="59">
   <data key="d0">pais</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.971</data>
 </node>
-<node id="318">
+<node id="60">
   <data key="d0">pandemia</data>
   <data key="d1">0.024</data>
   <data key="d2">0.024</data>
   <data key="d3">0.981</data>
 </node>
-<node id="319">
-  <data key="d0">paralisia</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="320">
-  <data key="d0">parceria</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="321">
-  <data key="d0">parte</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.988</data>
-</node>
-<node id="322">
+<node id="61">
   <data key="d0">partir</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.979</data>
 </node>
-<node id="323">
+<node id="62">
   <data key="d0">país</data>
   <data key="d1">0.02</data>
   <data key="d2">0.02</data>
   <data key="d3">0.983</data>
 </node>
-<node id="324">
-  <data key="d0">países</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.981</data>
-</node>
-<node id="325">
-  <data key="d0">pesquisa</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.977</data>
-</node>
-<node id="326">
-  <data key="d0">pessoa</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="327">
-  <data key="d0">pessoal</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="328">
+<node id="63">
   <data key="d0">pessoas</data>
   <data key="d1">0.04</data>
   <data key="d2">0.04</data>
   <data key="d3">0.952</data>
 </node>
-<node id="329">
-  <data key="d0">pfizergate</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="330">
-  <data key="d0">pior</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.982</data>
-</node>
-<node id="331">
-  <data key="d0">plano</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="332">
-  <data key="d0">pneumonia</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.925</data>
-</node>
-<node id="333">
-  <data key="d0">poliomielite</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.88</data>
-</node>
-<node id="334">
-  <data key="d0">política</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.959</data>
-</node>
-<node id="335">
-  <data key="d0">ponto</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="336">
-  <data key="d0">pontos</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.98</data>
-</node>
-<node id="337">
+<node id="64">
   <data key="d0">populacional</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.986</data>
 </node>
-<node id="338">
+<node id="65">
   <data key="d0">população</data>
   <data key="d1">0.031</data>
   <data key="d2">0.031</data>
   <data key="d3">0.956</data>
 </node>
-<node id="339">
-  <data key="d0">possível</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="340">
-  <data key="d0">posto</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="341">
-  <data key="d0">postos</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="342">
+<node id="66">
   <data key="d0">povo</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.958</data>
 </node>
-<node id="343">
-  <data key="d0">prazo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.944</data>
-</node>
-<node id="344">
-  <data key="d0">preciso</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="345">
-  <data key="d0">precoce</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.943</data>
-</node>
-<node id="346">
-  <data key="d0">prefeitura</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="347">
-  <data key="d0">presidente</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="348">
+<node id="67">
   <data key="d0">prevenção</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.949</data>
 </node>
-<node id="349">
+<node id="68">
   <data key="d0">primeira</data>
   <data key="d1">0.017</data>
   <data key="d2">0.017</data>
   <data key="d3">0.993</data>
 </node>
-<node id="350">
-  <data key="d0">principal</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.972</data>
-</node>
-<node id="351">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.988</data>
-</node>
-<node id="352">
-  <data key="d0">problema</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.927</data>
-</node>
-<node id="353">
-  <data key="d0">problemas</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.983</data>
-</node>
-<node id="354">
-  <data key="d0">processo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="355">
-  <data key="d0">procura</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="356">
-  <data key="d0">produtos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.906</data>
-</node>
-<node id="357">
-  <data key="d0">produção</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="358">
-  <data key="d0">profissionais</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.986</data>
-</node>
-<node id="359">
-  <data key="d0">programa</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.957</data>
-</node>
-<node id="360">
-  <data key="d0">projeto</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="361">
-  <data key="d0">proteção</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.971</data>
-</node>
-<node id="362">
+<node id="69">
   <data key="d0">proteína</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">0.856</data>
 </node>
-<node id="363">
-  <data key="d0">próxima</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="364">
-  <data key="d0">pólio</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.97</data>
-</node>
-<node id="365">
+<node id="70">
   <data key="d0">pública</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">1.0</data>
 </node>
-<node id="366">
-  <data key="d0">públicas</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="367">
+<node id="71">
   <data key="d0">público</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.971</data>
 </node>
-<node id="368">
-  <data key="d0">públicos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.975</data>
-</node>
-<node id="369">
-  <data key="d0">queda</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="370">
-  <data key="d0">raiva</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="371">
-  <data key="d0">realidade</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.871</data>
-</node>
-<node id="372">
+<node id="72">
   <data key="d0">reações</data>
   <data key="d1">0.016</data>
   <data key="d2">0.016</data>
   <data key="d3">0.943</data>
 </node>
-<node id="373">
-  <data key="d0">recorde</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.867</data>
-</node>
-<node id="374">
-  <data key="d0">rede</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.968</data>
-</node>
-<node id="375">
-  <data key="d0">redes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.929</data>
-</node>
-<node id="376">
+<node id="73">
   <data key="d0">redução</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.987</data>
 </node>
-<node id="377">
+<node id="74">
   <data key="d0">reforço</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.955</data>
 </node>
-<node id="378">
-  <data key="d0">registro</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.975</data>
-</node>
-<node id="379">
-  <data key="d0">região</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="380">
-  <data key="d0">regiões</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="381">
-  <data key="d0">relação</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="382">
-  <data key="d0">remédio</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="383">
-  <data key="d0">respiratórias</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="384">
-  <data key="d0">responsáveis</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.963</data>
-</node>
-<node id="385">
-  <data key="d0">resultado</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="386">
-  <data key="d0">resultados</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="387">
+<node id="75">
   <data key="d0">risco</data>
   <data key="d1">0.014</data>
   <data key="d2">0.014</data>
   <data key="d3">0.966</data>
 </node>
-<node id="388">
-  <data key="d0">riscos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="389">
-  <data key="d0">rna</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.946</data>
-</node>
-<node id="390">
+<node id="76">
   <data key="d0">sarampo</data>
   <data key="d1">0.012</data>
   <data key="d2">0.012</data>
   <data key="d3">0.928</data>
 </node>
-<node id="391">
+<node id="77">
   <data key="d0">saúde</data>
   <data key="d1">0.073</data>
   <data key="d2">0.073</data>
   <data key="d3">0.93</data>
 </node>
-<node id="392">
+<node id="78">
   <data key="d0">segunda</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.992</data>
 </node>
-<node id="393">
-  <data key="d0">segura</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="394">
-  <data key="d0">segurança</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="395">
-  <data key="d0">seis meses</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="396">
+<node id="79">
   <data key="d0">semana</data>
   <data key="d1">0.013</data>
   <data key="d2">0.013</data>
   <data key="d3">1.0</data>
 </node>
-<node id="397">
-  <data key="d0">sequelas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="398">
-  <data key="d0">serviços</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.914</data>
-</node>
-<node id="399">
-  <data key="d0">sexta</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="400">
-  <data key="d0">sintomas</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.983</data>
-</node>
-<node id="401">
-  <data key="d0">sistema</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.986</data>
-</node>
-<node id="402">
-  <data key="d0">site</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="403">
-  <data key="d0">situação</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.936</data>
-</node>
-<node id="404">
-  <data key="d0">spike</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.906</data>
-</node>
-<node id="405">
-  <data key="d0">surto</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.977</data>
-</node>
-<node id="406">
+<node id="80">
   <data key="d0">sus</data>
   <data key="d1">0.036</data>
   <data key="d2">0.036</data>
   <data key="d3">0.906</data>
 </node>
-<node id="407">
-  <data key="d0">suspeita</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="408">
-  <data key="d0">suspeitos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="409">
+<node id="81">
   <data key="d0">sábado</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
   <data key="d3">0.982</data>
 </node>
-<node id="410">
-  <data key="d0">súbitas</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.987</data>
-</node>
-<node id="411">
-  <data key="d0">tecnologia</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.9</data>
-</node>
-<node id="412">
-  <data key="d0">tempo</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.987</data>
-</node>
-<node id="413">
+<node id="82">
   <data key="d0">terapia</data>
   <data key="d1">0.02</data>
   <data key="d2">0.02</data>
   <data key="d3">0.966</data>
 </node>
-<node id="414">
-  <data key="d0">terça</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="415">
-  <data key="d0">teste</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.964</data>
-</node>
-<node id="416">
-  <data key="d0">testes</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.007</data>
-  <data key="d3">0.983</data>
-</node>
-<node id="417">
-  <data key="d0">tipo</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.009</data>
-  <data key="d3">0.961</data>
-</node>
-<node id="418">
-  <data key="d0">total</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="419">
-  <data key="d0">trabalhadores</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.964</data>
-</node>
-<node id="420">
-  <data key="d0">trabalho</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="421">
-  <data key="d0">transmissão</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.941</data>
-</node>
-<node id="422">
+<node id="83">
   <data key="d0">tratamento</data>
   <data key="d1">0.015</data>
   <data key="d2">0.015</data>
   <data key="d3">0.969</data>
 </node>
-<node id="423">
-  <data key="d0">trombose</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="424">
-  <data key="d0">tríplice</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">0.929</data>
-</node>
-<node id="425">
-  <data key="d0">tuberculose</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.942</data>
-</node>
-<node id="426">
-  <data key="d0">tétano</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.951</data>
-</node>
-<node id="427">
-  <data key="d0">um ano</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="428">
-  <data key="d0">um estudo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="429">
-  <data key="d0">unidades</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.978</data>
-</node>
-<node id="430">
+<node id="84">
   <data key="d0">uso</data>
   <data key="d1">0.014</data>
   <data key="d2">0.014</data>
   <data key="d3">0.958</data>
 </node>
-<node id="431">
-  <data key="d0">vachina</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.01</data>
-  <data key="d3">0.976</data>
-</node>
-<node id="432">
+<node id="85">
   <data key="d0">vacina</data>
   <data key="d1">0.28</data>
   <data key="d2">0.28</data>
   <data key="d3">0.903</data>
 </node>
-<node id="433">
+<node id="86">
   <data key="d0">vacinal</data>
   <data key="d1">0.03</data>
   <data key="d2">0.03</data>
   <data key="d3">0.977</data>
 </node>
-<node id="434">
+<node id="87">
   <data key="d0">vacinas</data>
   <data key="d1">0.056</data>
   <data key="d2">0.056</data>
   <data key="d3">0.915</data>
 </node>
-<node id="435">
+<node id="88">
   <data key="d0">vacinação</data>
   <data key="d1">0.201</data>
   <data key="d2">0.201</data>
   <data key="d3">0.947</data>
 </node>
-<node id="436">
-  <data key="d0">vax</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="437">
-  <data key="d0">venda</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="438">
-  <data key="d0">veneno</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="439">
-  <data key="d0">verdade</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">0.958</data>
-</node>
-<node id="440">
+<node id="89">
   <data key="d0">vez</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.978</data>
 </node>
-<node id="441">
-  <data key="d0">vezes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="442">
-  <data key="d0">via</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="443">
+<node id="90">
   <data key="d0">vida</data>
   <data key="d1">0.016</data>
   <data key="d2">0.016</data>
   <data key="d3">0.971</data>
 </node>
-<node id="444">
-  <data key="d0">vidas</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.008</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="445">
-  <data key="d0">viral</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.946</data>
-</node>
-<node id="446">
-  <data key="d0">viva</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.909</data>
-</node>
-<node id="447">
-  <data key="d0">vivo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.973</data>
-</node>
-<node id="448">
-  <data key="d0">volta</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.974</data>
-</node>
-<node id="449">
-  <data key="d0">vídeo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.969</data>
-</node>
-<node id="450">
+<node id="91">
   <data key="d0">vírus</data>
   <data key="d1">0.024</data>
   <data key="d2">0.024</data>
   <data key="d3">0.967</data>
 </node>
-<node id="451">
-  <data key="d0">vítimas</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="452">
-  <data key="d0">zika</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="453">
-  <data key="d0">água</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.006</data>
-  <data key="d3">0.981</data>
-</node>
-<node id="454">
-  <data key="d0">época</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="455">
-  <data key="d0">óbitos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.003</data>
-  <data key="d3">1.0</data>
-</node>
-<node id="456">
-  <data key="d0">última</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.978</data>
-</node>
-<node id="457">
+<node id="92">
   <data key="d0">única</data>
   <data key="d1">0.011</data>
   <data key="d2">0.011</data>
   <data key="d3">0.989</data>
 </node>
-<node id="458">
-  <data key="d0">único</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.004</data>
-  <data key="d3">0.968</data>
-</node>
-<node id="459">
-  <data key="d0">útero</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.005</data>
-  <data key="d3">0.878</data>
-</node>
-<node id="460">
-  <data key="d0">6 meses</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.072</data>
-  <data key="d3">8.214</data>
-</node>
-<node id="461">
-  <data key="d0">6 meses</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.496</data>
-</node>
-<node id="462">
-  <data key="d0">6 meses</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.95</data>
-</node>
-<node id="463">
-  <data key="d0">Anvisa</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.031</data>
-  <data key="d3">1.493</data>
-</node>
-<node id="464">
-  <data key="d0">Astrazeneca</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.126</data>
-</node>
-<node id="465">
-  <data key="d0">Bh</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.019</data>
-  <data key="d3">3.387</data>
-</node>
-<node id="466">
-  <data key="d0">cartão</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.243</data>
-  <data key="d3">20.661</data>
-</node>
-<node id="467">
-  <data key="d0">fraude</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.162</data>
-  <data key="d3">23.923</data>
-</node>
-<node id="468">
+<node id="93">
   <data key="d0">Bolsonaro</data>
   <data key="d1">0.013</data>
   <data key="d2">0.045</data>
   <data key="d3">1.951</data>
 </node>
-<node id="469">
-  <data key="d0">Bolsonaro</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.019</data>
-  <data key="d3">0.821</data>
-</node>
-<node id="470">
-  <data key="d0">Covid-19</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.073</data>
-  <data key="d3">1.332</data>
-</node>
-<node id="471">
-  <data key="d0">aviária</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.102</data>
-  <data key="d3">3.418</data>
-</node>
-<node id="472">
-  <data key="d0">casos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.061</data>
-  <data key="d3">1.812</data>
-</node>
-<node id="473">
-  <data key="d0">crianças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.08</data>
-  <data key="d3">1.485</data>
-</node>
-<node id="474">
-  <data key="d0">Brasil</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.082</data>
-  <data key="d3">1.433</data>
-</node>
-<node id="475">
-  <data key="d0">doença</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.078</data>
-  <data key="d3">2.727</data>
-</node>
-<node id="476">
-  <data key="d0">governo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.067</data>
-  <data key="d3">2.429</data>
-</node>
-<node id="477">
-  <data key="d0">Brasil</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.059</data>
-  <data key="d3">1.03</data>
-</node>
-<node id="478">
-  <data key="d0">mundo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.069</data>
-  <data key="d3">2.852</data>
-</node>
-<node id="479">
-  <data key="d0">país</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.069</data>
-  <data key="d3">3.325</data>
-</node>
-<node id="480">
-  <data key="d0">Brasil</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.065</data>
-  <data key="d3">1.139</data>
-</node>
-<node id="481">
-  <data key="d0">sus</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.073</data>
-  <data key="d3">1.873</data>
-</node>
-<node id="482">
+<node id="94">
   <data key="d0">Brasil</data>
   <data key="d1">0.018</data>
   <data key="d2">0.065</data>
   <data key="d3">1.129</data>
 </node>
-<node id="483">
-  <data key="d0">Brasil</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.072</data>
-  <data key="d3">1.262</data>
-</node>
-<node id="484">
-  <data key="d0">Brasil</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.048</data>
-  <data key="d3">0.838</data>
-</node>
-<node id="485">
-  <data key="d0">Butantan</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.021</data>
-  <data key="d3">3.247</data>
-</node>
-<node id="486">
-  <data key="d0">Ultimasnoticias</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.666</data>
-  <data key="d3">200.0</data>
-</node>
-<node id="487">
-  <data key="d0">cpi</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.053</data>
-  <data key="d3">8.621</data>
-</node>
-<node id="488">
-  <data key="d0">crianças</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.09</data>
-  <data key="d3">1.675</data>
-</node>
-<node id="489">
-  <data key="d0">dose</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.055</data>
-  <data key="d3">1.526</data>
-</node>
-<node id="490">
-  <data key="d0">mortes</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.064</data>
-  <data key="d3">2.727</data>
-</node>
-<node id="491">
-  <data key="d0">pessoas</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.061</data>
-  <data key="d3">1.457</data>
-</node>
-<node id="492">
-  <data key="d0">Covid</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.042</data>
-  <data key="d3">0.704</data>
-</node>
-<node id="493">
+<node id="95">
   <data key="d0">Covid</data>
   <data key="d1">0.022</data>
   <data key="d2">0.078</data>
   <data key="d3">1.299</data>
 </node>
-<node id="494">
-  <data key="d0">Covid</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.123</data>
-  <data key="d3">2.047</data>
-</node>
-<node id="495">
-  <data key="d0">Covid</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.03</data>
-  <data key="d3">0.492</data>
-</node>
-<node id="496">
-  <data key="d0">casos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.059</data>
-  <data key="d3">1.779</data>
-</node>
-<node id="497">
-  <data key="d0">crianças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.066</data>
-  <data key="d3">1.226</data>
-</node>
-<node id="498">
-  <data key="d0">dose</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.057</data>
-  <data key="d3">1.579</data>
-</node>
-<node id="499">
-  <data key="d0">pandemia</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.068</data>
-  <data key="d3">2.787</data>
-</node>
-<node id="500">
-  <data key="d0">Covid-19</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.042</data>
-  <data key="d3">0.768</data>
-</node>
-<node id="501">
+<node id="96">
   <data key="d0">Covid-19</data>
   <data key="d1">0.019</data>
   <data key="d2">0.066</data>
   <data key="d3">1.201</data>
 </node>
-<node id="502">
-  <data key="d0">Covid-19</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.132</data>
-  <data key="d3">2.386</data>
-</node>
-<node id="503">
+<node id="97">
   <data key="d0">Covid-19</data>
   <data key="d1">0.018</data>
   <data key="d2">0.09</data>
   <data key="d3">1.641</data>
 </node>
-<node id="504">
-  <data key="d0">Curitiba</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.021</data>
-  <data key="d3">2.523</data>
-</node>
-<node id="505">
-  <data key="d0">Dengue</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.786</data>
-</node>
-<node id="506">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.057</data>
-  <data key="d3">6.546</data>
-</node>
-<node id="507">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.3</data>
-  <data key="d3">34.607</data>
-</node>
-<node id="508">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.037</data>
-  <data key="d3">4.294</data>
-</node>
-<node id="509">
-  <data key="d0">Eua</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.356</data>
-</node>
-<node id="510">
-  <data key="d0">G1</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.015</data>
-  <data key="d3">2.053</data>
-</node>
-<node id="511">
-  <data key="d0">Hpv</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.854</data>
-</node>
-<node id="512">
-  <data key="d0">Influenza</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.025</data>
-  <data key="d3">2.612</data>
-</node>
-<node id="513">
-  <data key="d0">Instituto Butantan</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">3.373</data>
-</node>
-<node id="514">
-  <data key="d0">Lula</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.016</data>
-  <data key="d3">1.74</data>
-</node>
-<node id="515">
-  <data key="d0">Ministério Da Saúde</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.064</data>
-  <data key="d3">2.087</data>
-</node>
-<node id="516">
-  <data key="d0">Ministério Da Saúde</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.044</data>
-  <data key="d3">1.428</data>
-</node>
-<node id="517">
-  <data key="d0">Ministério Da Saúde</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.035</data>
-  <data key="d3">1.145</data>
-</node>
-<node id="518">
-  <data key="d0">Ministério Da Saúde</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.044</data>
-  <data key="d3">1.441</data>
-</node>
-<node id="519">
-  <data key="d0">Pfizer</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.022</data>
-  <data key="d3">1.111</data>
-</node>
-<node id="520">
-  <data key="d0">Pfizer</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.074</data>
-  <data key="d3">3.811</data>
-</node>
-<node id="521">
-  <data key="d0">Portalr7</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.785</data>
-  <data key="d3">188.571</data>
-</node>
-<node id="522">
-  <data key="d0">Rio</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.027</data>
-  <data key="d3">3.342</data>
-</node>
-<node id="523">
-  <data key="d0">Rs</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.119</data>
-  <data key="d3">17.857</data>
-</node>
-<node id="524">
-  <data key="d0">Rs</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.039</data>
-  <data key="d3">5.847</data>
-</node>
-<node id="525">
-  <data key="d0">Saúde</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.026</data>
-</node>
-<node id="526">
-  <data key="d0">Saúde</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">1.8</data>
-</node>
-<node id="527">
-  <data key="d0">Spike</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.494</data>
-  <data key="d3">65.934</data>
-</node>
-<node id="528">
-  <data key="d0">adolescentes</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.147</data>
-  <data key="d3">9.727</data>
-</node>
-<node id="529">
-  <data key="d0">adolescentes</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.063</data>
-  <data key="d3">4.15</data>
-</node>
-<node id="530">
-  <data key="d0">adolescentes</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.021</data>
-  <data key="d3">1.378</data>
-</node>
-<node id="531">
-  <data key="d0">adolescentes</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.039</data>
-  <data key="d3">2.585</data>
-</node>
-<node id="532">
+<node id="98">
   <data key="d0">adversas</data>
   <data key="d1">0.014</data>
   <data key="d2">0.884</data>
   <data key="d3">59.98</data>
 </node>
-<node id="533">
+<node id="99">
   <data key="d0">amarela</data>
   <data key="d1">0.014</data>
   <data key="d2">0.738</data>
   <data key="d3">50.085</data>
 </node>
-<node id="534">
-  <data key="d0">amarela</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.019</data>
-  <data key="d3">1.267</data>
-</node>
-<node id="535">
-  <data key="d0">amarela</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.022</data>
-  <data key="d3">1.485</data>
-</node>
-<node id="536">
-  <data key="d0">ano</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.063</data>
-  <data key="d3">3.66</data>
-</node>
-<node id="537">
-  <data key="d0">ano</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.023</data>
-  <data key="d3">1.339</data>
-</node>
-<node id="538">
-  <data key="d0">aplicação</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.015</data>
-  <data key="d3">2.155</data>
-</node>
-<node id="539">
-  <data key="d0">atendimento</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.106</data>
-  <data key="d3">11.252</data>
-</node>
-<node id="540">
-  <data key="d0">aumento</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.184</data>
-  <data key="d3">13.703</data>
-</node>
-<node id="541">
-  <data key="d0">aumento</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">0.822</data>
-</node>
-<node id="542">
-  <data key="d0">aumento</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.233</data>
-</node>
-<node id="543">
-  <data key="d0">aves</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.107</data>
-  <data key="d3">29.885</data>
-</node>
-<node id="544">
-  <data key="d0">caso</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.115</data>
-  <data key="d3">9.024</data>
-</node>
-<node id="545">
-  <data key="d0">frango</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.115</data>
-  <data key="d3">27.586</data>
-</node>
-<node id="546">
-  <data key="d0">granja</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.123</data>
-  <data key="d3">32.328</data>
-</node>
-<node id="547">
+<node id="100">
   <data key="d0">aviária</data>
   <data key="d1">0.029</data>
   <data key="d2">0.254</data>
   <data key="d3">8.531</data>
 </node>
-<node id="548">
-  <data key="d0">suspeita</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.107</data>
-  <data key="d3">23.593</data>
-</node>
-<node id="549">
-  <data key="d0">ação</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">2.563</data>
-</node>
-<node id="550">
-  <data key="d0">baixa</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.048</data>
-  <data key="d3">5.405</data>
-</node>
-<node id="551">
-  <data key="d0">baixa</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.286</data>
-</node>
-<node id="552">
-  <data key="d0">bebês</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.061</data>
-  <data key="d3">9.619</data>
-</node>
-<node id="553">
-  <data key="d0">boa</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.468</data>
-</node>
-<node id="554">
-  <data key="d0">brasileira</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.935</data>
-</node>
-<node id="555">
-  <data key="d0">brasileiros</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.523</data>
-</node>
-<node id="556">
-  <data key="d0">braço</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.015</data>
-  <data key="d3">2.473</data>
-</node>
-<node id="557">
-  <data key="d0">caderneta</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.016</data>
-  <data key="d3">3.838</data>
-</node>
-<node id="558">
-  <data key="d0">calendário</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.017</data>
-  <data key="d3">2.22</data>
-</node>
-<node id="559">
-  <data key="d0">campanha</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.063</data>
-  <data key="d3">1.713</data>
-</node>
-<node id="560">
+<node id="101">
   <data key="d0">campanha</data>
   <data key="d1">0.014</data>
   <data key="d2">0.12</data>
   <data key="d3">3.265</data>
 </node>
-<node id="561">
-  <data key="d0">campanha</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.047</data>
-  <data key="d3">1.286</data>
-</node>
-<node id="562">
-  <data key="d0">campanha</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.023</data>
-  <data key="d3">0.624</data>
-</node>
-<node id="563">
+<node id="102">
   <data key="d0">campanha</data>
   <data key="d1">0.028</data>
   <data key="d2">0.138</data>
   <data key="d3">3.751</data>
 </node>
-<node id="564">
-  <data key="d0">capital</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.019</data>
-  <data key="d3">2.653</data>
-</node>
-<node id="565">
-  <data key="d0">cara</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.279</data>
-</node>
-<node id="566">
-  <data key="d0">fraude</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.267</data>
-  <data key="d3">39.474</data>
-</node>
-<node id="567">
-  <data key="d0">cartão</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.027</data>
-  <data key="d3">2.309</data>
-</node>
-<node id="568">
-  <data key="d0">cartão</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.016</data>
-  <data key="d3">1.357</data>
-</node>
-<node id="569">
-  <data key="d0">caso</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.031</data>
-  <data key="d3">2.398</data>
-</node>
-<node id="570">
-  <data key="d0">caso</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">0.901</data>
-</node>
-<node id="571">
-  <data key="d0">casos</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.085</data>
-  <data key="d3">2.549</data>
-</node>
-<node id="572">
-  <data key="d0">doença</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.134</data>
-  <data key="d3">4.704</data>
-</node>
-<node id="573">
-  <data key="d0">casos</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.049</data>
-  <data key="d3">1.48</data>
-</node>
-<node id="574">
-  <data key="d0">casos</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.028</data>
-  <data key="d3">0.826</data>
-</node>
-<node id="575">
-  <data key="d0">casos</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.038</data>
-  <data key="d3">1.151</data>
-</node>
-<node id="576">
-  <data key="d0">causa</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.02</data>
-  <data key="d3">1.274</data>
-</node>
-<node id="577">
-  <data key="d0">chikungunya</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.024</data>
-  <data key="d3">2.5</data>
-</node>
-<node id="578">
-  <data key="d0">cidade</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.64</data>
-</node>
-<node id="579">
-  <data key="d0">ciência</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.429</data>
-</node>
-<node id="580">
-  <data key="d0">mudanças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.785</data>
-  <data key="d3">140.426</data>
-</node>
-<node id="581">
+<node id="103">
   <data key="d0">cobertura</data>
   <data key="d1">0.014</data>
   <data key="d2">0.456</data>
   <data key="d3">27.187</data>
 </node>
-<node id="582">
-  <data key="d0">cobertura</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.022</data>
-  <data key="d3">1.306</data>
-</node>
-<node id="583">
-  <data key="d0">coisa</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.269</data>
-</node>
-<node id="584">
-  <data key="d0">colaterais</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.357</data>
-  <data key="d3">71.429</data>
-</node>
-<node id="585">
-  <data key="d0">colo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.642</data>
-  <data key="d3">163.636</data>
-</node>
-<node id="586">
-  <data key="d0">combate</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.042</data>
-  <data key="d3">4.505</data>
-</node>
-<node id="587">
+<node id="104">
   <data key="d0">covid</data>
   <data key="d1">0.012</data>
   <data key="d2">0.045</data>
   <data key="d3">1.404</data>
 </node>
-<node id="588">
-  <data key="d0">criança</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.016</data>
-  <data key="d3">1.525</data>
-</node>
-<node id="589">
-  <data key="d0">crianças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.053</data>
-  <data key="d3">0.984</data>
-</node>
-<node id="590">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.103</data>
-  <data key="d3">11.983</data>
-</node>
-<node id="591">
-  <data key="d0">crianças</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.048</data>
-  <data key="d3">0.899</data>
-</node>
-<node id="592">
-  <data key="d0">idosos</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.114</data>
-  <data key="d3">6.448</data>
-</node>
-<node id="593">
-  <data key="d0">pais</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.07</data>
-  <data key="d3">5.711</data>
-</node>
-<node id="594">
-  <data key="d0">crianças</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.08</data>
-  <data key="d3">1.482</data>
-</node>
-<node id="595">
+<node id="105">
   <data key="d0">crianças</data>
   <data key="d1">0.019</data>
   <data key="d2">0.067</data>
   <data key="d3">1.254</data>
 </node>
-<node id="596">
-  <data key="d0">crianças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.072</data>
-  <data key="d3">1.34</data>
-</node>
-<node id="597">
+<node id="106">
   <data key="d0">crianças</data>
   <data key="d1">0.017</data>
   <data key="d2">0.086</data>
   <data key="d3">1.603</data>
 </node>
-<node id="598">
-  <data key="d0">câncer</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.024</data>
-  <data key="d3">1.366</data>
-</node>
-<node id="599">
-  <data key="d0">útero</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.223</data>
-  <data key="d3">38.265</data>
-</node>
-<node id="600">
-  <data key="d0">doença</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.066</data>
-  <data key="d3">2.309</data>
-</node>
-<node id="601">
-  <data key="d0">dose</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.059</data>
-  <data key="d3">1.639</data>
-</node>
-<node id="602">
-  <data key="d0">doses</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.067</data>
-  <data key="d3">3.339</data>
-</node>
-<node id="603">
-  <data key="d0">governo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.056</data>
-  <data key="d3">2.039</data>
-</node>
-<node id="604">
-  <data key="d0">mosquito</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.042</data>
-  <data key="d3">7.985</data>
-</node>
-<node id="605">
-  <data key="d0">nacional</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.051</data>
-  <data key="d3">4.158</data>
-</node>
-<node id="606">
-  <data key="d0">primeira</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.045</data>
-  <data key="d3">2.592</data>
-</node>
-<node id="607">
-  <data key="d0">saúde</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.101</data>
-  <data key="d3">1.294</data>
-</node>
-<node id="608">
-  <data key="d0">sus</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.053</data>
-  <data key="d3">1.351</data>
-</node>
-<node id="609">
+<node id="107">
   <data key="d0">dengue</data>
   <data key="d1">0.032</data>
   <data key="d2">0.115</data>
   <data key="d3">1.436</data>
 </node>
-<node id="610">
-  <data key="d0">vacinas</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.051</data>
-  <data key="d3">0.835</data>
-</node>
-<node id="611">
+<node id="108">
   <data key="d0">dengue</data>
   <data key="d1">0.015</data>
   <data key="d2">0.075</data>
   <data key="d3">0.93</data>
 </node>
-<node id="612">
-  <data key="d0">única</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.051</data>
-  <data key="d3">4.65</data>
-</node>
-<node id="613">
-  <data key="d0">dia</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.069</data>
-  <data key="d3">1.831</data>
-</node>
-<node id="614">
-  <data key="d0">dia</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.067</data>
-  <data key="d3">1.761</data>
-</node>
-<node id="615">
-  <data key="d0">sábado</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.115</data>
-  <data key="d3">5.923</data>
-</node>
-<node id="616">
-  <data key="d0">dia</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.029</data>
-  <data key="d3">0.773</data>
-</node>
-<node id="617">
+<node id="109">
   <data key="d0">dia</data>
   <data key="d1">0.016</data>
   <data key="d2">0.081</data>
   <data key="d3">2.137</data>
 </node>
-<node id="618">
-  <data key="d0">disponível</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.028</data>
-  <data key="d3">2.366</data>
-</node>
-<node id="619">
-  <data key="d0">disponível</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.047</data>
-  <data key="d3">3.933</data>
-</node>
-<node id="620">
-  <data key="d0">disponível</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.027</data>
-  <data key="d3">2.263</data>
-</node>
-<node id="621">
-  <data key="d0">disponível</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">1.675</data>
-</node>
-<node id="622">
-  <data key="d0">doença</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.034</data>
-  <data key="d3">1.18</data>
-</node>
-<node id="623">
-  <data key="d0">doença</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.042</data>
-  <data key="d3">1.484</data>
-</node>
-<node id="624">
-  <data key="d0">doença</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.033</data>
-  <data key="d3">1.146</data>
-</node>
-<node id="625">
-  <data key="d0">doença</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.024</data>
-  <data key="d3">0.85</data>
-</node>
-<node id="626">
-  <data key="d0">doenças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">0.815</data>
-</node>
-<node id="627">
-  <data key="d0">doenças</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">1.102</data>
-</node>
-<node id="628">
-  <data key="d0">primeira</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.171</data>
-  <data key="d3">9.871</data>
-</node>
-<node id="629">
+<node id="110">
   <data key="d0">reforço</data>
   <data key="d1">0.011</data>
   <data key="d2">0.315</data>
   <data key="d3">19.754</data>
 </node>
-<node id="630">
-  <data key="d0">segunda</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.136</data>
-  <data key="d3">9.326</data>
-</node>
-<node id="631">
+<node id="111">
   <data key="d0">dose</data>
   <data key="d1">0.017</data>
   <data key="d2">0.061</data>
   <data key="d3">1.686</data>
 </node>
-<node id="632">
-  <data key="d0">dose</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.031</data>
-  <data key="d3">0.848</data>
-</node>
-<node id="633">
-  <data key="d0">única</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.189</data>
-  <data key="d3">17.078</data>
-</node>
-<node id="634">
+<node id="112">
   <data key="d0">doses</data>
   <data key="d1">0.01</data>
   <data key="d2">0.037</data>
   <data key="d3">1.849</data>
 </node>
-<node id="635">
-  <data key="d0">doses</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.031</data>
-  <data key="d3">1.522</data>
-</node>
-<node id="636">
-  <data key="d0">efeitos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.015</data>
-  <data key="d3">1.19</data>
-</node>
-<node id="637">
-  <data key="d0">eficácia</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">2.381</data>
-</node>
-<node id="638">
-  <data key="d0">escolas</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.041</data>
-  <data key="d3">3.772</data>
-</node>
-<node id="639">
-  <data key="d0">esquema</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.158</data>
-  <data key="d3">22.222</data>
-</node>
-<node id="640">
-  <data key="d0">estado</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">1.471</data>
-</node>
-<node id="641">
-  <data key="d0">estudo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.394</data>
-</node>
-<node id="642">
-  <data key="d0">estudos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.389</data>
-</node>
-<node id="643">
-  <data key="d0">etária</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.856</data>
-  <data key="d3">200.0</data>
-</node>
-<node id="644">
-  <data key="d0">falta</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.233</data>
-</node>
-<node id="645">
-  <data key="d0">falta</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.015</data>
-  <data key="d3">1.145</data>
-</node>
-<node id="646">
-  <data key="d0">febre</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.022</data>
-  <data key="d3">1.117</data>
-</node>
-<node id="647">
-  <data key="d0">febre</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.03</data>
-  <data key="d3">1.526</data>
-</node>
-<node id="648">
-  <data key="d0">federal</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.145</data>
-  <data key="d3">24.444</data>
-</node>
-<node id="649">
-  <data key="d0">filhos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.337</data>
-  <data key="d3">32.197</data>
-</node>
-<node id="650">
-  <data key="d0">fim</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.016</data>
-  <data key="d3">1.791</data>
-</node>
-<node id="651">
-  <data key="d0">forma</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.269</data>
-</node>
-<node id="652">
-  <data key="d0">frango</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.031</data>
-  <data key="d3">7.332</data>
-</node>
-<node id="653">
-  <data key="d0">fraude</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.942</data>
-</node>
-<node id="654">
-  <data key="d0">gente</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.021</data>
-  <data key="d3">1.009</data>
-</node>
-<node id="655">
+<node id="113">
   <data key="d0">genética</data>
   <data key="d1">0.011</data>
   <data key="d2">0.535</data>
   <data key="d3">41.284</data>
 </node>
-<node id="656">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.028</data>
-  <data key="d3">3.319</data>
-</node>
-<node id="657">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.259</data>
-  <data key="d3">30.229</data>
-</node>
-<node id="658">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.016</data>
-  <data key="d3">1.835</data>
-</node>
-<node id="659">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">2.28</data>
-</node>
-<node id="660">
-  <data key="d0">governo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.029</data>
-  <data key="d3">1.068</data>
-</node>
-<node id="661">
+<node id="114">
   <data key="d0">governo</data>
   <data key="d1">0.011</data>
   <data key="d2">0.039</data>
   <data key="d3">1.416</data>
 </node>
-<node id="662">
-  <data key="d0">governo</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.027</data>
-  <data key="d3">0.965</data>
-</node>
-<node id="663">
-  <data key="d0">grande</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.239</data>
-</node>
-<node id="664">
-  <data key="d0">granja</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.031</data>
-  <data key="d3">8.02</data>
-</node>
-<node id="665">
-  <data key="d0">graves</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.471</data>
-</node>
-<node id="666">
-  <data key="d0">grupos</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.044</data>
-  <data key="d3">3.609</data>
-</node>
-<node id="667">
-  <data key="d0">idosos</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.05</data>
-  <data key="d3">2.851</data>
-</node>
-<node id="668">
-  <data key="d0">imunização</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.033</data>
-  <data key="d3">1.663</data>
-</node>
-<node id="669">
-  <data key="d0">influenza</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.054</data>
-  <data key="d3">2.95</data>
-</node>
-<node id="670">
-  <data key="d0">nacional</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.027</data>
-  <data key="d3">2.212</data>
-</node>
-<node id="671">
-  <data key="d0">país</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.028</data>
-  <data key="d3">1.365</data>
-</node>
-<node id="672">
-  <data key="d0">pessoas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.028</data>
-  <data key="d3">0.673</data>
-</node>
-<node id="673">
-  <data key="d0">população</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.072</data>
-  <data key="d3">2.212</data>
-</node>
-<node id="674">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.043</data>
-  <data key="d3">4.371</data>
-</node>
-<node id="675">
-  <data key="d0">saúde</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.078</data>
-  <data key="d3">0.995</data>
-</node>
-<node id="676">
-  <data key="d0">segunda</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.028</data>
-  <data key="d3">1.943</data>
-</node>
-<node id="677">
-  <data key="d0">suspeita</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.028</data>
-  <data key="d3">6.288</data>
-</node>
-<node id="678">
+<node id="115">
   <data key="d0">sábado</data>
   <data key="d1">0.01</data>
   <data key="d2">0.09</data>
   <data key="d3">4.641</data>
 </node>
-<node id="679">
+<node id="116">
   <data key="d0">gripe</data>
   <data key="d1">0.029</data>
   <data key="d2">0.102</data>
   <data key="d3">0.879</data>
 </node>
-<node id="680">
+<node id="117">
   <data key="d0">gripe</data>
   <data key="d1">0.043</data>
   <data key="d2">0.212</data>
   <data key="d3">1.824</data>
 </node>
-<node id="681">
-  <data key="d0">vírus</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.039</data>
-  <data key="d3">1.544</data>
-</node>
-<node id="682">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.743</data>
-  <data key="d3">75.301</data>
-</node>
-<node id="683">
-  <data key="d0">grupos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">0.971</data>
-</node>
-<node id="684">
-  <data key="d0">grupos</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.036</data>
-  <data key="d3">2.946</data>
-</node>
-<node id="685">
-  <data key="d0">gênica</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.351</data>
-  <data key="d3">46.094</data>
-</node>
-<node id="686">
-  <data key="d0">hpv</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.016</data>
-  <data key="d3">1.81</data>
-</node>
-<node id="687">
-  <data key="d0">idade</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.018</data>
-  <data key="d3">1.651</data>
-</node>
-<node id="688">
-  <data key="d0">idade</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.021</data>
-  <data key="d3">1.872</data>
-</node>
-<node id="689">
-  <data key="d0">idosos</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.026</data>
-  <data key="d3">1.462</data>
-</node>
-<node id="690">
-  <data key="d0">idosos</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.039</data>
-  <data key="d3">2.204</data>
-</node>
-<node id="691">
-  <data key="d0">importante</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.419</data>
-</node>
-<node id="692">
-  <data key="d0">importância</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.025</data>
-  <data key="d3">2.778</data>
-</node>
-<node id="693">
-  <data key="d0">imunizante</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.023</data>
-  <data key="d3">2.143</data>
-</node>
-<node id="694">
-  <data key="d0">imunizante</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.019</data>
-  <data key="d3">1.769</data>
-</node>
-<node id="695">
-  <data key="d0">imunização</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.031</data>
-  <data key="d3">1.58</data>
-</node>
-<node id="696">
-  <data key="d0">imunização</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.034</data>
-  <data key="d3">1.749</data>
-</node>
-<node id="697">
-  <data key="d0">paralisia</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.357</data>
-  <data key="d3">75.0</data>
-</node>
-<node id="698">
-  <data key="d0">infantil</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.015</data>
-  <data key="d3">1.725</data>
-</node>
-<node id="699">
-  <data key="d0">influenza</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">0.7</data>
-</node>
-<node id="700">
-  <data key="d0">influenza</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.04</data>
-  <data key="d3">2.179</data>
-</node>
-<node id="701">
-  <data key="d0">início</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.025</data>
-  <data key="d3">2.2</data>
-</node>
-<node id="702">
-  <data key="d0">locais</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.022</data>
-  <data key="d3">3.835</data>
-</node>
-<node id="703">
-  <data key="d0">maior</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">0.941</data>
-</node>
-<node id="704">
-  <data key="d0">maior</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.018</data>
-  <data key="d3">1.196</data>
-</node>
-<node id="705">
-  <data key="d0">massa</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.018</data>
-  <data key="d3">2.856</data>
-</node>
-<node id="706">
-  <data key="d0">meta</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">2.932</data>
-</node>
-<node id="707">
-  <data key="d0">morte</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.047</data>
-</node>
-<node id="708">
-  <data key="d0">súbitas</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.411</data>
-  <data key="d3">44.289</data>
-</node>
-<node id="709">
-  <data key="d0">mortes</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.016</data>
-  <data key="d3">0.692</data>
-</node>
-<node id="710">
-  <data key="d0">mortes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.015</data>
-  <data key="d3">0.66</data>
-</node>
-<node id="711">
-  <data key="d0">mrna</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.016</data>
-  <data key="d3">0.853</data>
-</node>
-<node id="712">
-  <data key="d0">mrna</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.112</data>
-  <data key="d3">6.106</data>
-</node>
-<node id="713">
-  <data key="d0">mundo</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.025</data>
-  <data key="d3">1.05</data>
-</node>
-<node id="714">
-  <data key="d0">mundo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.016</data>
-  <data key="d3">0.658</data>
-</node>
-<node id="715">
-  <data key="d0">nacional</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.021</data>
-  <data key="d3">1.683</data>
-</node>
-<node id="716">
-  <data key="d0">nacional</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.025</data>
-  <data key="d3">2.009</data>
-</node>
-<node id="717">
-  <data key="d0">notícia</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.015</data>
-  <data key="d3">1.919</data>
-</node>
-<node id="718">
-  <data key="d0">nova</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.028</data>
-  <data key="d3">1.872</data>
-</node>
-<node id="719">
-  <data key="d0">novas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.538</data>
-</node>
-<node id="720">
-  <data key="d0">novo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.015</data>
-  <data key="d3">1.135</data>
-</node>
-<node id="721">
-  <data key="d0">pais</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.11</data>
-</node>
-<node id="722">
-  <data key="d0">pandemia</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.031</data>
-  <data key="d3">1.248</data>
-</node>
-<node id="723">
-  <data key="d0">pandemia</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.018</data>
-  <data key="d3">0.749</data>
-</node>
-<node id="724">
-  <data key="d0">partir</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.02</data>
-  <data key="d3">1.748</data>
-</node>
-<node id="725">
-  <data key="d0">partir</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.025</data>
-  <data key="d3">2.276</data>
-</node>
-<node id="726">
-  <data key="d0">país</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.019</data>
-  <data key="d3">0.898</data>
-</node>
-<node id="727">
-  <data key="d0">país</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.041</data>
-  <data key="d3">1.962</data>
-</node>
-<node id="728">
-  <data key="d0">pessoas</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.057</data>
-  <data key="d3">1.351</data>
-</node>
-<node id="729">
+<node id="118">
   <data key="d0">pessoas</data>
   <data key="d1">0.013</data>
   <data key="d2">0.045</data>
   <data key="d3">1.076</data>
 </node>
-<node id="730">
-  <data key="d0">pessoas</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.083</data>
-  <data key="d3">1.962</data>
-</node>
-<node id="731">
-  <data key="d0">pessoas</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.04</data>
-  <data key="d3">0.953</data>
-</node>
-<node id="732">
-  <data key="d0">pontos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.021</data>
-  <data key="d3">3.554</data>
-</node>
-<node id="733">
+<node id="119">
   <data key="d0">populacional</data>
   <data key="d1">0.016</data>
   <data key="d2">0.857</data>
   <data key="d3">50.423</data>
 </node>
-<node id="734">
-  <data key="d0">população</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.068</data>
-  <data key="d3">2.115</data>
-</node>
-<node id="735">
+<node id="120">
   <data key="d0">população</data>
   <data key="d1">0.01</data>
   <data key="d2">0.037</data>
   <data key="d3">1.129</data>
 </node>
-<node id="736">
+<node id="121">
   <data key="d0">população</data>
   <data key="d1">0.011</data>
   <data key="d2">0.053</data>
   <data key="d3">1.628</data>
 </node>
-<node id="737">
-  <data key="d0">postos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.047</data>
-  <data key="d3">6.969</data>
-</node>
-<node id="738">
-  <data key="d0">postos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.018</data>
-  <data key="d3">2.618</data>
-</node>
-<node id="739">
-  <data key="d0">povo</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.451</data>
-</node>
-<node id="740">
-  <data key="d0">precoce</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.214</data>
-  <data key="d3">51.429</data>
-</node>
-<node id="741">
-  <data key="d0">presidente</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">1.429</data>
-</node>
-<node id="742">
-  <data key="d0">prevenção</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.443</data>
-</node>
-<node id="743">
-  <data key="d0">primeira</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.032</data>
-  <data key="d3">1.859</data>
-</node>
-<node id="744">
-  <data key="d0">primeira</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.018</data>
-  <data key="d3">1.022</data>
-</node>
-<node id="745">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.033</data>
-  <data key="d3">3.297</data>
-</node>
-<node id="746">
-  <data key="d0">produção</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.897</data>
-</node>
-<node id="747">
-  <data key="d0">profissionais</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.08</data>
-  <data key="d3">9.195</data>
-</node>
-<node id="748">
-  <data key="d0">proteção</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.017</data>
-  <data key="d3">2.048</data>
-</node>
-<node id="749">
-  <data key="d0">spike</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.411</data>
-  <data key="d3">65.312</data>
-</node>
-<node id="750">
-  <data key="d0">próxima</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.017</data>
-  <data key="d3">2.177</data>
-</node>
-<node id="751">
-  <data key="d0">pública</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.08</data>
-  <data key="d3">7.066</data>
-</node>
-<node id="752">
-  <data key="d0">público</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.054</data>
-</node>
-<node id="753">
-  <data key="d0">público</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.03</data>
-  <data key="d3">2.369</data>
-</node>
-<node id="754">
-  <data key="d0">reforço</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.016</data>
-  <data key="d3">0.986</data>
-</node>
-<node id="755">
-  <data key="d0">risco</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.029</data>
-</node>
-<node id="756">
-  <data key="d0">sarampo</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">0.837</data>
-</node>
-<node id="757">
-  <data key="d0">sarampo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.018</data>
-  <data key="d3">1.345</data>
-</node>
-<node id="758">
-  <data key="d0">sus</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.129</data>
-  <data key="d3">3.279</data>
-</node>
-<node id="759">
-  <data key="d0">unidades</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.054</data>
-  <data key="d3">10.046</data>
-</node>
-<node id="760">
+<node id="122">
   <data key="d0">saúde</data>
   <data key="d1">0.021</data>
   <data key="d2">0.074</data>
   <data key="d3">0.944</data>
 </node>
-<node id="761">
-  <data key="d0">vacinas</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.047</data>
-  <data key="d3">0.767</data>
-</node>
-<node id="762">
+<node id="123">
   <data key="d0">saúde</data>
   <data key="d1">0.025</data>
   <data key="d2">0.122</data>
   <data key="d3">1.565</data>
 </node>
-<node id="763">
-  <data key="d0">segunda</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.017</data>
-  <data key="d3">1.132</data>
-</node>
-<node id="764">
-  <data key="d0">segunda</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.033</data>
-  <data key="d3">2.225</data>
-</node>
-<node id="765">
-  <data key="d0">semana</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">0.989</data>
-</node>
-<node id="766">
-  <data key="d0">semana</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.025</data>
-  <data key="d3">1.866</data>
-</node>
-<node id="767">
-  <data key="d0">tratamento</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.102</data>
-  <data key="d3">6.78</data>
-</node>
-<node id="768">
+<node id="124">
   <data key="d0">sus</data>
   <data key="d1">0.014</data>
   <data key="d2">0.049</data>
   <data key="d3">1.255</data>
 </node>
-<node id="769">
-  <data key="d0">sus</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">0.498</data>
-</node>
-<node id="770">
-  <data key="d0">sábado</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.011</data>
-  <data key="d3">0.588</data>
-</node>
-<node id="771">
+<node id="125">
   <data key="d0">sábado</data>
   <data key="d1">0.014</data>
   <data key="d2">0.072</data>
   <data key="d3">3.671</data>
 </node>
-<node id="772">
-  <data key="d0">terapia</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">0.69</data>
-</node>
-<node id="773">
-  <data key="d0">testes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.012</data>
-  <data key="d3">1.726</data>
-</node>
-<node id="774">
-  <data key="d0">tipo</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.41</data>
-</node>
-<node id="775">
-  <data key="d0">unidades</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.02</data>
-  <data key="d3">3.648</data>
-</node>
-<node id="776">
-  <data key="d0">uso</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.014</data>
-  <data key="d3">1.02</data>
-</node>
-<node id="777">
-  <data key="d0">vacinal</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.015</data>
-  <data key="d3">0.498</data>
-</node>
-<node id="778">
+<node id="126">
   <data key="d0">vacinas</data>
   <data key="d1">0.015</data>
   <data key="d2">0.054</data>
   <data key="d3">0.876</data>
 </node>
-<node id="779">
+<node id="127">
   <data key="d0">vacinação</data>
   <data key="d1">0.019</data>
   <data key="d2">0.066</data>
   <data key="d3">0.312</data>
 </node>
-<node id="780">
-  <data key="d0">vez</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.013</data>
-  <data key="d3">1.203</data>
-</node>
-<node id="781">
-  <data key="d0">vida</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.021</data>
-  <data key="d3">1.303</data>
-</node>
-<node id="782">
-  <data key="d0">vidas</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.018</data>
-  <data key="d3">2.174</data>
-</node>
-<node id="783">
-  <data key="d0">vírus</data>
-  <data key="d1">0.009</data>
-  <data key="d2">0.031</data>
-  <data key="d3">1.23</data>
-</node>
-<node id="784">
-  <data key="d0">única</data>
-  <data key="d1">0.007</data>
-  <data key="d2">0.024</data>
-  <data key="d3">2.151</data>
-</node>
-<node id="785">
-  <data key="d0">vacinal</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.027</data>
-  <data key="d3">0.868</data>
-</node>
-<node id="786">
-  <data key="d0">vacinas</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.041</data>
-  <data key="d3">0.663</data>
-</node>
-<node id="787">
-  <data key="d0">vírus</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.022</data>
-  <data key="d3">0.892</data>
-</node>
-<node id="788">
-  <data key="d0">cartão</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.329</data>
-  <data key="d3">27.972</data>
-</node>
-<node id="789">
-  <data key="d0">aviária</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.764</data>
-  <data key="d3">25.714</data>
-</node>
-<node id="790">
-  <data key="d0">Brasil</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.097</data>
-  <data key="d3">1.689</data>
-</node>
-<node id="791">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.44</data>
-  <data key="d3">50.685</data>
-</node>
-<node id="792">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.135</data>
-  <data key="d3">15.61</data>
-</node>
-<node id="793">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.382</data>
-  <data key="d3">44.031</data>
-</node>
-<node id="794">
-  <data key="d0">Rs</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.119</data>
-  <data key="d3">17.857</data>
-</node>
-<node id="795">
-  <data key="d0">adolescentes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.169</data>
-  <data key="d3">11.189</data>
-</node>
-<node id="796">
-  <data key="d0">adolescentes</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.238</data>
-  <data key="d3">15.748</data>
-</node>
-<node id="797">
-  <data key="d0">amarela</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.852</data>
-  <data key="d3">57.796</data>
-</node>
-<node id="798">
-  <data key="d0">amarela</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.733</data>
-  <data key="d3">49.731</data>
-</node>
-<node id="799">
-  <data key="d0">caso</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.115</data>
-  <data key="d3">9.024</data>
-</node>
-<node id="800">
-  <data key="d0">frango</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.115</data>
-  <data key="d3">27.586</data>
-</node>
-<node id="801">
-  <data key="d0">granja</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.119</data>
-  <data key="d3">31.25</data>
-</node>
-<node id="802">
-  <data key="d0">suspeita</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.107</data>
-  <data key="d3">23.593</data>
-</node>
-<node id="803">
+<node id="128">
   <data key="d0">campanha</data>
   <data key="d1">0.012</data>
   <data key="d2">0.279</data>
   <data key="d3">7.601</data>
-</node>
-<node id="804">
-  <data key="d0">cobertura</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.666</data>
-  <data key="d3">39.716</data>
-</node>
-<node id="805">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.618</data>
-  <data key="d3">72.222</data>
-</node>
-<node id="806">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.634</data>
-  <data key="d3">74.074</data>
-</node>
-<node id="807">
-  <data key="d0">gestantes</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.196</data>
-  <data key="d3">22.876</data>
-</node>
-<node id="808">
-  <data key="d0">idosos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.808</data>
-  <data key="d3">45.638</data>
-</node>
-<node id="809">
-  <data key="d0">idosos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.196</data>
-  <data key="d3">11.054</data>
-</node>
-<node id="810">
-  <data key="d0">dose</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.123</data>
-  <data key="d3">3.381</data>
-</node>
-<node id="811">
-  <data key="d0">única</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.832</data>
-  <data key="d3">75.269</data>
-</node>
-<node id="812">
-  <data key="d0">nacional</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.115</data>
-  <data key="d3">9.315</data>
-</node>
-<node id="813">
-  <data key="d0">sus</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.104</data>
-  <data key="d3">2.652</data>
-</node>
-<node id="814">
-  <data key="d0">única</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.108</data>
-  <data key="d3">9.745</data>
-</node>
-<node id="815">
-  <data key="d0">dia</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.124</data>
-  <data key="d3">3.281</data>
-</node>
-<node id="816">
-  <data key="d0">sábado</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.215</data>
-  <data key="d3">11.052</data>
-</node>
-<node id="817">
-  <data key="d0">primeira</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.231</data>
-  <data key="d3">13.296</data>
-</node>
-<node id="818">
-  <data key="d0">única</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.287</data>
-  <data key="d3">25.933</data>
-</node>
-<node id="819">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.903</data>
-  <data key="d3">91.566</data>
-</node>
-<node id="820">
-  <data key="d0">grupos</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.086</data>
-  <data key="d3">6.999</data>
-</node>
-<node id="821">
-  <data key="d0">idosos</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.072</data>
-  <data key="d3">4.058</data>
-</node>
-<node id="822">
-  <data key="d0">influenza</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.091</data>
-  <data key="d3">5.016</data>
-</node>
-<node id="823">
-  <data key="d0">população</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.1</data>
-  <data key="d3">3.078</data>
-</node>
-<node id="824">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.086</data>
-  <data key="d3">8.686</data>
-</node>
-<node id="825">
-  <data key="d0">saúde</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.135</data>
-  <data key="d3">1.732</data>
-</node>
-<node id="826">
-  <data key="d0">sábado</data>
-  <data key="d1">0.008</data>
-  <data key="d2">0.191</data>
-  <data key="d3">9.784</data>
-</node>
-<node id="827">
-  <data key="d0">gripe</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.169</data>
-  <data key="d3">1.452</data>
-</node>
-<node id="828">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.006</data>
-  <data key="d2">0.866</data>
-  <data key="d3">87.78</data>
-</node>
-<node id="829">
-  <data key="d0">saúde</data>
-  <data key="d1">0.005</data>
-  <data key="d2">0.244</data>
-  <data key="d3">3.12</data>
-</node>
-<node id="830">
-  <data key="d0">Dia D</data>
-  <data key="d1">0.004</data>
-  <data key="d2">0.52</data>
-  <data key="d3">59.932</data>
-</node>
-<node id="831">
-  <data key="d0">única</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.773</data>
-  <data key="d3">69.892</data>
-</node>
-<node id="832">
-  <data key="d0">prioritários</data>
-  <data key="d1">0.003</data>
-  <data key="d2">0.832</data>
-  <data key="d3">84.337</data>
 </node>
 <edge source="0" target="1"/>
 <edge source="0" target="2"/>
@@ -5093,744 +869,40 @@
 <edge source="0" target="90"/>
 <edge source="0" target="91"/>
 <edge source="0" target="92"/>
-<edge source="0" target="93"/>
-<edge source="0" target="94"/>
-<edge source="0" target="95"/>
-<edge source="0" target="96"/>
-<edge source="0" target="97"/>
-<edge source="0" target="98"/>
-<edge source="0" target="99"/>
-<edge source="0" target="100"/>
-<edge source="0" target="101"/>
-<edge source="0" target="102"/>
-<edge source="0" target="103"/>
-<edge source="0" target="104"/>
-<edge source="0" target="105"/>
-<edge source="0" target="106"/>
-<edge source="0" target="107"/>
-<edge source="0" target="108"/>
-<edge source="0" target="109"/>
-<edge source="0" target="110"/>
-<edge source="0" target="111"/>
-<edge source="0" target="112"/>
-<edge source="0" target="113"/>
-<edge source="0" target="114"/>
-<edge source="0" target="115"/>
-<edge source="0" target="116"/>
-<edge source="0" target="117"/>
-<edge source="0" target="118"/>
-<edge source="0" target="119"/>
-<edge source="0" target="120"/>
-<edge source="0" target="121"/>
-<edge source="0" target="122"/>
-<edge source="0" target="123"/>
-<edge source="0" target="124"/>
-<edge source="0" target="125"/>
-<edge source="0" target="126"/>
-<edge source="0" target="127"/>
-<edge source="0" target="128"/>
-<edge source="0" target="129"/>
-<edge source="0" target="130"/>
-<edge source="0" target="131"/>
-<edge source="0" target="132"/>
-<edge source="0" target="133"/>
-<edge source="0" target="134"/>
-<edge source="0" target="135"/>
-<edge source="0" target="136"/>
-<edge source="0" target="137"/>
-<edge source="0" target="138"/>
-<edge source="0" target="139"/>
-<edge source="0" target="140"/>
-<edge source="0" target="141"/>
-<edge source="0" target="142"/>
-<edge source="0" target="143"/>
-<edge source="0" target="144"/>
-<edge source="0" target="145"/>
-<edge source="0" target="146"/>
-<edge source="0" target="147"/>
-<edge source="0" target="148"/>
-<edge source="0" target="149"/>
-<edge source="0" target="150"/>
-<edge source="0" target="151"/>
-<edge source="0" target="152"/>
-<edge source="0" target="153"/>
-<edge source="0" target="154"/>
-<edge source="0" target="155"/>
-<edge source="0" target="156"/>
-<edge source="0" target="157"/>
-<edge source="0" target="158"/>
-<edge source="0" target="159"/>
-<edge source="0" target="160"/>
-<edge source="0" target="161"/>
-<edge source="0" target="162"/>
-<edge source="0" target="163"/>
-<edge source="0" target="164"/>
-<edge source="0" target="165"/>
-<edge source="0" target="166"/>
-<edge source="0" target="167"/>
-<edge source="0" target="168"/>
-<edge source="0" target="169"/>
-<edge source="0" target="170"/>
-<edge source="0" target="171"/>
-<edge source="0" target="172"/>
-<edge source="0" target="173"/>
-<edge source="0" target="174"/>
-<edge source="0" target="175"/>
-<edge source="0" target="176"/>
-<edge source="0" target="177"/>
-<edge source="0" target="178"/>
-<edge source="0" target="179"/>
-<edge source="0" target="180"/>
-<edge source="0" target="181"/>
-<edge source="0" target="182"/>
-<edge source="0" target="183"/>
-<edge source="0" target="184"/>
-<edge source="0" target="185"/>
-<edge source="0" target="186"/>
-<edge source="0" target="187"/>
-<edge source="0" target="188"/>
-<edge source="0" target="189"/>
-<edge source="0" target="190"/>
-<edge source="0" target="191"/>
-<edge source="0" target="192"/>
-<edge source="0" target="193"/>
-<edge source="0" target="194"/>
-<edge source="0" target="195"/>
-<edge source="0" target="196"/>
-<edge source="0" target="197"/>
-<edge source="0" target="198"/>
-<edge source="0" target="199"/>
-<edge source="0" target="200"/>
-<edge source="0" target="201"/>
-<edge source="0" target="202"/>
-<edge source="0" target="203"/>
-<edge source="0" target="204"/>
-<edge source="0" target="205"/>
-<edge source="0" target="206"/>
-<edge source="0" target="207"/>
-<edge source="0" target="208"/>
-<edge source="0" target="209"/>
-<edge source="0" target="210"/>
-<edge source="0" target="211"/>
-<edge source="0" target="212"/>
-<edge source="0" target="213"/>
-<edge source="0" target="214"/>
-<edge source="0" target="215"/>
-<edge source="0" target="216"/>
-<edge source="0" target="217"/>
-<edge source="0" target="218"/>
-<edge source="0" target="219"/>
-<edge source="0" target="220"/>
-<edge source="0" target="221"/>
-<edge source="0" target="222"/>
-<edge source="0" target="223"/>
-<edge source="0" target="224"/>
-<edge source="0" target="225"/>
-<edge source="0" target="226"/>
-<edge source="0" target="227"/>
-<edge source="0" target="228"/>
-<edge source="0" target="229"/>
-<edge source="0" target="230"/>
-<edge source="0" target="231"/>
-<edge source="0" target="232"/>
-<edge source="0" target="233"/>
-<edge source="0" target="234"/>
-<edge source="0" target="235"/>
-<edge source="0" target="236"/>
-<edge source="0" target="237"/>
-<edge source="0" target="238"/>
-<edge source="0" target="239"/>
-<edge source="0" target="240"/>
-<edge source="0" target="241"/>
-<edge source="0" target="242"/>
-<edge source="0" target="243"/>
-<edge source="0" target="244"/>
-<edge source="0" target="245"/>
-<edge source="0" target="246"/>
-<edge source="0" target="247"/>
-<edge source="0" target="248"/>
-<edge source="0" target="249"/>
-<edge source="0" target="250"/>
-<edge source="0" target="251"/>
-<edge source="0" target="252"/>
-<edge source="0" target="253"/>
-<edge source="0" target="254"/>
-<edge source="0" target="255"/>
-<edge source="0" target="256"/>
-<edge source="0" target="257"/>
-<edge source="0" target="258"/>
-<edge source="0" target="259"/>
-<edge source="0" target="260"/>
-<edge source="0" target="261"/>
-<edge source="0" target="262"/>
-<edge source="0" target="263"/>
-<edge source="0" target="264"/>
-<edge source="0" target="265"/>
-<edge source="0" target="266"/>
-<edge source="0" target="267"/>
-<edge source="0" target="268"/>
-<edge source="0" target="269"/>
-<edge source="0" target="270"/>
-<edge source="0" target="271"/>
-<edge source="0" target="272"/>
-<edge source="0" target="273"/>
-<edge source="0" target="274"/>
-<edge source="0" target="275"/>
-<edge source="0" target="276"/>
-<edge source="0" target="277"/>
-<edge source="0" target="278"/>
-<edge source="0" target="279"/>
-<edge source="0" target="280"/>
-<edge source="0" target="281"/>
-<edge source="0" target="282"/>
-<edge source="0" target="283"/>
-<edge source="0" target="284"/>
-<edge source="0" target="285"/>
-<edge source="0" target="286"/>
-<edge source="0" target="287"/>
-<edge source="0" target="288"/>
-<edge source="0" target="289"/>
-<edge source="0" target="290"/>
-<edge source="0" target="291"/>
-<edge source="0" target="292"/>
-<edge source="0" target="293"/>
-<edge source="0" target="294"/>
-<edge source="0" target="295"/>
-<edge source="0" target="296"/>
-<edge source="0" target="297"/>
-<edge source="0" target="298"/>
-<edge source="0" target="299"/>
-<edge source="0" target="300"/>
-<edge source="0" target="301"/>
-<edge source="0" target="302"/>
-<edge source="0" target="303"/>
-<edge source="0" target="304"/>
-<edge source="0" target="305"/>
-<edge source="0" target="306"/>
-<edge source="0" target="307"/>
-<edge source="0" target="308"/>
-<edge source="0" target="309"/>
-<edge source="0" target="310"/>
-<edge source="0" target="311"/>
-<edge source="0" target="312"/>
-<edge source="0" target="313"/>
-<edge source="0" target="314"/>
-<edge source="0" target="315"/>
-<edge source="0" target="316"/>
-<edge source="0" target="317"/>
-<edge source="0" target="318"/>
-<edge source="0" target="319"/>
-<edge source="0" target="320"/>
-<edge source="0" target="321"/>
-<edge source="0" target="322"/>
-<edge source="0" target="323"/>
-<edge source="0" target="324"/>
-<edge source="0" target="325"/>
-<edge source="0" target="326"/>
-<edge source="0" target="327"/>
-<edge source="0" target="328"/>
-<edge source="0" target="329"/>
-<edge source="0" target="330"/>
-<edge source="0" target="331"/>
-<edge source="0" target="332"/>
-<edge source="0" target="333"/>
-<edge source="0" target="334"/>
-<edge source="0" target="335"/>
-<edge source="0" target="336"/>
-<edge source="0" target="337"/>
-<edge source="0" target="338"/>
-<edge source="0" target="339"/>
-<edge source="0" target="340"/>
-<edge source="0" target="341"/>
-<edge source="0" target="342"/>
-<edge source="0" target="343"/>
-<edge source="0" target="344"/>
-<edge source="0" target="345"/>
-<edge source="0" target="346"/>
-<edge source="0" target="347"/>
-<edge source="0" target="348"/>
-<edge source="0" target="349"/>
-<edge source="0" target="350"/>
-<edge source="0" target="351"/>
-<edge source="0" target="352"/>
-<edge source="0" target="353"/>
-<edge source="0" target="354"/>
-<edge source="0" target="355"/>
-<edge source="0" target="356"/>
-<edge source="0" target="357"/>
-<edge source="0" target="358"/>
-<edge source="0" target="359"/>
-<edge source="0" target="360"/>
-<edge source="0" target="361"/>
-<edge source="0" target="362"/>
-<edge source="0" target="363"/>
-<edge source="0" target="364"/>
-<edge source="0" target="365"/>
-<edge source="0" target="366"/>
-<edge source="0" target="367"/>
-<edge source="0" target="368"/>
-<edge source="0" target="369"/>
-<edge source="0" target="370"/>
-<edge source="0" target="371"/>
-<edge source="0" target="372"/>
-<edge source="0" target="373"/>
-<edge source="0" target="374"/>
-<edge source="0" target="375"/>
-<edge source="0" target="376"/>
-<edge source="0" target="377"/>
-<edge source="0" target="378"/>
-<edge source="0" target="379"/>
-<edge source="0" target="380"/>
-<edge source="0" target="381"/>
-<edge source="0" target="382"/>
-<edge source="0" target="383"/>
-<edge source="0" target="384"/>
-<edge source="0" target="385"/>
-<edge source="0" target="386"/>
-<edge source="0" target="387"/>
-<edge source="0" target="388"/>
-<edge source="0" target="389"/>
-<edge source="0" target="390"/>
-<edge source="0" target="391"/>
-<edge source="0" target="392"/>
-<edge source="0" target="393"/>
-<edge source="0" target="394"/>
-<edge source="0" target="395"/>
-<edge source="0" target="396"/>
-<edge source="0" target="397"/>
-<edge source="0" target="398"/>
-<edge source="0" target="399"/>
-<edge source="0" target="400"/>
-<edge source="0" target="401"/>
-<edge source="0" target="402"/>
-<edge source="0" target="403"/>
-<edge source="0" target="404"/>
-<edge source="0" target="405"/>
-<edge source="0" target="406"/>
-<edge source="0" target="407"/>
-<edge source="0" target="408"/>
-<edge source="0" target="409"/>
-<edge source="0" target="410"/>
-<edge source="0" target="411"/>
-<edge source="0" target="412"/>
-<edge source="0" target="413"/>
-<edge source="0" target="414"/>
-<edge source="0" target="415"/>
-<edge source="0" target="416"/>
-<edge source="0" target="417"/>
-<edge source="0" target="418"/>
-<edge source="0" target="419"/>
-<edge source="0" target="420"/>
-<edge source="0" target="421"/>
-<edge source="0" target="422"/>
-<edge source="0" target="423"/>
-<edge source="0" target="424"/>
-<edge source="0" target="425"/>
-<edge source="0" target="426"/>
-<edge source="0" target="427"/>
-<edge source="0" target="428"/>
-<edge source="0" target="429"/>
-<edge source="0" target="430"/>
-<edge source="0" target="431"/>
-<edge source="0" target="432"/>
-<edge source="0" target="433"/>
-<edge source="0" target="434"/>
-<edge source="0" target="435"/>
-<edge source="0" target="436"/>
-<edge source="0" target="437"/>
-<edge source="0" target="438"/>
-<edge source="0" target="439"/>
-<edge source="0" target="440"/>
-<edge source="0" target="441"/>
-<edge source="0" target="442"/>
-<edge source="0" target="443"/>
-<edge source="0" target="444"/>
-<edge source="0" target="445"/>
-<edge source="0" target="446"/>
-<edge source="0" target="447"/>
-<edge source="0" target="448"/>
-<edge source="0" target="449"/>
-<edge source="0" target="450"/>
-<edge source="0" target="451"/>
-<edge source="0" target="452"/>
-<edge source="0" target="453"/>
-<edge source="0" target="454"/>
-<edge source="0" target="455"/>
-<edge source="0" target="456"/>
-<edge source="0" target="457"/>
-<edge source="0" target="458"/>
-<edge source="0" target="459"/>
-<edge source="17" target="466"/>
-<edge source="17" target="467"/>
-<edge source="18" target="470"/>
-<edge source="18" target="471"/>
-<edge source="18" target="472"/>
-<edge source="18" target="473"/>
-<edge source="18" target="475"/>
-<edge source="18" target="476"/>
-<edge source="18" target="478"/>
-<edge source="18" target="479"/>
-<edge source="18" target="481"/>
-<edge source="20" target="486"/>
-<edge source="23" target="487"/>
-<edge source="23" target="488"/>
-<edge source="23" target="489"/>
-<edge source="23" target="490"/>
-<edge source="23" target="491"/>
-<edge source="24" target="496"/>
-<edge source="24" target="497"/>
-<edge source="24" target="498"/>
-<edge source="24" target="499"/>
-<edge source="56" target="521"/>
-<edge source="96" target="523"/>
-<edge source="96" target="543"/>
-<edge source="96" target="544"/>
-<edge source="96" target="545"/>
-<edge source="96" target="546"/>
-<edge source="96" target="548"/>
-<edge source="115" target="566"/>
-<edge source="118" target="540"/>
-<edge source="118" target="572"/>
-<edge source="127" target="580"/>
-<edge source="146" target="460"/>
-<edge source="146" target="528"/>
-<edge source="146" target="552"/>
-<edge source="146" target="559"/>
-<edge source="146" target="590"/>
-<edge source="146" target="592"/>
-<edge source="146" target="593"/>
-<edge source="150" target="599"/>
-<edge source="155" target="474"/>
-<edge source="155" target="515"/>
-<edge source="155" target="529"/>
-<edge source="155" target="536"/>
-<edge source="155" target="550"/>
-<edge source="155" target="571"/>
-<edge source="155" target="586"/>
-<edge source="155" target="589"/>
-<edge source="155" target="600"/>
-<edge source="155" target="601"/>
-<edge source="155" target="602"/>
-<edge source="155" target="603"/>
-<edge source="155" target="604"/>
-<edge source="155" target="605"/>
-<edge source="155" target="606"/>
-<edge source="155" target="607"/>
-<edge source="155" target="608"/>
-<edge source="155" target="610"/>
-<edge source="155" target="612"/>
-<edge source="157" target="615"/>
-<edge source="168" target="628"/>
-<edge source="168" target="629"/>
-<edge source="168" target="630"/>
-<edge source="168" target="633"/>
-<edge source="172" target="584"/>
-<edge source="189" target="643"/>
-<edge source="196" target="533"/>
-<edge source="218" target="648"/>
-<edge source="223" target="477"/>
-<edge source="223" target="506"/>
-<edge source="223" target="524"/>
-<edge source="223" target="547"/>
-<edge source="223" target="560"/>
-<edge source="223" target="569"/>
-<edge source="223" target="573"/>
-<edge source="223" target="591"/>
-<edge source="223" target="613"/>
-<edge source="223" target="618"/>
-<edge source="223" target="622"/>
-<edge source="223" target="652"/>
-<edge source="223" target="656"/>
-<edge source="223" target="660"/>
-<edge source="223" target="664"/>
-<edge source="223" target="666"/>
-<edge source="223" target="667"/>
-<edge source="223" target="668"/>
-<edge source="223" target="669"/>
-<edge source="223" target="670"/>
-<edge source="223" target="671"/>
-<edge source="223" target="672"/>
-<edge source="223" target="673"/>
-<edge source="223" target="674"/>
-<edge source="223" target="675"/>
-<edge source="223" target="676"/>
-<edge source="223" target="677"/>
-<edge source="223" target="678"/>
-<edge source="223" target="681"/>
-<edge source="225" target="682"/>
-<edge source="235" target="657"/>
-<edge source="242" target="697"/>
-<edge source="284" target="708"/>
-<edge source="317" target="649"/>
-<edge source="362" target="527"/>
-<edge source="362" target="749"/>
-<edge source="372" target="532"/>
-<edge source="376" target="733"/>
-<edge source="391" target="480"/>
-<edge source="391" target="492"/>
-<edge source="391" target="500"/>
-<edge source="391" target="516"/>
-<edge source="391" target="561"/>
-<edge source="391" target="594"/>
-<edge source="391" target="614"/>
-<edge source="391" target="619"/>
-<edge source="391" target="623"/>
-<edge source="391" target="728"/>
-<edge source="391" target="734"/>
-<edge source="391" target="737"/>
-<edge source="391" target="747"/>
-<edge source="391" target="751"/>
-<edge source="391" target="758"/>
-<edge source="391" target="759"/>
-<edge source="391" target="761"/>
-<edge source="406" target="539"/>
-<edge source="406" target="767"/>
-<edge source="409" target="507"/>
-<edge source="413" target="655"/>
-<edge source="413" target="685"/>
-<edge source="422" target="740"/>
-<edge source="432" target="461"/>
-<edge source="432" target="463"/>
-<edge source="432" target="464"/>
-<edge source="432" target="468"/>
-<edge source="432" target="482"/>
-<edge source="432" target="485"/>
-<edge source="432" target="493"/>
-<edge source="432" target="501"/>
-<edge source="432" target="505"/>
-<edge source="432" target="509"/>
-<edge source="432" target="511"/>
-<edge source="432" target="513"/>
-<edge source="432" target="514"/>
-<edge source="432" target="517"/>
-<edge source="432" target="519"/>
-<edge source="432" target="525"/>
-<edge source="432" target="530"/>
-<edge source="432" target="534"/>
-<edge source="432" target="537"/>
-<edge source="432" target="538"/>
-<edge source="432" target="541"/>
-<edge source="432" target="551"/>
-<edge source="432" target="553"/>
-<edge source="432" target="554"/>
-<edge source="432" target="555"/>
-<edge source="432" target="556"/>
-<edge source="432" target="562"/>
-<edge source="432" target="565"/>
-<edge source="432" target="567"/>
-<edge source="432" target="570"/>
-<edge source="432" target="574"/>
-<edge source="432" target="576"/>
-<edge source="432" target="577"/>
-<edge source="432" target="579"/>
-<edge source="432" target="583"/>
-<edge source="432" target="587"/>
-<edge source="432" target="588"/>
-<edge source="432" target="595"/>
-<edge source="432" target="598"/>
-<edge source="432" target="609"/>
-<edge source="432" target="616"/>
-<edge source="432" target="620"/>
-<edge source="432" target="624"/>
-<edge source="432" target="626"/>
-<edge source="432" target="631"/>
-<edge source="432" target="634"/>
-<edge source="432" target="636"/>
-<edge source="432" target="637"/>
-<edge source="432" target="641"/>
-<edge source="432" target="642"/>
-<edge source="432" target="644"/>
-<edge source="432" target="646"/>
-<edge source="432" target="651"/>
-<edge source="432" target="653"/>
-<edge source="432" target="654"/>
-<edge source="432" target="658"/>
-<edge source="432" target="661"/>
-<edge source="432" target="663"/>
-<edge source="432" target="665"/>
-<edge source="432" target="679"/>
-<edge source="432" target="683"/>
-<edge source="432" target="686"/>
-<edge source="432" target="687"/>
-<edge source="432" target="689"/>
-<edge source="432" target="691"/>
-<edge source="432" target="693"/>
-<edge source="432" target="695"/>
-<edge source="432" target="699"/>
-<edge source="432" target="703"/>
-<edge source="432" target="707"/>
-<edge source="432" target="709"/>
-<edge source="432" target="711"/>
-<edge source="432" target="713"/>
-<edge source="432" target="715"/>
-<edge source="432" target="717"/>
-<edge source="432" target="718"/>
-<edge source="432" target="719"/>
-<edge source="432" target="721"/>
-<edge source="432" target="722"/>
-<edge source="432" target="724"/>
-<edge source="432" target="726"/>
-<edge source="432" target="729"/>
-<edge source="432" target="735"/>
-<edge source="432" target="739"/>
-<edge source="432" target="741"/>
-<edge source="432" target="742"/>
-<edge source="432" target="743"/>
-<edge source="432" target="746"/>
-<edge source="432" target="748"/>
-<edge source="432" target="752"/>
-<edge source="432" target="754"/>
-<edge source="432" target="755"/>
-<edge source="432" target="756"/>
-<edge source="432" target="760"/>
-<edge source="432" target="763"/>
-<edge source="432" target="765"/>
-<edge source="432" target="768"/>
-<edge source="432" target="770"/>
-<edge source="432" target="772"/>
-<edge source="432" target="773"/>
-<edge source="432" target="774"/>
-<edge source="432" target="776"/>
-<edge source="432" target="777"/>
-<edge source="432" target="778"/>
-<edge source="432" target="779"/>
-<edge source="432" target="780"/>
-<edge source="432" target="781"/>
-<edge source="432" target="782"/>
-<edge source="432" target="783"/>
-<edge source="432" target="784"/>
-<edge source="433" target="581"/>
-<edge source="433" target="639"/>
-<edge source="434" target="483"/>
-<edge source="434" target="494"/>
-<edge source="434" target="502"/>
-<edge source="434" target="520"/>
-<edge source="434" target="596"/>
-<edge source="434" target="712"/>
-<edge source="434" target="730"/>
-<edge source="435" target="462"/>
-<edge source="435" target="465"/>
-<edge source="435" target="469"/>
-<edge source="435" target="484"/>
-<edge source="435" target="495"/>
-<edge source="435" target="503"/>
-<edge source="435" target="504"/>
-<edge source="435" target="508"/>
-<edge source="435" target="510"/>
-<edge source="435" target="512"/>
-<edge source="435" target="518"/>
-<edge source="435" target="522"/>
-<edge source="435" target="526"/>
-<edge source="435" target="531"/>
-<edge source="435" target="535"/>
-<edge source="435" target="542"/>
-<edge source="435" target="549"/>
-<edge source="435" target="557"/>
-<edge source="435" target="558"/>
-<edge source="435" target="563"/>
-<edge source="435" target="564"/>
-<edge source="435" target="568"/>
-<edge source="435" target="575"/>
-<edge source="435" target="578"/>
-<edge source="435" target="582"/>
-<edge source="435" target="597"/>
-<edge source="435" target="611"/>
-<edge source="435" target="617"/>
-<edge source="435" target="621"/>
-<edge source="435" target="625"/>
-<edge source="435" target="627"/>
-<edge source="435" target="632"/>
-<edge source="435" target="635"/>
-<edge source="435" target="638"/>
-<edge source="435" target="640"/>
-<edge source="435" target="645"/>
-<edge source="435" target="647"/>
-<edge source="435" target="650"/>
-<edge source="435" target="659"/>
-<edge source="435" target="662"/>
-<edge source="435" target="680"/>
-<edge source="435" target="684"/>
-<edge source="435" target="688"/>
-<edge source="435" target="690"/>
-<edge source="435" target="692"/>
-<edge source="435" target="694"/>
-<edge source="435" target="696"/>
-<edge source="435" target="698"/>
-<edge source="435" target="700"/>
-<edge source="435" target="701"/>
-<edge source="435" target="702"/>
-<edge source="435" target="704"/>
-<edge source="435" target="705"/>
-<edge source="435" target="706"/>
-<edge source="435" target="710"/>
-<edge source="435" target="714"/>
-<edge source="435" target="716"/>
-<edge source="435" target="720"/>
-<edge source="435" target="723"/>
-<edge source="435" target="725"/>
-<edge source="435" target="727"/>
-<edge source="435" target="731"/>
-<edge source="435" target="732"/>
-<edge source="435" target="736"/>
-<edge source="435" target="738"/>
-<edge source="435" target="744"/>
-<edge source="435" target="745"/>
-<edge source="435" target="750"/>
-<edge source="435" target="753"/>
-<edge source="435" target="757"/>
-<edge source="435" target="762"/>
-<edge source="435" target="764"/>
-<edge source="435" target="766"/>
-<edge source="435" target="769"/>
-<edge source="435" target="771"/>
-<edge source="435" target="775"/>
-<edge source="435" target="785"/>
-<edge source="435" target="786"/>
-<edge source="435" target="787"/>
-<edge source="459" target="585"/>
-<edge source="468" target="788"/>
-<edge source="477" target="789"/>
-<edge source="547" target="794"/>
-<edge source="547" target="799"/>
-<edge source="547" target="800"/>
-<edge source="547" target="801"/>
-<edge source="547" target="802"/>
-<edge source="591" target="805"/>
-<edge source="591" target="808"/>
-<edge source="592" target="806"/>
-<edge source="595" target="795"/>
-<edge source="597" target="796"/>
-<edge source="597" target="807"/>
-<edge source="597" target="809"/>
-<edge source="601" target="811"/>
-<edge source="609" target="790"/>
-<edge source="609" target="810"/>
-<edge source="609" target="812"/>
-<edge source="609" target="813"/>
-<edge source="609" target="814"/>
-<edge source="617" target="816"/>
-<edge source="631" target="817"/>
-<edge source="631" target="818"/>
-<edge source="646" target="797"/>
-<edge source="647" target="798"/>
-<edge source="666" target="819"/>
-<edge source="678" target="791"/>
-<edge source="680" target="792"/>
-<edge source="680" target="803"/>
-<edge source="680" target="815"/>
-<edge source="680" target="820"/>
-<edge source="680" target="821"/>
-<edge source="680" target="822"/>
-<edge source="680" target="823"/>
-<edge source="680" target="824"/>
-<edge source="680" target="825"/>
-<edge source="680" target="826"/>
-<edge source="684" target="828"/>
-<edge source="771" target="793"/>
-<edge source="779" target="827"/>
-<edge source="779" target="829"/>
-<edge source="785" target="804"/>
-<edge source="810" target="831"/>
-<edge source="820" target="832"/>
-<edge source="826" target="830"/>
+<edge source="31" target="110"/>
+<edge source="37" target="99"/>
+<edge source="42" target="100"/>
+<edge source="42" target="101"/>
+<edge source="42" target="115"/>
+<edge source="72" target="98"/>
+<edge source="73" target="119"/>
+<edge source="82" target="113"/>
+<edge source="85" target="93"/>
+<edge source="85" target="94"/>
+<edge source="85" target="95"/>
+<edge source="85" target="96"/>
+<edge source="85" target="104"/>
+<edge source="85" target="105"/>
+<edge source="85" target="107"/>
+<edge source="85" target="111"/>
+<edge source="85" target="112"/>
+<edge source="85" target="114"/>
+<edge source="85" target="116"/>
+<edge source="85" target="118"/>
+<edge source="85" target="120"/>
+<edge source="85" target="122"/>
+<edge source="85" target="124"/>
+<edge source="85" target="126"/>
+<edge source="85" target="127"/>
+<edge source="86" target="103"/>
+<edge source="88" target="97"/>
+<edge source="88" target="102"/>
+<edge source="88" target="106"/>
+<edge source="88" target="108"/>
+<edge source="88" target="109"/>
+<edge source="88" target="117"/>
+<edge source="88" target="121"/>
+<edge source="88" target="123"/>
+<edge source="88" target="125"/>
+<edge source="117" target="128"/>
 </graph></graphml>
