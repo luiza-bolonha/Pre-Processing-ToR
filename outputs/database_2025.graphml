@@ -101,9 +101,9 @@
 </node>
 <node id="16">
   <data key="d0">campanha</data>
-  <data key="d1">0.035</data>
-  <data key="d2">0.035</data>
-  <data key="d3">0.964</data>
+  <data key="d1">0.036</data>
+  <data key="d2">0.036</data>
+  <data key="d3">0.965</data>
 </node>
 <node id="17">
   <data key="d0">cartão</data>
@@ -119,8 +119,8 @@
 </node>
 <node id="19">
   <data key="d0">casos</data>
-  <data key="d1">0.031</data>
-  <data key="d2">0.031</data>
+  <data key="d1">0.032</data>
+  <data key="d2">0.032</data>
   <data key="d3">0.943</data>
 </node>
 <node id="20">
@@ -169,7 +169,7 @@
   <data key="d0">dia</data>
   <data key="d1">0.035</data>
   <data key="d2">0.035</data>
-  <data key="d3">0.912</data>
+  <data key="d3">0.913</data>
 </node>
 <node id="28">
   <data key="d0">disponível</data>
@@ -191,15 +191,15 @@
 </node>
 <node id="31">
   <data key="d0">dose</data>
-  <data key="d1">0.034</data>
-  <data key="d2">0.034</data>
-  <data key="d3">0.948</data>
+  <data key="d1">0.035</data>
+  <data key="d2">0.035</data>
+  <data key="d3">0.943</data>
 </node>
 <node id="32">
   <data key="d0">doses</data>
-  <data key="d1">0.019</data>
-  <data key="d2">0.019</data>
-  <data key="d3">0.959</data>
+  <data key="d1">0.024</data>
+  <data key="d2">0.024</data>
+  <data key="d3">0.966</data>
 </node>
 <node id="33">
   <data key="d0">efeitos</data>
@@ -229,7 +229,7 @@
   <data key="d0">febre</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
-  <data key="d3">0.969</data>
+  <data key="d3">0.97</data>
 </node>
 <node id="38">
   <data key="d0">gente</data>
@@ -317,15 +317,15 @@
 </node>
 <node id="52">
   <data key="d0">morte</data>
-  <data key="d1">0.013</data>
-  <data key="d2">0.013</data>
-  <data key="d3">0.957</data>
+  <data key="d1">0.014</data>
+  <data key="d2">0.014</data>
+  <data key="d3">0.95</data>
 </node>
 <node id="53">
   <data key="d0">mortes</data>
-  <data key="d1">0.022</data>
-  <data key="d2">0.022</data>
-  <data key="d3">0.964</data>
+  <data key="d1">0.023</data>
+  <data key="d2">0.023</data>
+  <data key="d3">0.96</data>
 </node>
 <node id="54">
   <data key="d0">mrna</data>
@@ -383,9 +383,9 @@
 </node>
 <node id="63">
   <data key="d0">pessoas</data>
-  <data key="d1">0.04</data>
-  <data key="d2">0.04</data>
-  <data key="d3">0.952</data>
+  <data key="d1">0.041</data>
+  <data key="d2">0.041</data>
+  <data key="d3">0.953</data>
 </node>
 <node id="64">
   <data key="d0">populacional</data>
@@ -445,7 +445,7 @@
   <data key="d0">redução</data>
   <data key="d1">0.019</data>
   <data key="d2">0.019</data>
-  <data key="d3">0.987</data>
+  <data key="d3">0.988</data>
 </node>
 <node id="74">
   <data key="d0">reforço</data>
@@ -479,8 +479,8 @@
 </node>
 <node id="79">
   <data key="d0">semana</data>
-  <data key="d1">0.013</data>
-  <data key="d2">0.013</data>
+  <data key="d1">0.014</data>
+  <data key="d2">0.014</data>
   <data key="d3">1.0</data>
 </node>
 <node id="80">
@@ -527,9 +527,9 @@
 </node>
 <node id="87">
   <data key="d0">vacinas</data>
-  <data key="d1">0.056</data>
-  <data key="d2">0.056</data>
-  <data key="d3">0.915</data>
+  <data key="d1">0.057</data>
+  <data key="d2">0.057</data>
+  <data key="d3">0.916</data>
 </node>
 <node id="88">
   <data key="d0">vacinação</data>
@@ -582,14 +582,14 @@
 <node id="96">
   <data key="d0">Covid-19</data>
   <data key="d1">0.019</data>
-  <data key="d2">0.066</data>
-  <data key="d3">1.201</data>
+  <data key="d2">0.067</data>
+  <data key="d3">1.206</data>
 </node>
 <node id="97">
   <data key="d0">Covid-19</data>
   <data key="d1">0.018</data>
   <data key="d2">0.09</data>
-  <data key="d3">1.641</data>
+  <data key="d3">1.637</data>
 </node>
 <node id="98">
   <data key="d0">adversas</data>
@@ -612,14 +612,14 @@
 <node id="101">
   <data key="d0">campanha</data>
   <data key="d1">0.014</data>
-  <data key="d2">0.12</data>
-  <data key="d3">3.265</data>
+  <data key="d2">0.121</data>
+  <data key="d3">3.283</data>
 </node>
 <node id="102">
   <data key="d0">campanha</data>
   <data key="d1">0.028</data>
   <data key="d2">0.138</data>
-  <data key="d3">3.751</data>
+  <data key="d3">3.755</data>
 </node>
 <node id="103">
   <data key="d0">cobertura</data>
@@ -661,25 +661,25 @@
   <data key="d0">dia</data>
   <data key="d1">0.016</data>
   <data key="d2">0.081</data>
-  <data key="d3">2.137</data>
+  <data key="d3">2.13</data>
 </node>
 <node id="110">
   <data key="d0">reforço</data>
   <data key="d1">0.011</data>
-  <data key="d2">0.315</data>
-  <data key="d3">19.754</data>
+  <data key="d2">0.316</data>
+  <data key="d3">19.829</data>
 </node>
 <node id="111">
   <data key="d0">dose</data>
-  <data key="d1">0.017</data>
-  <data key="d2">0.061</data>
-  <data key="d3">1.686</data>
+  <data key="d1">0.018</data>
+  <data key="d2">0.064</data>
+  <data key="d3">1.695</data>
 </node>
 <node id="112">
   <data key="d0">doses</data>
-  <data key="d1">0.01</data>
-  <data key="d2">0.037</data>
-  <data key="d3">1.849</data>
+  <data key="d1">0.013</data>
+  <data key="d2">0.048</data>
+  <data key="d3">1.969</data>
 </node>
 <node id="113">
   <data key="d0">genética</data>
@@ -714,14 +714,14 @@
 <node id="118">
   <data key="d0">pessoas</data>
   <data key="d1">0.013</data>
-  <data key="d2">0.045</data>
-  <data key="d3">1.076</data>
+  <data key="d2">0.046</data>
+  <data key="d3">1.084</data>
 </node>
 <node id="119">
   <data key="d0">populacional</data>
   <data key="d1">0.016</data>
-  <data key="d2">0.857</data>
-  <data key="d3">50.423</data>
+  <data key="d2">0.863</data>
+  <data key="d3">50.791</data>
 </node>
 <node id="120">
   <data key="d0">população</data>
@@ -762,8 +762,8 @@
 <node id="126">
   <data key="d0">vacinas</data>
   <data key="d1">0.015</data>
-  <data key="d2">0.054</data>
-  <data key="d3">0.876</data>
+  <data key="d2">0.055</data>
+  <data key="d3">0.883</data>
 </node>
 <node id="127">
   <data key="d0">vacinação</data>
@@ -774,8 +774,8 @@
 <node id="128">
   <data key="d0">campanha</data>
   <data key="d1">0.012</data>
-  <data key="d2">0.279</data>
-  <data key="d3">7.601</data>
+  <data key="d2">0.282</data>
+  <data key="d3">7.652</data>
 </node>
 <edge source="0" target="1"/>
 <edge source="0" target="2"/>
