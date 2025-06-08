@@ -1,0 +1,9 @@
+.env
+/outputs
+/outputs_clusters
+
+# Outros arquivos/diretórios comuns para ignorar
+__pycache__/
+*.pyc
+.vscode/
+.idea/
