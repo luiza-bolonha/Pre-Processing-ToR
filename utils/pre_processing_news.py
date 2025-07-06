@@ -1,5 +1,6 @@
 import re
 import spacy
+import csv
 import nltk
 from spacy.matcher import Matcher
 from spacy.util import filter_spans
@@ -33,8 +34,9 @@ padrao_ordinal = [
 ]
 matcher.add("NUM_UNIDADE", [padrao_cardinal_substantivo, padrao_num_extenso, padrao_ordinal])
 
-def pre_processar_doc(doc):
-    
+def pre_processar_txt(texto):
+    doc = nlp(texto)
+
     # Identifica spans compostos (ex: "vinte mil pessoas")
     matches = matcher(doc)
     spans = [doc[start:end] for _, start, end in matches]
@@ -68,17 +70,27 @@ def pre_processar_doc(doc):
         tokens_unicos = list(dict.fromkeys(tokens))
     return tokens_unicos
 
-def processar_lote_textos(lista_de_textos, batch_size=1000, n_process=1):
-    docs = nlp.pipe(lista_de_textos,
-                    batch_size=batch_size,
-                    n_process=n_process)
-    return [pre_processar_doc(doc) for doc in docs]
+def pre_processing_database(file_path, separar_paragrafos, column="Texto"):
+    valores_coluna = []
 
-def pre_processing_database(file_path, column="Texto", batch_size=1000, n_process=1):
-    df = carregar_csv(file_path,column)
-    textos = df[column].tolist()
-    resultados = processar_lote_textos(textos, batch_size, n_process)
-    return resultados, textos
+    with open(file_path, encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for line in reader:
+            texto = line[column]
+            if(separar_paragrafos):
+                paragrafos = texto.split('\n')  
+                paragrafos = [p.strip() for p in paragrafos if p.strip()]
+                valores_coluna.extend(paragrafos)             
+            else: 
+                valores_coluna.append(texto)
+        
+    valores = []
+    for texto in valores_coluna:
+        result = pre_processar_txt(texto)
+        valores.append(result)
+
+    return valores, valores_coluna
+
 
 def concordance(list_values, termo, largura=40, case_sensitive=False, show_result=True):
     texto = " ".join(list_values).lower()
