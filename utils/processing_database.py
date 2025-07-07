@@ -54,9 +54,10 @@ def remover_textos_semelhantes_spacy(file, column="description", threshold=0.92)
             indices_para_manter.append(i)
             indices_vistos.append(i)
     
+    df_filtrado = df.iloc[indices_para_manter].reset_index(drop=True)
+ 
     total_removidos = len(df) - len(df_filtrado)
     print(f"Índices removidos: {total_removidos}")
     print(f"Tamanho arquivo processado: {len(df_filtrado)}")
         
-    df_filtrado = df.iloc[indices_para_manter].reset_index(drop=True)
     return df_filtrado
