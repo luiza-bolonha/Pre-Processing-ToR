@@ -10,9 +10,9 @@ from utils.pre_processing_social_media import carregar_stopwords_personalizadas
 
 nlp = spacy.load('pt_core_news_lg')
 
-#nltk.download('stopwords')
-#stopwords = set(nltk.corpus.stopwords.words('portuguese'))
-stopwords = carregar_stopwords_personalizadas()
+nltk.download('stopwords')
+stopwords = set(nltk.corpus.stopwords.words('portuguese'))
+#stopwords = carregar_stopwords_personalizadas()
 
 # Matcher para padrões como "20 mil pessoas" e datas
 matcher = Matcher(nlp.vocab)
