@@ -2,6 +2,7 @@
 /outputs
 /outputs_clusters
 /outputs_clusters_csv
+/ranking_palavras
 
 # Outros arquivos/diretórios comuns para ignorar
 __pycache__/
