@@ -44,8 +44,8 @@ def carregar_stopwords_personalizadas():
     with open('stopwords.txt', "r", encoding="utf-8") as f:
         return set(p.strip().lower() for p in f if p.strip())
     
-#stopwords = set(nltk.corpus.stopwords.words('portuguese'))
-stopwords = carregar_stopwords_personalizadas()
+stopwords = set(nltk.corpus.stopwords.words('portuguese'))
+#stopwords = carregar_stopwords_personalizadas()
 
 def capitalizar_palavras(texto):
     return ' '.join(p.capitalize() for p in texto.split())
