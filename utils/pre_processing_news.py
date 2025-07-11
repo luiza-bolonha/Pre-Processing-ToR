@@ -6,6 +6,8 @@ from spacy.matcher import Matcher
 from spacy.util import filter_spans
 from utils.io_helpers import carregar_csv
 from utils.pre_processing_social_media import carregar_stopwords_personalizadas
+import numpy as np
+import pandas as pd
 
 
 nlp = spacy.load('pt_core_news_lg')
@@ -72,11 +74,13 @@ def pre_processar_txt(texto):
 
 def pre_processing_database(file_path, separar_paragrafos, column="Texto"):
     valores_coluna = []
+    news = []
 
     with open(file_path, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for line in reader:
             texto = line[column]
+            news.append(texto)
             if(separar_paragrafos):
                 paragrafos = texto.split('\n')  
                 paragrafos = [p.strip() for p in paragrafos if p.strip()]
@@ -89,7 +93,7 @@ def pre_processing_database(file_path, separar_paragrafos, column="Texto"):
         result = pre_processar_txt(texto)
         valores.append(result)
 
-    return valores, valores_coluna
+    return valores, news
 
 
 def concordance(list_values, termo, largura=40, case_sensitive=False, show_result=True):
@@ -123,3 +127,29 @@ def concordance(list_values, termo, largura=40, case_sensitive=False, show_resul
     print(f"Número de ocorrências: {len(resultados)}\n")
     for r in resultados:
         print(r)
+
+def cosine_similarity(v1, v2):
+    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+
+def recomendar_resumo_centralidade_semantica(file_path):
+    df = pd.read_csv(file_path)
+
+    textos = df["Texto"].fillna("").tolist()
+
+    nlp = spacy.load("pt_core_news_lg")
+
+    docs = list(nlp.pipe(textos, disable=["ner", "parser"]))
+
+    vetores = np.array([doc.vector for doc in docs])
+
+    vetor_medio = np.mean(vetores, axis=0)
+
+    similaridades = [cosine_similarity(v, vetor_medio) for v in vetores]
+
+    indice_mais_central = int(np.argmax(similaridades))
+
+    texto_representativo = df.iloc[indice_mais_central]
+    print("Texto mais central semanticamente:\n")
+    print("Título:", texto_representativo["Título"])
+    print("\nResumo:", texto_representativo["Texto"])
+    print("\nURL:", texto_representativo["URL"])

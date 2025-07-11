@@ -1,4 +1,5 @@
 import networkx as nx
+import re
 import os
 
 def extrair_clusters(graphml_path, show_results=True):
@@ -129,3 +130,44 @@ def ranking_words(list_tokens, n=1000):
         contador.update(sublist)
     return contador.most_common(n)
     
+def limpar_texto(texto):
+        # Remove pontuação e coloca tudo em minúsculas
+        return re.findall(r'\b\w+\b', texto.lower())
+
+def extrair_palavras_relevantes(graphml_path):
+    G = nx.read_graphml(graphml_path)
+
+    # Remove nó raiz vazio se existir
+    if "0" in G:
+        G.remove_node("0")
+
+    palavras = set()
+    for n in G.nodes:
+        valor = G.nodes[n].get("value")
+        if valor:
+            palavras.add(valor)
+
+    return sorted(palavras)
+
+
+def recomendar_resumo(lista_textos, graphml_path):    
+    palavras_relevantes = extrair_palavras_relevantes(graphml_path)
+    melhor_indice = -1
+    melhor_pontuacao = 0
+    proporcoes = []
+
+    for i, texto in enumerate(lista_textos):
+        palavras = limpar_texto(texto)
+        if not palavras:
+            continue
+        total = len(palavras)
+        relevantes = sum(1 for p in palavras if p in palavras_relevantes)
+        proporcao = relevantes / total
+        proporcoes.append(proporcao)
+
+        if proporcao > melhor_pontuacao:
+            melhor_pontuacao = proporcao
+            melhor_indice = i
+        
+    print(f"Melhor proporção: {round((melhor_pontuacao*100),2)}")
+    return proporcoes, lista_textos[melhor_indice] if melhor_indice != -1 else None
