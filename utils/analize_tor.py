@@ -1,6 +1,12 @@
 import networkx as nx
 import re
-import os
+from collections import Counter
+import pandas as pd
+import numpy as np
+import spacy
+
+
+nlp = spacy.load('pt_core_news_lg')
 
 def extrair_clusters(graphml_path, show_results=True):
     G = nx.read_graphml(graphml_path)
@@ -121,15 +127,6 @@ def prompt_IA(c):
     prompt = f"Considere os tweets a seguir, que foram identificados como relacionados ao assunto {c['raiz']}. Eles mencionam com frequência palavras como: {', '.join(c['palavras'])}. Com base nesse conteúdo, gere um pequeno texto de 1 a 2 parágrafos, com uma síntese clara e objetiva sobre o que está sendo discutido nos tweets. O texto deve ajudar qualquer pessoa a entender rapidamente o teor das conversas, mesmo que ela não tenha lido os tweets originais. Retorne somente o resumo."
     return prompt
 
-from collections import Counter
-import csv
-
-def ranking_words(list_tokens, n=1000):
-    contador = Counter()
-    for sublist in list_tokens:
-        contador.update(sublist)
-    return contador.most_common(n)
-    
 def limpar_texto(texto):
         # Remove pontuação e coloca tudo em minúsculas
         return re.findall(r'\b\w+\b', texto.lower())
@@ -150,7 +147,7 @@ def extrair_palavras_relevantes(graphml_path):
     return sorted(palavras)
 
 
-def recomendar_resumo(lista_textos, graphml_path):    
+def recomendar_texto(lista_textos, graphml_path):    
     palavras_relevantes = extrair_palavras_relevantes(graphml_path)
     melhor_indice = -1
     melhor_pontuacao = 0
@@ -171,3 +168,63 @@ def recomendar_resumo(lista_textos, graphml_path):
         
     print(f"Melhor proporção: {round((melhor_pontuacao*100),2)}")
     return proporcoes, lista_textos[melhor_indice] if melhor_indice != -1 else None
+
+def concordance(list_values, termo, largura=40, case_sensitive=False):
+    texto = " ".join(list_values).lower()
+    
+    if not case_sensitive:
+        texto_proc = texto.lower()
+        termo_proc = termo.lower()
+    else:
+        texto_proc = texto
+        termo_proc = termo
+
+    ocorrencias = [m.start() for m in re.finditer(re.escape(termo_proc), texto_proc)]
+    resultados = []
+
+    for i in ocorrencias:
+        inicio = max(0, i - largura)
+        fim = min(len(texto), i + len(termo) + largura)
+
+        esquerda = texto[inicio:i].replace('\n', ' ')
+        centro = texto[i:i+len(termo)]
+        direita = texto[i+len(termo):fim].replace('\n', ' ')
+
+        # Calcula quantos espaços são necessários para alinhar o termo na coluna `largura`
+        padding = largura - len(esquerda)
+        padding = max(0, padding)
+
+        linha = f"{' ' * padding}{esquerda}{centro}{direita}"
+        resultados.append(linha)
+
+    print(f"Número de ocorrências: {len(resultados)}\n")
+    for r in resultados:
+        print(r)
+
+def cosine_similarity(v1, v2):
+    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+
+def recomendar_texto_centralidade_semantica(file_path, column = 'Texto'):
+    df = pd.read_csv(file_path)
+
+    textos = df[column].fillna("").tolist()
+
+    docs = list(nlp.pipe(textos, disable=["ner", "parser"]))
+
+    vetores = np.array([doc.vector for doc in docs])
+
+    vetor_medio = np.mean(vetores, axis=0)
+
+    similaridades = [cosine_similarity(v, vetor_medio) for v in vetores]
+
+    indice_mais_central = int(np.argmax(similaridades))
+
+    texto_representativo = df.iloc[indice_mais_central]
+    print("Texto mais central semanticamente:\n")
+    print(texto_representativo[column])
+
+def ranking_words(list_tokens, n=1000):
+    contador = Counter()
+    for sublist in list_tokens:
+        contador.update(sublist)
+    return contador.most_common(n)

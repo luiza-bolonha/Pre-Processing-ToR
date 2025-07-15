@@ -1,14 +1,8 @@
-import re
 import spacy
 import csv
 import nltk
 from spacy.matcher import Matcher
 from spacy.util import filter_spans
-from utils.io_helpers import carregar_csv
-from utils.pre_processing_social_media import carregar_stopwords_personalizadas
-import numpy as np
-import pandas as pd
-
 
 nlp = spacy.load('pt_core_news_lg')
 
@@ -94,62 +88,3 @@ def pre_processing_database(file_path, separar_paragrafos, column="Texto"):
         valores.append(result)
 
     return valores, news
-
-
-def concordance(list_values, termo, largura=40, case_sensitive=False, show_result=True):
-    texto = " ".join(list_values).lower()
-    
-    if not case_sensitive:
-        texto_proc = texto.lower()
-        termo_proc = termo.lower()
-    else:
-        texto_proc = texto
-        termo_proc = termo
-
-    ocorrencias = [m.start() for m in re.finditer(re.escape(termo_proc), texto_proc)]
-    resultados = []
-
-    for i in ocorrencias:
-        inicio = max(0, i - largura)
-        fim = min(len(texto), i + len(termo) + largura)
-
-        esquerda = texto[inicio:i].replace('\n', ' ')
-        centro = texto[i:i+len(termo)]
-        direita = texto[i+len(termo):fim].replace('\n', ' ')
-
-        # Calcula quantos espaços são necessários para alinhar o termo na coluna `largura`
-        padding = largura - len(esquerda)
-        padding = max(0, padding)
-
-        linha = f"{' ' * padding}{esquerda}{centro}{direita}"
-        resultados.append(linha)
-
-    print(f"Número de ocorrências: {len(resultados)}\n")
-    for r in resultados:
-        print(r)
-
-def cosine_similarity(v1, v2):
-    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
-
-def recomendar_resumo_centralidade_semantica(file_path):
-    df = pd.read_csv(file_path)
-
-    textos = df["Texto"].fillna("").tolist()
-
-    nlp = spacy.load("pt_core_news_lg")
-
-    docs = list(nlp.pipe(textos, disable=["ner", "parser"]))
-
-    vetores = np.array([doc.vector for doc in docs])
-
-    vetor_medio = np.mean(vetores, axis=0)
-
-    similaridades = [cosine_similarity(v, vetor_medio) for v in vetores]
-
-    indice_mais_central = int(np.argmax(similaridades))
-
-    texto_representativo = df.iloc[indice_mais_central]
-    print("Texto mais central semanticamente:\n")
-    print("Título:", texto_representativo["Título"])
-    print("\nResumo:", texto_representativo["Texto"])
-    print("\nURL:", texto_representativo["URL"])
