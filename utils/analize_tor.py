@@ -157,7 +157,7 @@ def recomendar_texto(lista_textos, graphml_path):
         palavras = limpar_texto(texto)
         if not palavras:
             continue
-        total = len(palavras)
+        total = len(set(palavras))
         relevantes = sum(1 for p in palavras if p in palavras_relevantes)
         proporcao = relevantes / total
         proporcoes.append(proporcao)
