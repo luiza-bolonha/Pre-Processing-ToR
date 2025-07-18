@@ -222,9 +222,3 @@ def recomendar_texto_centralidade_semantica(file_path, column = 'Texto'):
     texto_representativo = df.iloc[indice_mais_central]
     print("Texto mais central semanticamente:\n")
     print(texto_representativo[column])
-
-def ranking_words(list_tokens, n=1000):
-    contador = Counter()
-    for sublist in list_tokens:
-        contador.update(sublist)
-    return contador.most_common(n)

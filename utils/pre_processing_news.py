@@ -66,7 +66,21 @@ def pre_processar_txt(texto):
         tokens_unicos = list(dict.fromkeys(tokens))
     return tokens_unicos
 
-def pre_processing_database(file_path, separar_paragrafos, column="Texto"):
+
+def pre_processar_txt_simples(texto):
+    doc = nlp(texto)
+
+    tokens = []
+    for token in doc:
+        if token.is_alpha and token.text.lower() not in stopwords:
+            tokens.append(token.text)
+
+    # Remove duplicados preservando a ordem
+    # tokens_unicos = list(dict.fromkeys(tokens))
+
+    return tokens
+
+def pre_processing_database(file_path, separar_paragrafos, column="Texto", simples=False):
     valores_coluna = []
     news = []
 
@@ -84,7 +98,10 @@ def pre_processing_database(file_path, separar_paragrafos, column="Texto"):
         
     valores = []
     for texto in valores_coluna:
-        result = pre_processar_txt(texto)
+        if simples:
+            result = pre_processar_txt_simples(texto)
+        else:
+            result = pre_processar_txt(texto)    
         valores.append(result)
 
     return valores, news
