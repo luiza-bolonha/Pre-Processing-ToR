@@ -76,9 +76,8 @@ def pre_processar_txt_simples(texto):
             tokens.append(token.text)
 
     # Remove duplicados preservando a ordem
-    # tokens_unicos = list(dict.fromkeys(tokens))
-
-    return tokens
+    tokens_unicos = list(dict.fromkeys(tokens))
+    return tokens_unicos
 
 def pre_processing_database(file_path, separar_paragrafos, column="Texto", simples=False):
     valores_coluna = []

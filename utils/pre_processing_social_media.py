@@ -80,7 +80,8 @@ def pre_processar_doc(doc):
         else:
             i += 1
 
-    return tokens
+        tokens_unicos = list(dict.fromkeys(tokens))
+    return tokens_unicos
 
 def processar_lote_textos(lista_de_textos, batch_size=1000, n_process=1):
     docs = nlp.pipe([limpar_texto_bruto(txt) for txt in lista_de_textos],
