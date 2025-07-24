@@ -31,10 +31,10 @@ def scartter_plot_from_ranking(df):
     df_top = df.sort_values(by='quantidade', ascending=False).head(50)
 
     plt.figure(figsize=(12, 6))
-    plt.scatter(df_top['palavra'], df_top['quantidade'], color='blue')
+    plt.bar(df_top['palavra'], df_top['quantidade'], color='green')
 
     plt.xticks(rotation=90)
-    plt.title('Dispersão das Top 50 Palavras')
+    plt.title('Gráfico de Frequência')
     plt.xlabel('Palavras')
     plt.ylabel('Quantidade')
     plt.grid(True, linestyle='--', alpha=0.5)

@@ -169,7 +169,7 @@ def recomendar_texto(lista_textos, graphml_path):
     print(f"Melhor proporção: {round((melhor_pontuacao*100),2)}")
     return proporcoes, lista_textos[melhor_indice] if melhor_indice != -1 else None
 
-def concordance(list_values, termo, largura=40, case_sensitive=False):
+def concordance(list_values, termo, largura=32, case_sensitive=False):
     texto = " ".join(list_values).lower()
     
     if not case_sensitive:
