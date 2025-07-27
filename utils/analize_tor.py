@@ -4,9 +4,10 @@ from collections import Counter
 import pandas as pd
 import numpy as np
 import spacy
+import nltk
 
-
-nlp = spacy.load('pt_core_news_lg')
+nltk.download('stopwords')
+stopwords = set(nltk.corpus.stopwords.words('portuguese'))
 
 def extrair_clusters(graphml_path, show_results=True):
     G = nx.read_graphml(graphml_path)
@@ -142,17 +143,17 @@ def extrair_palavras_relevantes(graphml_path):
     for n in G.nodes:
         valor = G.nodes[n].get("value")
         if valor:
-            palavras.add(valor)
+            palavras.update(valor.split())
 
-    return sorted(palavras)
+    filtrada = [item for item in palavras if item not in stopwords]
+    return sorted(filtrada)
 
 
 def recomendar_texto(lista_textos, graphml_path):    
     palavras_relevantes = extrair_palavras_relevantes(graphml_path)
     melhor_indice = -1
     melhor_pontuacao = 0
-    proporcoes = []
-
+    
     for i, texto in enumerate(lista_textos):
         palavras = limpar_texto(texto)
         if not palavras:
@@ -160,14 +161,15 @@ def recomendar_texto(lista_textos, graphml_path):
         total = len(set(palavras))
         relevantes = sum(1 for p in palavras if p in palavras_relevantes)
         proporcao = relevantes / total
-        proporcoes.append(proporcao)
-
+    
         if proporcao > melhor_pontuacao:
             melhor_pontuacao = proporcao
             melhor_indice = i
         
-    print(f"Melhor proporção: {round((melhor_pontuacao*100),2)}")
-    return proporcoes, lista_textos[melhor_indice] if melhor_indice != -1 else None
+    print(f"Melhor proporção: {round((melhor_pontuacao*100),2)}%")
+    texto_recomendado = lista_textos[melhor_indice] if melhor_indice != -1 else None
+    print(f"Número de palavras: {len(texto_recomendado.split())}")
+    return texto_recomendado
 
 def concordance(list_values, termo, largura=32, case_sensitive=False):
     texto = " ".join(list_values).lower()
@@ -200,25 +202,3 @@ def concordance(list_values, termo, largura=32, case_sensitive=False):
     print(f"Número de ocorrências: {len(resultados)}\n")
     for r in resultados:
         print(r)
-
-def cosine_similarity(v1, v2):
-    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
-
-def recomendar_texto_centralidade_semantica(file_path, column = 'Texto'):
-    df = pd.read_csv(file_path)
-
-    textos = df[column].fillna("").tolist()
-
-    docs = list(nlp.pipe(textos, disable=["ner", "parser"]))
-
-    vetores = np.array([doc.vector for doc in docs])
-
-    vetor_medio = np.mean(vetores, axis=0)
-
-    similaridades = [cosine_similarity(v, vetor_medio) for v in vetores]
-
-    indice_mais_central = int(np.argmax(similaridades))
-
-    texto_representativo = df.iloc[indice_mais_central]
-    print("Texto mais central semanticamente:\n")
-    print(texto_representativo[column])

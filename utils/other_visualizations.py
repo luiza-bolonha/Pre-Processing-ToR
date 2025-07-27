@@ -98,7 +98,7 @@ def generate_graph_file(list_of_lists, output_file):
     with open(output_file, "w", encoding="utf-8") as f:
         for line in nodes + edges:
             f.write(line + "\n")
-
+'''
 def generate_graph_file(list_of_lists, output_file):
     # Count frequencies: uma ocorrência por sublista
     freq_counter = Counter()
@@ -147,7 +147,7 @@ def generate_graph_file(list_of_lists, output_file):
     with open(output_file, "w", encoding="utf-8") as f:
         for line in nodes + edges:
             f.write(line + "\n")
-
+'''
 
 def ranking_words(list_tokens, n=1000, remove_duplicidades=True):
     contador = Counter()
