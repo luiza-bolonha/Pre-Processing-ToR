@@ -20,6 +20,7 @@ ABREVIACOES_REGEX = re.compile(r'\b(' + '|'.join(map(re.escape, ABREVIACOES.keys
 nlp = spacy.load('pt_core_news_lg')
 
 matcher = Matcher(nlp.vocab)
+matcher_simples = Matcher(nlp.vocab)
 matcher.add("NUM_UNIDADE", [[
     {"LIKE_NUM": True},
     {"LOWER": {"IN": ["mil", "milhão", "milhões", "bilhão", "bilhões"]}, "OP": "?"},
@@ -29,6 +30,10 @@ matcher.add("NUM_UNIDADE", [[
 matcher.add("SUBSTANTIVOS", [[{"POS": "NOUN"}]])
 matcher.add("PROPRIOS", [[{"POS": "PROPN"}]])
 matcher.add("ADJETIVOS", [[{"POS": "ADJ"}]])
+
+matcher_simples.add("SUBSTANTIVOS", [[{"POS": "NOUN"}]])
+matcher_simples.add("PROPRIOS", [[{"POS": "PROPN"}]])
+matcher_simples.add("ADJETIVOS", [[{"POS": "ADJ"}]])
 
 def substituir_abreviacoes(match):
     palavra = match.group(0).lower()
@@ -83,14 +88,43 @@ def pre_processar_doc(doc):
         tokens_unicos = list(dict.fromkeys(tokens))
     return tokens_unicos
 
-def processar_lote_textos(lista_de_textos, batch_size=1000, n_process=1):
+def pre_processar_doc_simples(doc):
+    matches = matcher_simples(doc)
+    spans = [doc[start:end] for _, start, end in matches]
+    spans_filtrados = filter_spans(spans)
+
+    spans_dict = {span.start: span for span in spans_filtrados}
+    
+    tokens = []
+    i = 0
+    while i < len(doc):
+        if i in spans_dict:
+            span = spans_dict[i]
+            span_text = span.text.lower()
+            if len(span) == 1:
+                token = span[0]
+                if token.is_alpha and token.text.lower() not in stopwords and len(token.text) >= 3:
+                    tokens.append(token.text.lower())
+            elif len(span_text) >= 3:
+                tokens.append(span_text)
+            i = span.end
+        else:
+            i += 1
+        tokens_unicos = list(dict.fromkeys(tokens))
+    return tokens_unicos
+
+
+def processar_lote_textos(lista_de_textos, batch_size=1000, n_process=1, simples = False):
     docs = nlp.pipe([limpar_texto_bruto(txt) for txt in lista_de_textos],
                     batch_size=batch_size,
                     n_process=n_process)
-    return [pre_processar_doc(doc) for doc in docs]
-
-def pre_processing_database(file_path, column="description", batch_size=1000, n_process=1):
+    if(simples):
+        return [pre_processar_doc_simples(doc) for doc in docs]
+    else:
+        return [pre_processar_doc(doc) for doc in docs]
+    
+def pre_processing_database(file_path, column="description", batch_size=1000, n_process=1, simples = False):
     df = carregar_csv(file_path,column)
     textos = df[column].tolist()
-    resultados = processar_lote_textos(textos, batch_size, n_process)
+    resultados = processar_lote_textos(textos, batch_size, n_process, simples)
     return resultados, textos
