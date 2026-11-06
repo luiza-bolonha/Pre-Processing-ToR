@@ -1,12 +1,16 @@
-from arulespy.arules import Transactions, apriori, parameters
-from arulespy.arulesViz import plot
-from rpy2.ipython.ggplot import image_png
 import matplotlib.pyplot as plt
 from collections import Counter, defaultdict
 from itertools import combinations
 
 
 def get_rules_to_arulespy(transacoes, support):
+    try:
+        from arulespy.arules import Transactions, apriori, parameters
+        from arulespy.arulesViz import plot
+        from rpy2.ipython.ggplot import image_png
+    except ImportError as e:
+        raise ImportError(f'arulespy ou rpy2 nao disponivel no ambiente: {e}')
+
     transacoes_sanitizadas = [
         [str(item).strip() for item in trans if item and str(item).strip() != '']
         for trans in transacoes

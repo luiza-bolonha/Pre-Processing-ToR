@@ -6,7 +6,13 @@ from spacy.util import filter_spans
 
 nlp = spacy.load('pt_core_news_lg')
 
-nltk.download('stopwords')
+try:
+    nltk.corpus.stopwords.words('portuguese')
+except Exception:
+    try:
+        nltk.download('stopwords', quiet=True)
+    except Exception:
+        pass
 stopwords = set(nltk.corpus.stopwords.words('portuguese'))
 #stopwords = carregar_stopwords_personalizadas()
 

@@ -6,7 +6,13 @@ import numpy as np
 import spacy
 import nltk
 
-nltk.download('stopwords')
+try:
+    nltk.corpus.stopwords.words('portuguese')
+except Exception:
+    try:
+        nltk.download('stopwords', quiet=True)
+    except Exception:
+        pass
 stopwords = set(nltk.corpus.stopwords.words('portuguese'))
 
 def extrair_clusters(graphml_path, show_results=True):

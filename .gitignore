@@ -1,4 +1,5 @@
 .env
+variables.env
 /outputs
 /outputs_clusters
 /outputs_clusters_csv
@@ -10,3 +11,5 @@ __pycache__/
 *.pyc
 .vscode/
 .idea/
+grafo.pdf
+grafo.png
