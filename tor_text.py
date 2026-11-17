@@ -50,8 +50,26 @@ def parse_args():
     parser.add_argument(
         "-s", "--min-support",
         type=float,
-        default=0.05,
-        help="Minimum support threshold for ARM (default: 0.05)."
+        default=None,
+        help="Minimum support threshold for ARM (optional: if omitted, calculated dynamically)."
+    )
+    parser.add_argument(
+        "--target-words",
+        type=int,
+        default=50,
+        help="Target number of words for dynamic support calculation (default: 50)."
+    )
+    parser.add_argument(
+        "--min-nodes",
+        type=int,
+        default=4,
+        help="Minimum number of nodes required in the graph (default: 4)."
+    )
+    parser.add_argument(
+        "--target-nodes",
+        type=int,
+        default=None,
+        help="Target exact number of nodes desired in graph (optional binary search)."
     )
     parser.add_argument(
         "-a", "--alg",
@@ -128,7 +146,12 @@ def main():
     print("\n" + "-" * 60)
     print("Executing TOR for raw text:")
     print(f" - Algorithm: {args.alg}")
-    print(f" - Minimum Support: {args.min_support}")
+    if args.min_support is not None:
+        print(f" - Explicit Support: {args.min_support}")
+    elif args.target_nodes is not None:
+        print(f" - Target Nodes: ~{args.target_nodes}")
+    else:
+        print(f" - Dynamic Support Target: {args.target_words} words (min {args.min_nodes} nodes)")
     print(f" - Split Mode: {args.split}")
     print(f" - PDF Destination: {output_pdf}")
     print("-" * 60)
@@ -138,6 +161,9 @@ def main():
             texto_ou_arquivo=texto_input,
             alg=args.alg,
             min_support=args.min_support,
+            target_words=args.target_words,
+            min_nodes=args.min_nodes,
+            target_nodes=args.target_nodes,
             output_pdf=output_pdf,
             output_png=args.png,
             modo_divisao=args.split,

@@ -1,10 +1,16 @@
 import os
 import re
 import csv
+import tempfile
+from collections import Counter
 import pandas as pd
 import networkx as nx
 import nltk
 import spacy
+
+# Ensure clean temp cache for matplotlib
+os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "matplotlib"))
+
 from trieofrules import trieofrules
 import utils.analize_tor as ator
 import utils.other_visualizations as ovi
@@ -47,11 +53,139 @@ def garantir_diretorios(pastas=None):
     for p in pastas:
         os.makedirs(p, exist_ok=True)
 
-def gerar_tor(dados_processados, alg="FP-max", min_support=0.05, output_graphml=None):
+def calcular_suporte_otimo(
+    dados_processados,
+    alg="FP-max",
+    target_words=50,
+    min_nodes=4,
+    target_nodes=None,
+    min_support=None,
+    verbose=True
+):
+    """
+    Calculates the optimal ARM minimum support value dynamically.
+    - If min_support is None:
+        1. Estimates base support using target_words (default: 50 most frequent words).
+        2. Verifies whether the resulting Trie has at least min_nodes (default: 4 nodes).
+           If not, decreases support until the tree meets min_nodes.
+    - If target_nodes is provided:
+        Uses binary search to find the support value that achieves approximately target_nodes.
+    - If min_support is explicitly provided:
+        Validates against min_nodes (adjusting if fewer nodes were produced).
+    """
+    N = len(dados_processados)
+    if N == 0:
+        return 0.05
+
+    doc_freq = Counter()
+    for trans in dados_processados:
+        doc_freq.update(set(trans))
+
+    U = len(doc_freq)
+    if U == 0:
+        return 0.05
+
+    freqs = sorted(doc_freq.values(), reverse=True)
+    min_possible_support = max(0.0001, 1.0 / N)
+
+    # 1. Modo busca por número de nós exato (target_nodes)
+    if target_nodes is not None and target_nodes > 0:
+        low = min_possible_support
+        high = max(min_possible_support, freqs[0] / N)
+        best_support = low
+        best_diff = float("inf")
+
+        for _ in range(8):
+            mid = (low + high) / 2
+            try:
+                tor = trieofrules(data=dados_processados, alg=alg, min_support=mid)
+                nodes = tor.trie.number_of_nodes()
+            except Exception:
+                nodes = 0
+
+            diff = abs(nodes - target_nodes)
+            if diff < best_diff:
+                best_diff = diff
+                best_support = mid
+
+            if nodes < target_nodes:
+                high = mid  # suporte alto gera poucos nós, precisamos diminuir
+            else:
+                low = mid   # suporte baixo gera muitos nós, precisamos aumentar
+
+        final_support = round(best_support, 4 if best_support >= 0.001 else 5)
+        if verbose:
+            print(f"[Suporte Dinâmico] Alvo: ~{target_nodes} nós -> Suporte calculado: {final_support}")
+        return final_support
+
+    # 2. Modo baseado em palavras frequentes (target_words) e mínimo de nós (min_nodes)
+    if min_support is not None:
+        support = float(min_support)
+        motivo = f"valor explícito ({min_support})"
+    else:
+        target_w = target_words if target_words is not None and target_words > 0 else 50
+        idx = min(target_w - 1, U - 1)
+        freq_corte = freqs[idx]
+        support = max(min_possible_support, freq_corte / N)
+        palavras_usadas = min(target_w, U)
+        motivo = f"baseado em {palavras_usadas} palavras mais frequentes (freq={freq_corte}/{N})"
+
+    # Avalia quantos nós o suporte atual gera no grafo
+    try:
+        tor = trieofrules(data=dados_processados, alg=alg, min_support=support)
+        nodes = tor.trie.number_of_nodes()
+    except Exception:
+        nodes = 0
+
+    curr_support = support
+    ajustado = False
+    tentativas = 0
+    alvo_min_nodes = min_nodes if (min_nodes is not None and min_nodes > 0) else 4
+
+    while nodes < alvo_min_nodes and curr_support > min_possible_support and tentativas < 8:
+        tentativas += 1
+        ajustado = True
+        curr_support = max(min_possible_support, curr_support * 0.7)
+        try:
+            tor = trieofrules(data=dados_processados, alg=alg, min_support=curr_support)
+            nodes = tor.trie.number_of_nodes()
+        except Exception:
+            nodes = 0
+
+    final_support = round(curr_support, 4 if curr_support >= 0.001 else 5)
+    if verbose:
+        if ajustado:
+            print(f"[Suporte Dinâmico] Suporte ajustado para {final_support} para garantir pelo menos {alvo_min_nodes} nós (nós obtidos: {nodes}).")
+        else:
+            print(f"[Suporte Dinâmico] Suporte definido em {final_support} ({motivo}, gerando {nodes} nós no grafo).")
+
+    return final_support
+
+def gerar_tor(
+    dados_processados,
+    alg="FP-max",
+    min_support=None,
+    target_words=50,
+    min_nodes=4,
+    target_nodes=None,
+    output_graphml=None
+):
     """
     Generates the Trie of Rules (TOR) from tokenized transactions.
     Optionally saves the resulting graph in .graphml format.
+    If min_support is None or target_nodes is provided, calculates support dynamically.
     """
+    if min_support is None or target_nodes is not None:
+        min_support = calcular_suporte_otimo(
+            dados_processados=dados_processados,
+            alg=alg,
+            target_words=target_words,
+            min_nodes=min_nodes,
+            target_nodes=target_nodes,
+            min_support=min_support,
+            verbose=True
+        )
+
     print(f"Generating Trie of Rules (TOR) with alg='{alg}' and min_support={min_support}...")
     tor = trieofrules(data=dados_processados, alg=alg, min_support=min_support)
 
@@ -143,7 +277,10 @@ def processar_texto_livre(texto_ou_linhas, modo_divisao="paragrafos", min_tokens
 def executar_tor_para_texto(
     texto_ou_arquivo,
     alg="FP-max",
-    min_support=0.05,
+    min_support=None,
+    target_words=50,
+    min_nodes=4,
+    target_nodes=None,
     output_pdf="outputs/tor_texto.pdf",
     output_png=None,
     modo_divisao="paragrafos",
@@ -153,8 +290,9 @@ def executar_tor_para_texto(
     Direct pipeline for arbitrary text:
     1. Reads text (direct string or file)
     2. Tokenizes into transactions
-    3. Builds Trie of Rules (TOR)
-    4. Renders and saves vector PDF
+    3. Calculates optimal support dynamically (if min_support is None or target_nodes is set)
+    4. Builds Trie of Rules (TOR)
+    5. Renders and saves vector PDF
     * Does NOT compute or modify clusters. *
     """
     # 1. Fetch text content
@@ -176,16 +314,23 @@ def executar_tor_para_texto(
     if len(transacoes) == 0:
         raise ValueError("No valid transactions found after stopwords removal.")
 
-    # Dynamically adjust min_support if transactions count is low
-    if min_support * len(transacoes) < 1.0:
-        min_support = max(0.01, 1.0 / len(transacoes))
-        print(f"Adjusting min_support to {round(min_support, 3)} to accommodate transaction size.")
+    # 3. Calculate optimal support if not specified or target_nodes is passed
+    if min_support is None or target_nodes is not None:
+        min_support = calcular_suporte_otimo(
+            dados_processados=transacoes,
+            alg=alg,
+            target_words=target_words,
+            min_nodes=min_nodes,
+            target_nodes=target_nodes,
+            min_support=min_support,
+            verbose=True
+        )
 
-    # 3. Generate TOR
+    # 4. Generate TOR
     tor = gerar_tor(transacoes, alg=alg, min_support=min_support)
     print(f"TOR successfully constructed! Nodes in graph: {tor.trie.number_of_nodes()}")
 
-    # 4. Export visual PDF
+    # 5. Export visual PDF
     print(f"Drawing graph and generating PDF: {output_pdf}")
     pf.plotar_grafo(
         tor.trie,

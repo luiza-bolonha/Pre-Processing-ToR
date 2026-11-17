@@ -31,7 +31,10 @@ def main():
     p_news = subparsers.add_parser("news", help="Execute news articles pipeline")
     p_news.add_argument("--file", type=str, default="manifestacao_bolsonaro", help="Dataset filename in datasets/.")
     p_news.add_argument("--alg", type=str, default="FP-max", choices=["FP-max", "Apriori", "FP-growth"])
-    p_news.add_argument("--min-support", type=float, default=0.05)
+    p_news.add_argument("--min-support", type=float, default=None, help="Minimum support threshold (optional: calculated dynamically if omitted)")
+    p_news.add_argument("--target-words", type=int, default=50, help="Target number of words for support calculation (default: 50)")
+    p_news.add_argument("--min-nodes", type=int, default=4, help="Minimum number of nodes in graph (default: 4)")
+    p_news.add_argument("--target-nodes", type=int, default=None, help="Desired number of nodes in graph (optional)")
     p_news.add_argument("--no-paragrafos", action="store_true", help="Do not split by paragraphs")
     p_news.add_argument("--titulo", action="store_true", help="Use 'Título' column instead of 'Texto'")
     p_news.add_argument("--concordance", type=str, default="20 minutos", help="Concordance search keyword")
@@ -41,7 +44,10 @@ def main():
     p_social = subparsers.add_parser("social", help="Execute social media (tweets) pipeline")
     p_social.add_argument("--file", type=str, default="vacinal_2025_05", help="Dataset filename in process_datasets/.")
     p_social.add_argument("--alg", type=str, default="Apriori", choices=["FP-max", "Apriori", "FP-growth"])
-    p_social.add_argument("--min-support", type=float, default=0.009)
+    p_social.add_argument("--min-support", type=float, default=None, help="Minimum support threshold (optional: calculated dynamically if omitted)")
+    p_social.add_argument("--target-words", type=int, default=50, help="Target number of words for support calculation (default: 50)")
+    p_social.add_argument("--min-nodes", type=int, default=4, help="Minimum number of nodes in graph (default: 4)")
+    p_social.add_argument("--target-nodes", type=int, default=None, help="Desired number of nodes in graph (optional)")
     p_social.add_argument("--cluster-ia", type=int, default=10, help="Cluster index for LLM prompt")
     p_social.add_argument("--plot", action="store_true", help="Display interactive plots")
 
@@ -52,7 +58,10 @@ def main():
     g_text.add_argument("-f", "--file", type=str, help="Path to raw text file.")
     p_text.add_argument("-o", "--output", type=str, default=None, help="Destination PDF path.")
     p_text.add_argument("--png", type=str, default=None, help="Optional destination PNG path.")
-    p_text.add_argument("-s", "--min-support", type=float, default=0.05)
+    p_text.add_argument("-s", "--min-support", type=float, default=None, help="Minimum support threshold (optional: calculated dynamically if omitted)")
+    p_text.add_argument("--target-words", type=int, default=50, help="Target number of words for support calculation (default: 50)")
+    p_text.add_argument("--min-nodes", type=int, default=4, help="Minimum number of nodes in graph (default: 4)")
+    p_text.add_argument("--target-nodes", type=int, default=None, help="Desired number of nodes in graph (optional)")
     p_text.add_argument("-a", "--alg", type=str, default="FP-max", choices=["FP-max", "Apriori", "FP-growth"])
     p_text.add_argument("--split", type=str, default="paragrafos", choices=["paragrafos", "frases", "linhas"])
     p_text.add_argument("--show", action="store_true", help="Display interactive plot window")
@@ -68,6 +77,9 @@ def main():
             file_name_base=args.file,
             alg=args.alg,
             min_support=args.min_support,
+            target_words=args.target_words,
+            min_nodes=args.min_nodes,
+            target_nodes=args.target_nodes,
             separar_paragrafos=not args.no_paragrafos,
             is_titulo=args.titulo,
             termo_concordance=args.concordance,
@@ -78,6 +90,9 @@ def main():
             file_name_base=args.file,
             alg=args.alg,
             min_support=args.min_support,
+            target_words=args.target_words,
+            min_nodes=args.min_nodes,
+            target_nodes=args.target_nodes,
             cluster_ia=args.cluster_ia,
             plot=args.plot
         )

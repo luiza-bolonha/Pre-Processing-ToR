@@ -117,11 +117,14 @@ python -m spacy download pt_core_news_lg
 Quickly generates a Trie of Rules and exports a visual **PDF** from any input text **without creating or modifying clusters**:
 
 ```bash
-# Direct inline text argument:
-python tor_text.py --text "Artificial intelligence transforms healthcare. Data science and artificial intelligence accelerate medical discovery." --min-support 0.3 --output "outputs/my_tor.pdf"
+# Dynamic support auto-tuned for ~50 words and at least 4 nodes (default):
+python tor_text.py --text "Artificial intelligence transforms healthcare. Data science and artificial intelligence accelerate medical discovery."
 
-# From a text file (.txt or .csv):
-python tor_text.py --file "datasets/sample.txt" --min-support 0.05
+# Direct inline text argument with explicit support:
+python tor_text.py --text "Artificial intelligence transforms healthcare..." --min-support 0.3 --output "outputs/my_tor.pdf"
+
+# Target specific number of words or exact nodes:
+python tor_text.py --file "datasets/sample.txt" --target-words 40 --min-nodes 6
 
 # Interactive prompt (type or paste text in terminal):
 python tor_text.py
@@ -136,27 +139,35 @@ python tor_text.py
 | `-f`, `--file` | `str` | `None` | Path to text file to read |
 | `-o`, `--output` | `str` | `outputs/tor_texto_<date>.pdf` | Destination PDF path |
 | `--png` | `str` | `None` | Optional path to export a PNG image |
-| `-s`, `--min-support` | `float` | `0.05` | Minimum support threshold for ARM |
+| `-s`, `--min-support` | `float` | `None` (auto) | Explicit minimum support threshold (calculated automatically if omitted) |
+| `--target-words` | `int` | `50` | Target number of frequent words to base automatic support on |
+| `--min-nodes` | `int` | `4` | Minimum number of nodes required in the Trie graph |
+| `--target-nodes` | `int` | `None` | Target exact number of nodes desired in graph (via binary search) |
 | `-a`, `--alg` | `str` | `FP-max` | Algorithm (`FP-max`, `Apriori`, or `FP-growth`) |
 | `--split` | `str` | `paragrafos` | Transaction split mode (`paragrafos`, `frases`, or `linhas`) |
 | `--show` | `flag` | `False` | Displays interactive Matplotlib plot window |
 
 ---
 
-### 2. Unified Command-Line Interface (`main.py`)
+### 2. Unified Command-Line Interface (`main.py` / `main.bat`)
 
-Run complete pipelines directly from the terminal:
+Run complete pipelines directly from the terminal (support is calculated automatically if `--min-support` is omitted):
 
 ```bash
-# News Article Pipeline:
-python main.py news --file manifestacao_bolsonaro --alg FP-max --min-support 0.05
+# News Article Pipeline (auto support targeting 50 words and at least 4 nodes):
+python main.py news --file manifestacao_bolsonaro --alg FP-max
+
+# News Article Pipeline with explicit support or target nodes:
+python main.py news --file manifestacao_bolsonaro --alg FP-max --target-words 40 --min-nodes 5
 
 # Social Media Pipeline:
-python main.py social --file vacinal_2025_05 --alg Apriori --min-support 0.009 --cluster-ia 10
+python main.py social --file vacinal_2025_05 --alg Apriori --cluster-ia 10
 
 # Free Text to PDF Mode:
 python main.py text --text "Sample text..." --output "outputs/network.pdf"
 ```
+
+*On Windows, you can also use `main.bat` directly (e.g. `main.bat news --file manifestacao_bolsonaro`).*
 
 ---
 
