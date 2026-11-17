@@ -1,9 +1,14 @@
 import os
+import tempfile
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from fa2_modified import ForceAtlas2
+
+# Ensure clean temp cache for matplotlib
+os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "matplotlib"))
+
 
 # ---------- 1. Helper Functions ----------
 def ranking(values, minimum, maximum):
@@ -16,14 +21,16 @@ def ranking(values, minimum, maximum):
         return np.full_like(v, (minimum + maximum) / 2)
     return minimum + (v - v.min()) / (v.max() - v.min()) * (maximum - minimum)
 
-def rotacionar(pos, degrees):
+
+def rotate(pos, degrees):
     """Rotates layout positions by given degrees (similar to Gephi's Rotation)."""
     a = np.radians(degrees)
     R = np.array([[np.cos(a), -np.sin(a)],
                   [np.sin(a),  np.cos(a)]])
     return {n: R @ np.array(p) for n, p in pos.items()}
 
-def plotar_grafo(G, output_pdf="grafo.pdf", output_png=None, show=True, figsize=(14, 14)):
+
+def plot_graph(G, output_pdf="graph.pdf", output_png=None, show=True, figsize=(14, 14)):
     """
     Renders graph using ForceAtlas2 layout refined by spring_layout
     and exports directly to vector PDF (and optionally PNG).
@@ -33,22 +40,22 @@ def plotar_grafo(G, output_pdf="grafo.pdf", output_png=None, show=True, figsize=
         return
 
     # ---------- 2. Node Attributes ----------
-    nos = list(G.nodes())
-    suporte   = [float(G.nodes[n].get("support", 0.0))    for n in nos]
-    confianca = [float(G.nodes[n].get("confidence", 0.0)) for n in nos]
-    rotulos   = {n: str(G.nodes[n].get("value", n)) for n in nos}
+    nodes = list(G.nodes())
+    support    = [float(G.nodes[n].get("support", 0.0))    for n in nodes]
+    confidence = [float(G.nodes[n].get("confidence", 0.0)) for n in nodes]
+    labels     = {n: str(G.nodes[n].get("value", n)) for n in nodes}
 
     # Node Size: linear ranking between 10 and 60
-    tam_gephi = ranking(suporte, 10, 60)
+    gephi_size = ranking(support, 10, 60)
 
     # Node Color: mapped by confidence
-    c_min = min(confianca) if confianca else 0.0
-    c_max = max(confianca) if confianca else 1.0
+    c_min = min(confidence) if confidence else 0.0
+    c_max = max(confidence) if confidence else 1.0
     if c_max == c_min:
         c_max = c_min + 1.0
     norm = Normalize(vmin=c_min, vmax=c_max)
     cmap = plt.cm.viridis
-    cores = [cmap(norm(c)) for c in confianca]
+    colors = [cmap(norm(c)) for c in confidence]
 
     # ---------- 3. Layout: ForceAtlas2 -> Spring Refinement ----------
     try:
@@ -78,13 +85,13 @@ def plotar_grafo(G, output_pdf="grafo.pdf", output_png=None, show=True, figsize=
 
     nx.draw_networkx_nodes(
         G, pos, ax=ax,
-        nodelist=nos,
-        node_size=tam_gephi ** 2 / 2,
-        node_color=cores,
+        nodelist=nodes,
+        node_size=gephi_size ** 2 / 2,
+        node_color=colors,
         edgecolors="black", linewidths=0.5,
     )
 
-    nx.draw_networkx_labels(G, pos, labels=rotulos, font_size=8, ax=ax)
+    nx.draw_networkx_labels(G, pos, labels=labels, font_size=8, ax=ax)
 
     # Colorbar indicating confidence
     sm = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
@@ -108,5 +115,9 @@ def plotar_grafo(G, output_pdf="grafo.pdf", output_png=None, show=True, figsize=
 
     if show:
         plt.show()
-    else:
-        plt.close(fig)
+    plt.close(fig)
+
+
+# Backwards compatibility aliases
+plotar_grafo = plot_graph
+rotacionar = rotate

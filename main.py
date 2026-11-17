@@ -11,7 +11,11 @@ Unified command-line entry point for the Pre-Processing-ToR framework:
 
 import sys
 import os
+import tempfile
 import argparse
+
+# Ensure clean temp cache for matplotlib
+os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "matplotlib"))
 
 # Ensure project root in sys.path
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))

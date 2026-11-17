@@ -10,8 +10,12 @@ from any arbitrary text (inline string, text file, or interactive prompt).
 
 import sys
 import os
+import tempfile
 import argparse
 from datetime import datetime
+
+# Ensure clean temp cache for matplotlib
+os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "matplotlib"))
 
 # Ensure project root is in sys.path
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))

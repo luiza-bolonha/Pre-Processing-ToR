@@ -69,8 +69,7 @@ def pre_processar_txt(texto):
                 tokens.append(token.text)
             i += 1
 
-        tokens_unicos = list(dict.fromkeys(tokens))
-    return tokens_unicos
+    return list(dict.fromkeys(tokens))
 
 
 def pre_processar_txt_simples(texto):

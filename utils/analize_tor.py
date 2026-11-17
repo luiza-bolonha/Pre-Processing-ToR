@@ -2,8 +2,6 @@ import networkx as nx
 import re
 from collections import Counter
 import pandas as pd
-import numpy as np
-import spacy
 import nltk
 
 try:

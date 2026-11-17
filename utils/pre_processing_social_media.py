@@ -85,8 +85,7 @@ def pre_processar_doc(doc):
         else:
             i += 1
 
-        tokens_unicos = list(dict.fromkeys(tokens))
-    return tokens_unicos
+    return list(dict.fromkeys(tokens))
 
 def pre_processar_doc_simples(doc):
     matches = matcher_simples(doc)
@@ -110,8 +109,7 @@ def pre_processar_doc_simples(doc):
             i = span.end
         else:
             i += 1
-        tokens_unicos = list(dict.fromkeys(tokens))
-    return tokens_unicos
+    return list(dict.fromkeys(tokens))
 
 
 def processar_lote_textos(lista_de_textos, batch_size=1000, n_process=1, simples = False):

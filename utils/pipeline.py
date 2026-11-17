@@ -198,20 +198,22 @@ def gerar_tor(
 
     return tor
 
-def separar_e_salvar_clusters(graphml_path, file_name, pasta="outputs_clusters"):
+def separar_e_salvar_clusters(graphml_path, file_name, pasta="outputs_clusters", show=False):
     """
     Decomposes graph into central core and peripheral sub-clusters,
-    saving both sub-graphs to disk.
+    rendering both sub-graphs as vector PDF.
     """
     os.makedirs(pasta, exist_ok=True)
     print("Separating central core from peripheral clusters...")
     g_central, g_perifericos = ator.separar_clusters_por_tamanho(graphml_path)
 
-    path_central = os.path.join(pasta, f"{file_name}_cluster_central.graphml")
-    path_perifericos = os.path.join(pasta, f"{file_name}_clusters_perifericos.graphml")
+    path_central = os.path.join(pasta, f"{file_name}_cluster_central.pdf")
+    path_perifericos = os.path.join(pasta, f"{file_name}_clusters_perifericos.pdf")
 
-    nx.write_graphml(g_central, path_central)
-    nx.write_graphml(g_perifericos, path_perifericos)
+    print("Rendering central core cluster...")
+    pf.plotar_grafo(g_central, output_pdf=path_central, show=show)
+    print("Rendering peripheral clusters...")
+    pf.plotar_grafo(g_perifericos, output_pdf=path_perifericos, show=show)
     print(f"Clusters saved to:\n - Central Core: {path_central}\n - Peripherals: {path_perifericos}")
 
     return g_central, g_perifericos, path_central, path_perifericos

@@ -55,10 +55,12 @@ The project natively supports multiple data modalities:
 ```plaintext
 Pre-Processing-ToR/
 ├── datasets/                     # Input datasets (.csv)
+├── process_datasets/             # Processed datasets for social media (.csv)
 ├── utils/                        # Core utilities and pipeline functions
-│   ├── pipeline.py               # Shared orchestration routines (DRY architecture)
+│   ├── pipeline.py               # Shared orchestration routines & dynamic support calculation
 │   ├── pre_processing_news.py    # News text preprocessing and tokenization
 │   ├── pre_processing_social_media.py # Social media cleaner and tokenizer
+│   ├── processing_database.py    # Dataset filtering, deduplication and date range utilities
 │   ├── analize_tor.py            # Cluster extraction, concordance, and LLM prompt generation
 │   ├── processing_file.py        # ForceAtlas2 graph drawing to PDF/PNG
 │   ├── other_visualizations.py   # Word rankings and co-occurrence graph exporter (.gdf)
@@ -69,11 +71,9 @@ Pre-Processing-ToR/
 ├── tor_text.py                   # ⭐ Standalone CLI: Raw text to TOR PDF (no clusters)
 ├── tor_text.bat                  # ⭐ Windows batch shortcut for tor_text.py
 ├── main.py                       # ⭐ Unified CLI dispatcher (news, social, text)
+├── main.bat                      # ⭐ Windows batch shortcut for main.py
 ├── main_news.py                  # Standalone script for news pipeline
 ├── main_social_media.py          # Standalone script for social media pipeline
-├── main_news.ipynb               # Interactive Jupyter notebook for news
-├── main_social_media.ipynb       # Interactive Jupyter notebook for social media
-├── processing_database.ipynb     # Database cleaning and temporal filtering notebook
 ├── requirements.txt              # Project package dependencies
 └── README.md                     # Documentation
 ```
@@ -185,13 +185,19 @@ You can also invoke domain modules directly:
 
 ---
 
-### 4. Interactive Jupyter Notebooks
+### 4. Windows Batch Shortcuts (`CMD`)
 
-For step-by-step exploratory analysis with inline visualizations:
-* [`main_news.ipynb`](main_news.ipynb): Tailored for journalistic articles.
-* [`main_social_media.ipynb`](main_social_media.ipynb): Tailored for social media posts.
-
-Both notebooks are organized into standardized blocks with centralized configuration cells at the top.
+For fast terminal execution without needing to specify Python paths:
+* **`main.bat`**: Direct CLI wrapper for `main.py` that auto-detects `venv` or Python 3.12:
+  ```cmd
+  main.bat news --file manifestacao_bolsonaro
+  main.bat social --file vacinal_2025_05
+  main.bat text --text "Meu texto para gerar grafo"
+  ```
+* **`tor_text.bat`**: Direct CLI wrapper for `tor_text.py` with interactive prompt support:
+  ```cmd
+  tor_text.bat
+  ```
 
 ---
 
@@ -205,7 +211,7 @@ flowchart TD
     D --> E["Rules Graph (.graphml)"]
     E --> F["ForceAtlas2 Visualization<br/>(Vector PDF & High-Res PNG)"]
     
-    E --> G["Cluster Decomposition<br/>(Central Core vs. Peripheral Sub-graphs)"]
+    E --> G["Cluster Decomposition<br/>(Central Core vs. Peripheral PDFs)"]
     G --> H["Thematic Mapping & KWIC Concordance"]
     G --> I["LLM Synthesis Prompt Generation"]
     

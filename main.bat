@@ -1,6 +1,11 @@
 @echo off
 setlocal
-set PYTHON_EXE=C:\Users\luiza\AppData\Local\Programs\Python\Python312\python.exe
+
+set PYTHON_EXE=%~dp0venv\Scripts\python.exe
+
+if not exist "%PYTHON_EXE%" (
+    set PYTHON_EXE=C:\Users\luiza\AppData\Local\Programs\Python\Python312\python.exe
+)
 
 if not exist "%PYTHON_EXE%" (
     set PYTHON_EXE=python
