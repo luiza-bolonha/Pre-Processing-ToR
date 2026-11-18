@@ -1,208 +1,221 @@
-import networkx as nx
+"""
+Analysis on top of a saved TOR graph (.graphml):
+cluster extraction, core/periphery split, text-to-cluster mapping,
+LLM prompt generation, text recommendation and KWIC concordance.
+"""
+
 import re
-from collections import Counter
-import pandas as pd
+
+import networkx as nx
 import nltk
 
 try:
-    nltk.corpus.stopwords.words('portuguese')
+    nltk.corpus.stopwords.words("portuguese")
 except Exception:
     try:
-        nltk.download('stopwords', quiet=True)
+        nltk.download("stopwords", quiet=True)
     except Exception:
         pass
-stopwords = set(nltk.corpus.stopwords.words('portuguese'))
+stopwords = set(nltk.corpus.stopwords.words("portuguese"))
 
-def extrair_clusters(graphml_path, show_results=True):
-    G = nx.read_graphml(graphml_path)
-    if "0" in G:
-        G.remove_node("0")
+# In graphs read from .graphml, node ids are strings: the TOR root is "0".
+ROOT_ID = "0"
 
-    def nome(n):
-        return G.nodes[n].get("value", n)
 
-    componentes = []
-    visitados = set()
+def _load_graph_without_root(graphml_path):
+    graph = nx.read_graphml(graphml_path)
+    if ROOT_ID in graph:
+        graph.remove_node(ROOT_ID)
+    return graph
 
-    for raiz in G.nodes:
-        if raiz in visitados or G.out_degree(raiz) == 0:
+
+def extract_clusters(graphml_path, show_results=True):
+    """
+    Splits the TOR (without its root) into clusters: each first-level node with
+    descendants becomes a cluster, described by its branches (root-to-leaf paths).
+    """
+    graph = _load_graph_without_root(graphml_path)
+
+    def label(node):
+        return graph.nodes[node].get("value", node)
+
+    clusters = []
+    visited = set()
+
+    for root in graph.nodes:
+        if root in visited or graph.out_degree(root) == 0:
             continue
 
-        descendentes = nx.descendants(G, raiz)
-        cluster_nos = {raiz} | descendentes
-        if len(cluster_nos) <= 1:
-            continue
+        cluster_nodes = {root} | nx.descendants(graph, root)
+        visited |= cluster_nodes
 
-        visitados |= cluster_nos
+        leaves = [n for n in cluster_nodes if graph.out_degree(n) == 0]
+        branches = []
+        branch_words = set()
+        for leaf in leaves:
+            for path in nx.all_simple_paths(graph, root, leaf):
+                path_labels = [label(n) for n in path]
+                branches.append(path_labels)
+                branch_words.update(path_labels[1:])
 
-        folhas = [n for n in cluster_nos if G.out_degree(n) == 0]
-        ramos = []
-        palavras_ramos = set()
-        for folha in folhas:
-            for caminho in nx.all_simple_paths(G, raiz, folha):
-                caminho_nomes = [nome(n) for n in caminho]
-                ramos.append(caminho_nomes)
-                palavras_ramos.update(caminho_nomes[1:])
-
-        componentes.append({
-            "raiz": nome(raiz),
-            "ramos": ramos,
-            "n_nos": len(cluster_nos),
-            "ids": cluster_nos,
-            "palavras": list(palavras_ramos)
+        clusters.append({
+            "root": label(root),
+            "branches": branches,
+            "n_nodes": len(cluster_nodes),
+            "ids": cluster_nodes,
+            "words": list(branch_words),
         })
 
-    if(show_results):
-        for idx, c in enumerate(componentes, 1):
-            print(f"Cluster {idx} — Raiz: {c['raiz']} — {c['n_nos']} nós")
-            print("Ramos: ")
-            for ramo in c["ramos"]:
-                print(" → ".join(ramo))
-            print("Palavras:")
-            print(", ".join(c["palavras"]))
+    if show_results:
+        for idx, cluster in enumerate(clusters, 1):
+            print(f"Cluster {idx} — Root: {cluster['root']} — {cluster['n_nodes']} nodes")
+            print("Branches:")
+            for branch in cluster["branches"]:
+                print(" → ".join(branch))
+            print("Words:")
+            print(", ".join(cluster["words"]))
             print("-" * 80)
 
-    return componentes
+    return clusters
 
-def separar_clusters_por_tamanho(graphml_path):
-    G = nx.read_graphml(graphml_path)
-    G_central = nx.DiGraph()
-    G_perifericos = nx.DiGraph()
 
-    # Armazena os atributos do nó "0" e suas arestas
-    origem_presente = "0" in G
-    if origem_presente:
-        atributos_0 = G.nodes["0"]
-        arestas_de_0 = list(G.out_edges("0", data=True))
-        arestas_para_0 = list(G.in_edges("0", data=True))
+def split_core_and_peripheral(graphml_path):
+    """
+    Splits the TOR into two graphs:
+      - core:       first-level items without children (single nodes)
+      - peripheral: first-level items that have descendants (subtrees)
+    The root node and its edges are kept in both graphs.
+    """
+    graph = nx.read_graphml(graphml_path)
+    core = nx.DiGraph()
+    peripheral = nx.DiGraph()
 
-    for vizinho in G.successors("0") if origem_presente else G.nodes:
-        if vizinho == "0":
+    has_root = ROOT_ID in graph
+    first_level = graph.successors(ROOT_ID) if has_root else graph.nodes
+
+    for child in first_level:
+        if child == ROOT_ID:
             continue
-
-        subnos = nx.descendants(G, vizinho) | {vizinho}
-        subgrafo = G.subgraph(subnos).copy()
-
-        if len(subgrafo.nodes) <= 1:
-            G_central = nx.compose(G_central, subgrafo)
+        subtree = graph.subgraph(nx.descendants(graph, child) | {child}).copy()
+        if len(subtree) <= 1:
+            core = nx.compose(core, subtree)
         else:
-            G_perifericos = nx.compose(G_perifericos, subgrafo)
+            peripheral = nx.compose(peripheral, subtree)
 
-    # Adiciona "0" e suas arestas aos dois grafos se necessário
-    if origem_presente:
-        for G_cluster in [G_central, G_perifericos]:
-            G_cluster.add_node("0", **atributos_0)
-            for u, v, data in arestas_de_0:
-                if v in G_cluster:
-                    G_cluster.add_edge(u, v, **data)
-            for u, v, data in arestas_para_0:
-                if u in G_cluster:
-                    G_cluster.add_edge(u, v, **data)
+    if has_root:
+        root_attrs = graph.nodes[ROOT_ID]
+        root_edges = list(graph.out_edges(ROOT_ID, data=True)) + list(graph.in_edges(ROOT_ID, data=True))
+        for subgraph in (core, peripheral):
+            subgraph.add_node(ROOT_ID, **root_attrs)
+            for u, v, data in root_edges:
+                other = v if u == ROOT_ID else u
+                if other in subgraph:
+                    subgraph.add_edge(u, v, **data)
 
-    return G_central, G_perifericos
+    return core, peripheral
 
-def tweets_clusters(clusters, textos_tokenizados, textos_originais):
-    resultados = []
 
-    for idx, c in enumerate(clusters, 1):
-        ramos_sets = [set(r) for r in c["ramos"]]
-        tweets_relevantes = []
+def map_texts_to_clusters(clusters, tokenized_texts, original_texts):
+    """
+    For each cluster, collects the texts that contain every word of at least
+    one of its branches.
+    """
+    results = []
 
-        for i, tokens in enumerate(textos_tokenizados):
-            tokens_set = set(tokens)
-            if any(ramo.issubset(tokens_set) for ramo in ramos_sets):
-                tweets_relevantes.append({
-                    "tweet": textos_originais[i],
-                    "index": i
-                })
+    for idx, cluster in enumerate(clusters, 1):
+        branch_sets = [set(branch) for branch in cluster["branches"]]
+        related = [
+            {"tweet": original_texts[i], "index": i}
+            for i, tokens in enumerate(tokenized_texts)
+            if any(branch.issubset(tokens) for branch in branch_sets)
+        ]
 
-        resultados.append({
+        results.append({
             "cluster_idx": idx,
-            "raiz": c["raiz"],
-            "n_nos": c["n_nos"],
-            "n_tweets": len(tweets_relevantes),
-            "tweets": tweets_relevantes
+            "root": cluster["root"],
+            "n_nodes": cluster["n_nodes"],
+            "n_tweets": len(related),
+            "tweets": related,
         })
+        print(f"Cluster {idx} ({cluster['root']}) — {len(related)} related tweets")
 
-        print(f"Cluster {idx} ({c['raiz']}) — {len(tweets_relevantes)} tweets relacionados")
-
-    return resultados
-
-def prompt_IA(c):
-    prompt = f"Considere os tweets a seguir, que foram identificados como relacionados ao assunto {c['raiz']}. Eles mencionam com frequência palavras como: {', '.join(c['palavras'])}. Com base nesse conteúdo, gere um pequeno texto de 1 a 2 parágrafos, com uma síntese clara e objetiva sobre o que está sendo discutido nos tweets. O texto deve ajudar qualquer pessoa a entender rapidamente o teor das conversas, mesmo que ela não tenha lido os tweets originais. Retorne somente o resumo."
-    return prompt
-
-def limpar_texto(texto):
-        # Remove pontuação e coloca tudo em minúsculas
-        return re.findall(r'\b\w+\b', texto.lower())
-
-def extrair_palavras_relevantes(graphml_path):
-    G = nx.read_graphml(graphml_path)
-
-    # Remove nó raiz vazio se existir
-    if "0" in G:
-        G.remove_node("0")
-
-    palavras = set()
-    for n in G.nodes:
-        valor = G.nodes[n].get("value")
-        if valor:
-            palavras.update(valor.split())
-
-    filtrada = [item for item in palavras if item not in stopwords]
-    return sorted(filtrada)
+    return results
 
 
-def recomendar_texto(lista_textos, graphml_path):    
-    palavras_relevantes = extrair_palavras_relevantes(graphml_path)
-    melhor_indice = -1
-    melhor_pontuacao = 0
-    
-    for i, texto in enumerate(lista_textos):
-        palavras = limpar_texto(texto)
-        if not palavras:
+def build_llm_prompt(cluster):
+    """Builds an LLM prompt (in Portuguese, the language of the data) to summarize a cluster."""
+    return (
+        f"Considere os tweets a seguir, que foram identificados como relacionados ao assunto "
+        f"{cluster['root']}. Eles mencionam com frequência palavras como: {', '.join(cluster['words'])}. "
+        "Com base nesse conteúdo, gere um pequeno texto de 1 a 2 parágrafos, com uma síntese clara "
+        "e objetiva sobre o que está sendo discutido nos tweets. O texto deve ajudar qualquer pessoa "
+        "a entender rapidamente o teor das conversas, mesmo que ela não tenha lido os tweets "
+        "originais. Retorne somente o resumo."
+    )
+
+
+def tokenize_words(text):
+    """Lowercases the text and returns its words (punctuation removed)."""
+    return re.findall(r"\b\w+\b", text.lower())
+
+
+def extract_relevant_words(graphml_path):
+    """Returns the sorted, stopword-free words used in the TOR node labels."""
+    graph = _load_graph_without_root(graphml_path)
+
+    words = set()
+    for _, data in graph.nodes(data=True):
+        value = data.get("value")
+        if value:
+            words.update(value.split())
+
+    return sorted(w for w in words if w not in stopwords)
+
+
+def recommend_text(texts, graphml_path):
+    """
+    Returns the text with the highest proportion of TOR words
+    (relevant words / distinct words), i.e. the most informative and concise one.
+    """
+    relevant_words = set(extract_relevant_words(graphml_path))
+    best_index = -1
+    best_score = 0
+
+    for i, text in enumerate(texts):
+        words = tokenize_words(text)
+        if not words:
             continue
-        total = len(set(palavras))
-        relevantes = sum(1 for p in palavras if p in palavras_relevantes)
-        proporcao = relevantes / total
-    
-        if proporcao > melhor_pontuacao:
-            melhor_pontuacao = proporcao
-            melhor_indice = i
-        
-    print(f"Melhor proporção: {round((melhor_pontuacao*100),2)}%")
-    texto_recomendado = lista_textos[melhor_indice] if melhor_indice != -1 else None
-    print(f"Número de palavras: {len(texto_recomendado.split())}")
-    return texto_recomendado
+        relevant = sum(1 for w in words if w in relevant_words)
+        score = relevant / len(set(words))
+        if score > best_score:
+            best_score = score
+            best_index = i
 
-def concordance(list_values, termo, largura=32, case_sensitive=False):
-    texto = " ".join(list_values).lower()
-    
+    print(f"Best ratio: {round(best_score * 100, 2)}%")
+    if best_index == -1:
+        return None
+    recommended = texts[best_index]
+    print(f"Number of words: {len(recommended.split())}")
+    return recommended
+
+
+def concordance(texts, term, width=32, case_sensitive=False):
+    """Prints every occurrence of `term` with `width` characters of context (KWIC)."""
+    text = " ".join(texts)
     if not case_sensitive:
-        texto_proc = texto.lower()
-        termo_proc = termo.lower()
-    else:
-        texto_proc = texto
-        termo_proc = termo
+        text = text.lower()
+        term = term.lower()
 
-    ocorrencias = [m.start() for m in re.finditer(re.escape(termo_proc), texto_proc)]
-    resultados = []
+    lines = []
+    for match in re.finditer(re.escape(term), text):
+        start = match.start()
+        end = start + len(term)
+        left = text[max(0, start - width):start].replace("\n", " ")
+        right = text[end:min(len(text), end + width)].replace("\n", " ")
+        # Left padding aligns the term on the same column in every line
+        padding = " " * max(0, width - len(left))
+        lines.append(f"{padding}{left}{text[start:end]}{right}")
 
-    for i in ocorrencias:
-        inicio = max(0, i - largura)
-        fim = min(len(texto), i + len(termo) + largura)
-
-        esquerda = texto[inicio:i].replace('\n', ' ')
-        centro = texto[i:i+len(termo)]
-        direita = texto[i+len(termo):fim].replace('\n', ' ')
-
-        # Calcula quantos espaços são necessários para alinhar o termo na coluna `largura`
-        padding = largura - len(esquerda)
-        padding = max(0, padding)
-
-        linha = f"{' ' * padding}{esquerda}{centro}{direita}"
-        resultados.append(linha)
-
-    print(f"Número de ocorrências: {len(resultados)}\n")
-    for r in resultados:
-        print(r)
+    print(f"Number of occurrences: {len(lines)}\n")
+    for line in lines:
+        print(line)

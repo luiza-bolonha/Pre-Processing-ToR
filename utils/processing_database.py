@@ -1,78 +1,64 @@
-import spacy
-from tqdm import tqdm
+"""Dataset utilities: summary info, date filtering and near-duplicate removal."""
+
 import pandas as pd
+from tqdm import tqdm
 
-
-def info_file(file_path):
-    df = pd.read_csv(file_path)
-    info_df(df)
-
-
-def info_df(df):
-    df['createdAt'] = pd.to_datetime(df['createdAt'], format='mixed')
-
-    menor_data = df['createdAt'].min()
-    maior_data = df['createdAt'].max()
-
-    num_linhas = len(df)
-    print(f"A base tem {num_linhas} linhas.")
-
-    print(f"A menor data é: {menor_data}")
-    print(f"A maior data é: {maior_data}")
-
-
-def cut_database_by_date(original_file, start_date, end_date):
-    df = pd.read_csv(original_file)
-
-    df['createdAt'] = pd.to_datetime(df['createdAt'], format='mixed')
-    df_ordenado = df.sort_values(by='createdAt')
-
-    data_inicio = pd.Timestamp(start_date)
-    data_fim = pd.Timestamp(end_date)
-    df_new_database = df_ordenado[(df_ordenado['createdAt'] >= data_inicio) & (df_ordenado['createdAt'] < data_fim)]
-
-    return df_new_database
-
+DATE_COLUMN = "createdAt"
 
 _nlp = None
 
 
 def _get_nlp():
+    """Loads the Portuguese SpaCy model on demand (large, falling back to small)."""
     global _nlp
     if _nlp is None:
+        import spacy
         try:
-            _nlp = spacy.load('pt_core_news_lg')
+            _nlp = spacy.load("pt_core_news_lg")
         except Exception:
-            _nlp = spacy.load('pt_core_news_sm')
+            _nlp = spacy.load("pt_core_news_sm")
     return _nlp
 
 
-def remover_textos_semelhantes_spacy(file, column="description", threshold=0.92):
-    df = pd.read_csv(file)
+def info_file(file_path):
+    """Prints the row count and date range of a CSV file."""
+    info_df(pd.read_csv(file_path))
 
-    print(f"Tamanho arquivo original: {len(df)}")
+
+def info_df(df):
+    """Prints the row count and date range of a DataFrame."""
+    dates = pd.to_datetime(df[DATE_COLUMN], format="mixed")
+    print(f"The dataset has {len(df)} rows.")
+    print(f"Earliest date: {dates.min()}")
+    print(f"Latest date: {dates.max()}")
+
+
+def cut_database_by_date(original_file, start_date, end_date):
+    """Returns the rows with start_date <= createdAt < end_date, sorted by date."""
+    df = pd.read_csv(original_file)
+    df[DATE_COLUMN] = pd.to_datetime(df[DATE_COLUMN], format="mixed")
+    df = df.sort_values(by=DATE_COLUMN)
+    in_range = (df[DATE_COLUMN] >= pd.Timestamp(start_date)) & (df[DATE_COLUMN] < pd.Timestamp(end_date))
+    return df[in_range]
+
+
+def remove_similar_texts(file, column="description", threshold=0.92):
+    """
+    Removes near-duplicate texts using SpaCy vector similarity:
+    a text is dropped if it is >= `threshold` similar to one already kept.
+    """
+    df = pd.read_csv(file)
+    print(f"Original file size: {len(df)}")
 
     nlp = _get_nlp()
-    textos = df[column].astype(str).tolist()
-    docs = list(nlp.pipe(textos, batch_size=1000))
+    docs = list(nlp.pipe(df[column].astype(str).tolist(), batch_size=1000))
 
-    indices_para_manter = []
-    indices_vistos = []
+    kept = []
+    for i, doc in enumerate(tqdm(docs, desc="Checking similarity")):
+        if all(doc.similarity(docs[j]) < threshold for j in kept):
+            kept.append(i)
 
-    for i, doc_i in enumerate(tqdm(docs, desc="Verificando similaridade")):
-        duplicado = False
-        for j in indices_vistos:
-            if doc_i.similarity(docs[j]) >= threshold:
-                duplicado = True
-                break
-        if not duplicado:
-            indices_para_manter.append(i)
-            indices_vistos.append(i)
-
-    df_filtrado = df.iloc[indices_para_manter].reset_index(drop=True)
-
-    total_removidos = len(df) - len(df_filtrado)
-    print(f"Índices removidos: {total_removidos}")
-    print(f"Tamanho arquivo processado: {len(df_filtrado)}")
-
-    return df_filtrado
+    df_filtered = df.iloc[kept].reset_index(drop=True)
+    print(f"Rows removed: {len(df) - len(df_filtered)}")
+    print(f"Processed file size: {len(df_filtered)}")
+    return df_filtered

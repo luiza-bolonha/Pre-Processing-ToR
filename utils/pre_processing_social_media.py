@@ -1,128 +1,139 @@
+"""Preprocessing for social media posts / tweets (Portuguese)."""
+
 import re
-import spacy
+
 import nltk
+import spacy
 from spacy.matcher import Matcher
 from spacy.util import filter_spans
-from utils.io_helpers import carregar_csv
 
-URL_MENCAO_REGEX = re.compile(r"http\S+|www\S+|https\S+|@\w+|#")
+from utils.io_helpers import load_csv
+
+URL_MENTION_REGEX = re.compile(r"http\S+|www\S+|https\S+|@\w+|#")
 EMOJI_SYMBOL_REGEX = re.compile(r"[^\w\s\-áéíóúâêôãõç]", flags=re.UNICODE)
 
-ABREVIACOES = {
+# Common Portuguese internet abbreviations -> full word
+ABBREVIATIONS = {
     "q": "que", "pq": "porque", "vc": "você", "vcs": "vocês", "tb": "também",
     "blz": "beleza", "hj": "hoje", "amanha": "amanhã", "mt": "muito", "td": "tudo",
     "obg": "obrigado", "vlw": "valeu", "msg": "mensagem", "n": "não", "s": "sim",
-    "tbm": "também", "p": "para", "nao": "não"
+    "tbm": "também", "p": "para", "nao": "não",
 }
+ABBREVIATIONS_REGEX = re.compile(
+    r"\b(" + "|".join(map(re.escape, ABBREVIATIONS)) + r")\b", flags=re.IGNORECASE
+)
 
-ABREVIACOES_REGEX = re.compile(r'\b(' + '|'.join(map(re.escape, ABREVIACOES.keys())) + r')\b', flags=re.IGNORECASE)
+MIN_TOKEN_LENGTH = 3
 
-nlp = spacy.load('pt_core_news_lg')
+nlp = spacy.load("pt_core_news_lg")
 
+# Full matcher: quantity expressions + nouns, proper nouns and adjectives
 matcher = Matcher(nlp.vocab)
-matcher_simples = Matcher(nlp.vocab)
-matcher.add("NUM_UNIDADE", [[
+matcher.add("NUM_UNIT", [[
     {"LIKE_NUM": True},
     {"LOWER": {"IN": ["mil", "milhão", "milhões", "bilhão", "bilhões"]}, "OP": "?"},
     {"LOWER": "de", "OP": "?"},
-    {"POS": "NOUN"}
+    {"POS": "NOUN"},
 ]])
-matcher.add("SUBSTANTIVOS", [[{"POS": "NOUN"}]])
-matcher.add("PROPRIOS", [[{"POS": "PROPN"}]])
-matcher.add("ADJETIVOS", [[{"POS": "ADJ"}]])
+matcher.add("NOUNS", [[{"POS": "NOUN"}]])
+matcher.add("PROPER_NOUNS", [[{"POS": "PROPN"}]])
+matcher.add("ADJECTIVES", [[{"POS": "ADJ"}]])
 
-matcher_simples.add("SUBSTANTIVOS", [[{"POS": "NOUN"}]])
-matcher_simples.add("PROPRIOS", [[{"POS": "PROPN"}]])
-matcher_simples.add("ADJETIVOS", [[{"POS": "ADJ"}]])
+# Simple matcher: nouns, proper nouns and adjectives only
+simple_matcher = Matcher(nlp.vocab)
+simple_matcher.add("NOUNS", [[{"POS": "NOUN"}]])
+simple_matcher.add("PROPER_NOUNS", [[{"POS": "PROPN"}]])
+simple_matcher.add("ADJECTIVES", [[{"POS": "ADJ"}]])
 
-def substituir_abreviacoes(match):
-    palavra = match.group(0).lower()
-    return ABREVIACOES.get(palavra, palavra)
+stopwords = set(nltk.corpus.stopwords.words("portuguese"))
 
-def limpar_texto_bruto(texto: str) -> str:
-    texto = URL_MENCAO_REGEX.sub(" ", texto)
-    texto = ABREVIACOES_REGEX.sub(substituir_abreviacoes, texto)
-    texto = EMOJI_SYMBOL_REGEX.sub(" ", texto)
-    return texto
 
-def carregar_stopwords_personalizadas():
-    with open('stopwords.txt', "r", encoding="utf-8") as f:
-        return set(p.strip().lower() for p in f if p.strip())
-    
-stopwords = set(nltk.corpus.stopwords.words('portuguese'))
-#stopwords = carregar_stopwords_personalizadas()
+def load_custom_stopwords(path="stopwords.txt"):
+    """Loads one stopword per line from a text file."""
+    with open(path, "r", encoding="utf-8") as f:
+        return {line.strip().lower() for line in f if line.strip()}
 
-def capitalizar_palavras(texto):
-    return ' '.join(p.capitalize() for p in texto.split())
 
-def pre_processar_doc(doc):
-    matches = matcher(doc)
-    spans = [doc[start:end] for _, start, end in matches]
-    spans_filtrados = filter_spans(spans)
+def _expand_abbreviation(match):
+    word = match.group(0).lower()
+    return ABBREVIATIONS.get(word, word)
 
-    spans_dict = {span.start: span for span in spans_filtrados}
-    ent_by_start = {ent.start: ent for ent in doc.ents}
+
+def clean_raw_text(text: str) -> str:
+    """Removes URLs, mentions, '#', emojis/symbols and expands abbreviations."""
+    text = URL_MENTION_REGEX.sub(" ", text)
+    text = ABBREVIATIONS_REGEX.sub(_expand_abbreviation, text)
+    return EMOJI_SYMBOL_REGEX.sub(" ", text)
+
+
+def capitalize_words(text):
+    return " ".join(word.capitalize() for word in text.split())
+
+
+def _matched_spans(doc, span_matcher):
+    """Returns non-overlapping matcher spans indexed by start token."""
+    spans = filter_spans([doc[start:end] for _, start, end in span_matcher(doc)])
+    return {span.start: span for span in spans}
+
+
+def _single_token_value(token, lemmatize_verbs):
+    """Value for a one-token span: verb lemma, or the lowercase word if it is long and not a stopword."""
+    if lemmatize_verbs and token.pos_ == "VERB":
+        return token.lemma_
+    text = token.text.lower()
+    if token.is_alpha and text not in stopwords and len(text) >= MIN_TOKEN_LENGTH:
+        return text
+    return None
+
+
+def _span_tokens(doc, span_matcher, use_entities, lemmatize_verbs):
+    """
+    Collects tokens from named entities (capitalized) and matcher spans.
+    Tokens outside entities/spans are discarded. Returns unique tokens in order.
+    """
+    spans = _matched_spans(doc, span_matcher)
+    entities = {ent.start: ent for ent in doc.ents} if use_entities else {}
 
     tokens = []
     i = 0
     while i < len(doc):
-        if i in ent_by_start:
-            ent = ent_by_start[i]
-            tokens.append(capitalizar_palavras(ent.text.lower()))
+        if i in entities:
+            ent = entities[i]
+            tokens.append(capitalize_words(ent.text.lower()))
             i = ent.end
-        elif i in spans_dict:
-            span = spans_dict[i]
-            span_text = span.text.lower()
+        elif i in spans:
+            span = spans[i]
             if len(span) == 1:
-                token = span[0]
-                if token.pos_ == "VERB":
-                    tokens.append(token.lemma_)
-                elif token.is_alpha and token.text.lower() not in stopwords and len(token.text) >= 3:
-                    tokens.append(token.text.lower())
-            elif len(span_text) >= 3:
-                tokens.append(span_text)
+                value = _single_token_value(span[0], lemmatize_verbs)
+            else:
+                value = span.text.lower() if len(span.text) >= MIN_TOKEN_LENGTH else None
+            if value:
+                tokens.append(value)
             i = span.end
         else:
             i += 1
 
     return list(dict.fromkeys(tokens))
 
-def pre_processar_doc_simples(doc):
-    matches = matcher_simples(doc)
-    spans = [doc[start:end] for _, start, end in matches]
-    spans_filtrados = filter_spans(spans)
 
-    spans_dict = {span.start: span for span in spans_filtrados}
-    
-    tokens = []
-    i = 0
-    while i < len(doc):
-        if i in spans_dict:
-            span = spans_dict[i]
-            span_text = span.text.lower()
-            if len(span) == 1:
-                token = span[0]
-                if token.is_alpha and token.text.lower() not in stopwords and len(token.text) >= 3:
-                    tokens.append(token.text.lower())
-            elif len(span_text) >= 3:
-                tokens.append(span_text)
-            i = span.end
-        else:
-            i += 1
-    return list(dict.fromkeys(tokens))
+def preprocess_doc(doc):
+    """Full tokenization: entities, quantity expressions, nouns, proper nouns and adjectives."""
+    return _span_tokens(doc, matcher, use_entities=True, lemmatize_verbs=True)
 
 
-def processar_lote_textos(lista_de_textos, batch_size=1000, n_process=1, simples = False):
-    docs = nlp.pipe([limpar_texto_bruto(txt) for txt in lista_de_textos],
-                    batch_size=batch_size,
-                    n_process=n_process)
-    if(simples):
-        return [pre_processar_doc_simples(doc) for doc in docs]
-    else:
-        return [pre_processar_doc(doc) for doc in docs]
-    
-def pre_processing_database(file_path, column="description", batch_size=1000, n_process=1, simples = False):
-    df = carregar_csv(file_path,column)
-    textos = df[column].tolist()
-    resultados = processar_lote_textos(textos, batch_size, n_process, simples)
-    return resultados, textos
+def preprocess_doc_simple(doc):
+    """Simple tokenization: nouns, proper nouns and adjectives only."""
+    return _span_tokens(doc, simple_matcher, use_entities=False, lemmatize_verbs=False)
+
+
+def process_texts(texts, batch_size=1000, n_process=1, simple=False):
+    """Cleans and tokenizes a list of texts with SpaCy in batches."""
+    docs = nlp.pipe((clean_raw_text(t) for t in texts), batch_size=batch_size, n_process=n_process)
+    preprocess = preprocess_doc_simple if simple else preprocess_doc
+    return [preprocess(doc) for doc in docs]
+
+
+def pre_processing_database(file_path, column="description", batch_size=1000, n_process=1, simple=False):
+    """Reads the CSV and returns (transactions, original_texts)."""
+    texts = load_csv(file_path, column)[column].tolist()
+    return process_texts(texts, batch_size, n_process, simple), texts

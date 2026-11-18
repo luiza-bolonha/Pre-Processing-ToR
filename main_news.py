@@ -19,11 +19,11 @@ import utils.pre_processing_news as ppn
 import utils.analize_tor as ator
 import utils.processing_file as pf
 from utils.pipeline import (
-    garantir_diretorios,
-    gerar_tor,
-    calcular_suporte_otimo,
-    separar_e_salvar_clusters,
-    salvar_visualizacoes_comuns,
+    ensure_directories,
+    build_tor,
+    compute_optimal_support,
+    split_and_save_clusters,
+    save_common_visualizations,
 )
 
 
@@ -67,12 +67,14 @@ def parse_args():
         help="Target exact number of nodes desired in graph (optional binary search)."
     )
     parser.add_argument(
-        "--no-paragrafos",
+        "--no-paragraphs", "--no-paragrafos",
+        dest="no_paragraphs",
         action="store_true",
         help="Do not split text into paragraphs (use whole document as single transaction)."
     )
     parser.add_argument(
-        "--titulo",
+        "--title", "--titulo",
+        dest="title",
         action="store_true",
         help="Use 'Título' (Title) column instead of 'Texto' (Body text)."
     )
@@ -97,16 +99,16 @@ def run_pipeline_news(
     target_words=50,
     min_nodes=4,
     target_nodes=None,
-    separar_paragrafos=True,
-    is_titulo=False,
-    termo_concordance="20 minutos",
+    split_paragraphs=True,
+    use_title=False,
+    concordance_term="20 minutos",
     plot=False
 ):
     """Executes the full news analysis pipeline."""
-    garantir_diretorios()
+    ensure_directories()
 
     input_file = os.path.join("datasets", f"{file_name_base}.csv")
-    column = "Título" if is_titulo else "Texto"
+    column = "Título" if use_title else "Texto"
 
     print("=" * 60)
     print(f"Starting News Pipeline: {file_name_base}")
@@ -122,68 +124,69 @@ def run_pipeline_news(
 
     # 1. Preprocessing
     print("\n[1/6] Preprocessing news articles...")
-    pre_result, noticias = ppn.pre_processing_database(
+    transactions, news_texts = ppn.pre_processing_database(
         file_path=input_file,
-        separar_paragrafos=separar_paragrafos,
+        split_paragraphs=split_paragraphs,
         column=column
     )
-    print(f" - Total transactions/records processed: {len(pre_result)}")
+    print(f" - Total transactions/records processed: {len(transactions)}")
 
-    # Calculate optimal support if not specified or target_nodes passed
+    # Support is computed first because it is part of the output file names
     if min_support is None or target_nodes is not None:
-        min_support = calcular_suporte_otimo(
-            dados_processados=pre_result,
+        min_support = compute_optimal_support(
+            transactions=transactions,
             alg=alg,
             target_words=target_words,
             min_nodes=min_nodes,
             target_nodes=target_nodes,
             min_support=min_support,
-            verbose=True
         )
 
-    obs = "p" if separar_paragrafos else "n"
-    obs = "titulos" if is_titulo else obs
-    identificador = f"{file_name_base}_{obs}_{alg}_{min_support}"
+    if use_title:
+        mode_tag = "titulos"
+    else:
+        mode_tag = "p" if split_paragraphs else "n"
+    run_id = f"{file_name_base}_{mode_tag}_{alg}_{min_support}"
 
     # 2. Build TOR
     print(f"\n[2/6] Generating Trie of Rules (TOR) with support={min_support}...")
-    output_graphml = os.path.join("outputs", f"{identificador}.graphml")
-    tor = gerar_tor(pre_result, alg=alg, min_support=min_support, output_graphml=output_graphml)
+    output_graphml = os.path.join("outputs", f"{run_id}.graphml")
+    build_tor(transactions, alg=alg, min_support=min_support, output_graphml=output_graphml)
 
     # 3. Render vector PDF
     print("\n[3/6] Drawing graph and saving PDF...")
-    output_pdf = os.path.join("outputs", f"{identificador}_grafo.pdf")
-    output_png = os.path.join("outputs", f"{identificador}_grafo.png")
+    output_pdf = os.path.join("outputs", f"{run_id}_grafo.pdf")
+    output_png = os.path.join("outputs", f"{run_id}_grafo.png")
     G = nx.read_graphml(output_graphml)
-    pf.plotar_grafo(G, output_pdf=output_pdf, output_png=output_png, show=plot)
+    pf.plot_graph(G, output_pdf=output_pdf, output_png=output_png, show=plot)
 
     # 4. Cluster Partitioning
     print("\n[4/6] Separating central core from peripheral clusters...")
-    separar_e_salvar_clusters(output_graphml, identificador)
+    split_and_save_clusters(output_graphml, run_id)
 
     # 5. Semantic Analysis
     print("\n[5/6] Analyzing context and article recommendation...")
-    if termo_concordance:
-        print(f" - KWIC Concordance for term: '{termo_concordance}':")
-        ator.concordance(noticias, termo_concordance)
+    if concordance_term:
+        print(f" - KWIC Concordance for term: '{concordance_term}':")
+        ator.concordance(news_texts, concordance_term)
 
     print("\n - Computing most informative and concise article:")
-    texto_recomendado = ator.recomendar_texto(noticias, output_graphml)
-    print("Recommended Article:\n", texto_recomendado)
+    recommended = ator.recommend_text(news_texts, output_graphml)
+    print("Recommended Article:\n", recommended)
 
     # 6. Auxiliary Visualizations
     print("\n[6/6] Generating auxiliary visualizations...")
-    pre_simples, _ = ppn.pre_processing_database(
+    simple_transactions, _ = ppn.pre_processing_database(
         file_path=input_file,
-        separar_paragrafos=separar_paragrafos,
+        split_paragraphs=split_paragraphs,
         column=column,
-        simples=True
+        simple=True
     )
-    salvar_visualizacoes_comuns(
-        pre_simples,
-        identificador,
-        pasta_ranking="ranking_palavras",
-        plotar_frequencia=plot
+    save_common_visualizations(
+        simple_transactions,
+        run_id,
+        ranking_folder="ranking_palavras",
+        plot_frequency=plot
     )
 
     print("\n" + "=" * 60)
@@ -200,9 +203,9 @@ def main():
         target_words=args.target_words,
         min_nodes=args.min_nodes,
         target_nodes=args.target_nodes,
-        separar_paragrafos=not args.no_paragrafos,
-        is_titulo=args.titulo,
-        termo_concordance=args.concordance,
+        split_paragraphs=not args.no_paragraphs,
+        use_title=args.title,
+        concordance_term=args.concordance,
         plot=args.plot
     )
 

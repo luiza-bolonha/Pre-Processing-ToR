@@ -12,8 +12,3 @@ def save_df(df, output_path):
     """Saves a pandas DataFrame to CSV format."""
     df.to_csv(output_path, index=False)
     print(f"File saved to: {output_path}")
-
-
-# Backwards compatibility aliases
-carregar_csv = load_csv
-salvar_df = save_df

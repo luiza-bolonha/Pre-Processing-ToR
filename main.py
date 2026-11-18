@@ -39,8 +39,8 @@ def main():
     p_news.add_argument("--target-words", type=int, default=50, help="Target number of words for support calculation (default: 50)")
     p_news.add_argument("--min-nodes", type=int, default=4, help="Minimum number of nodes in graph (default: 4)")
     p_news.add_argument("--target-nodes", type=int, default=None, help="Desired number of nodes in graph (optional)")
-    p_news.add_argument("--no-paragrafos", action="store_true", help="Do not split by paragraphs")
-    p_news.add_argument("--titulo", action="store_true", help="Use 'Título' column instead of 'Texto'")
+    p_news.add_argument("--no-paragraphs", "--no-paragrafos", dest="no_paragraphs", action="store_true", help="Do not split by paragraphs")
+    p_news.add_argument("--title", "--titulo", dest="title", action="store_true", help="Use 'Título' column instead of 'Texto'")
     p_news.add_argument("--concordance", type=str, default="20 minutos", help="Concordance search keyword")
     p_news.add_argument("--plot", action="store_true", help="Display interactive plots")
 
@@ -67,7 +67,8 @@ def main():
     p_text.add_argument("--min-nodes", type=int, default=4, help="Minimum number of nodes in graph (default: 4)")
     p_text.add_argument("--target-nodes", type=int, default=None, help="Desired number of nodes in graph (optional)")
     p_text.add_argument("-a", "--alg", type=str, default="FP-max", choices=["FP-max", "Apriori", "FP-growth"])
-    p_text.add_argument("--split", type=str, default="paragrafos", choices=["paragrafos", "frases", "linhas"])
+    p_text.add_argument("--split", type=str, default="paragraphs",
+                        choices=["paragraphs", "sentences", "lines", *tor_text.SPLIT_MODE_ALIASES])
     p_text.add_argument("--show", action="store_true", help="Display interactive plot window")
 
     args = parser.parse_args()
@@ -84,9 +85,9 @@ def main():
             target_words=args.target_words,
             min_nodes=args.min_nodes,
             target_nodes=args.target_nodes,
-            separar_paragrafos=not args.no_paragrafos,
-            is_titulo=args.titulo,
-            termo_concordance=args.concordance,
+            split_paragraphs=not args.no_paragraphs,
+            use_title=args.title,
+            concordance_term=args.concordance,
             plot=args.plot
         )
     elif args.command == "social":

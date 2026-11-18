@@ -1,130 +1,143 @@
-import trieofrules.arm as arm
-import networkx as nx
-import matplotlib.pyplot as plt
+"""
+Trie of Rules (TOR).
+
+A prefix tree built from frequent itemsets, where each path from the root
+represents an association rule annotated with support, confidence and lift.
+"""
+
 from math import log
 
+import networkx as nx
 
-class trieofrules:
-    def __init__(self, data, min_support = 0.1, alg='FP-max',frequent_sequences = None,
-                    round_value = 3, min_len = 0):
+import trieofrules.arm as arm
+
+ROOT_ID = 0
+ROOT_LABEL = "NULL"
+
+
+class TrieOfRules:
+    def __init__(self, data, min_support=0.1, alg="FP-max", frequent_sequences=None,
+                 round_value=3, min_len=0):
         """
-        init with raw data. it's neede for metrics
-        Uses mlxtnd arm, so it may work badly with large-scale dataset
-        TODO:
-            rework for FP-growth and FP-max using norm library
+        Builds the trie from raw transactions (needed to compute the metrics).
+
+        data:               list of transactions (each one a list of items)
+        min_support:        minimum support for frequent itemset mining
+        alg:                'FP-max', 'Apriori' or 'FP-growth' (via mlxtend)
+        frequent_sequences: optional precomputed itemsets (skips mining)
+        round_value:        decimal places for the stored metrics
+        min_len:            minimum itemset length to keep
+
+        Note: mining uses mlxtend, which may be slow on large datasets.
         """
         self.data = data
         self.min_support = min_support
         self.alg = alg
         self.round_value = round_value
+
         if frequent_sequences is not None:
             self.frequent_sequences = frequent_sequences
-            self.frequent_items = arm.find_frequent_items_by_sequencset(self.data, self.frequent_sequences)
+            self.frequent_items = arm.count_items_in_sequences(self.data, self.frequent_sequences)
         else:
             self.frequent_sequences = arm.mine_frequent_sequences(data, min_support, alg, min_len)
             self.frequent_items = arm.find_frequent_items(self.data, self.min_support)
 
+        self.root_node_id = ROOT_ID
+        self._build_trie()
+        self._add_metrics(self.root_node_id)
 
-        self.create_trie()
-        self.add_metrics(self.root_node_id) #extend trie with ARM metrics starting from root
-
-
-    def create_trie(self):
-        """
-        create actual Trie of rules
-        """
-        self.trie  = nx.DiGraph()
-        self.trie.add_node(0, value='NULL')
-        self.root_node_id = 0
+    # ---------- Construction ----------
+    def _build_trie(self):
+        """Inserts every frequent itemset, items ordered by global frequency."""
+        self.trie = nx.DiGraph()
+        self.trie.add_node(self.root_node_id, value=ROOT_LABEL)
 
         for sequence in self.frequent_sequences:
-            sorted_items = []
-            for el in self.frequent_items.keys():
-                if el in sequence:
-                    sorted_items.append(el)
-            if len(sorted_items) > 0:
-                self.insert_tree(sorted_items)
+            # frequent_items is sorted by frequency, so this orders the itemset
+            sorted_items = [item for item in self.frequent_items if item in sequence]
+            if sorted_items:
+                self._insert(sorted_items)
 
-
-    def insert_tree(self,items):
-        current_node_id = self.root_node_id
+    def _insert(self, items):
+        """Walks down the trie following `items`, creating missing branches."""
+        current = self.root_node_id
         for item in items:
-            for children in self.trie.adj[current_node_id]:
-                if (self.trie.nodes[children]['value']==item):
-                    current_node_id = children
-                    break
-            else: #for-else, we didn't find this item, then create a new branch
-                new_node_id = self.trie.number_of_nodes()
-                self.trie.add_edge(current_node_id, new_node_id)
-                self.trie.nodes[new_node_id]['value'] = item
-                current_node_id = new_node_id
+            child = self._find_child(current, item)
+            if child is None:
+                child = self.trie.number_of_nodes()
+                self.trie.add_edge(current, child)
+                self.trie.nodes[child]["value"] = item
+            current = child
 
-    def add_metrics(self,node_id):
-        if node_id == 0:
-            self.trie.nodes[node_id]['support'] = 1.0
-            self.trie.nodes[node_id]['confidence'] = 1.0
-            self.trie.nodes[node_id]['lift'] = 1.0
+    def _find_child(self, node_id, item):
+        for child in self.trie.successors(node_id):
+            if self.trie.nodes[child]["value"] == item:
+                return child
+        return None
+
+    def _add_metrics(self, node_id):
+        """Recursively annotates nodes with support, confidence and lift."""
+        node = self.trie.nodes[node_id]
+        if node_id == self.root_node_id:
+            node["support"] = 1.0
+            node["confidence"] = 1.0
+            node["lift"] = 1.0
         else:
             rule = self.get_path(node_id)
             support = arm.get_support(rule, self.data)
-            predecessor_id = list(self.trie.predecessors(node_id))[0]
-            predecessor_support = self.trie.nodes[predecessor_id]['support']
-            self.trie.nodes[node_id]['support'] = round(support, self.round_value)
-            #conf(abc-d)=supp(abcd)/sup(abc)
-            self.trie.nodes[node_id]['confidence'] = round(support/predecessor_support,self.round_value)
-            #lift(abc-d) = supp(abcd)/supp(abc)supp(d)
-            consequent = rule[-1] #last item
-            consequent_support = self.frequent_items[consequent]/len(self.data)
-            self.trie.nodes[node_id]['lift'] = round(support/(predecessor_support*consequent_support),self.round_value)
+            parent_support = self.trie.nodes[self._parent(node_id)]["support"]
+            consequent_support = self.frequent_items[rule[-1]] / len(self.data)
 
-        for child in self.trie.adj[node_id]:
-            self.add_metrics(child)
+            node["support"] = round(support, self.round_value)
+            # conf(abc -> d) = supp(abcd) / supp(abc)
+            node["confidence"] = round(support / parent_support, self.round_value)
+            # lift(abc -> d) = supp(abcd) / (supp(abc) * supp(d))
+            node["lift"] = round(support / (parent_support * consequent_support), self.round_value)
 
+        for child in self.trie.successors(node_id):
+            self._add_metrics(child)
 
+    # ---------- Queries ----------
+    def _parent(self, node_id):
+        return next(self.trie.predecessors(node_id))  # a trie node has a single parent
 
-    def get_path(self,node_id):
+    def get_path(self, node_id):
+        """Returns the items on the path from the root to `node_id` (the rule)."""
         rule = []
         while node_id != self.root_node_id:
-            rule.append(self.trie.nodes[node_id]['value'])
-            node_id = list(self.trie.predecessors(node_id))[0] #take the only one predecessor
+            rule.append(self.trie.nodes[node_id]["value"])
+            node_id = self._parent(node_id)
         return rule[::-1]
 
-    def draw(self):
-        labels = nx.get_node_attributes(self.trie, 'value')
-        nx.draw_kamada_kawai(self.trie, with_labels=True, font_weight='bold', labels = labels)
-
-    def save_graph(self, filename, fileformat='graphml'):
-        fileformat = fileformat.lower()
-        save_function = {
-                    'gexf':nx.write_gexf,
-                    'gml':nx.write_gml,
-                    'graphml':nx.write_graphml_lxml
+    # ---------- Export ----------
+    def save_graph(self, filename, fileformat="graphml"):
+        """Saves the trie as GraphML, GEXF or GML."""
+        writers = {
+            "gexf": nx.write_gexf,
+            "gml": nx.write_gml,
+            "graphml": nx.write_graphml_lxml,
         }
-        try:
-            save_function[fileformat](self.trie, filename)
-        except KeyError:
-            print("Wrong file format. Use:", ', '.join(save_function.keys()))
+        writer = writers.get(fileformat.lower())
+        if writer is None:
+            print("Wrong file format. Use:", ", ".join(writers))
+            return
+        writer(self.trie, filename)
 
+    def save_gexf_with_style(self, filename="tor.gexf"):
+        """
+        Saves a GEXF file with Gephi 'viz' attributes:
+        size from confidence, color from lift (greener = higher lift).
+        """
+        lifts = [data["lift"] for _, data in self.trie.nodes(data=True)]
+        lift_max = max(lifts)
 
-
-    def save(self):
-        lift_max = self.trie.nodes[0]['lift']
-        lift_min = self.trie.nodes[0]['lift']
-        for i in range(self.trie.number_of_nodes()):
-            lift_max=max(self.trie.nodes[i]['lift'],lift_max)
-            lift_min=min(self.trie.nodes[i]['lift'],lift_min)
-        gap = lift_max - lift_min
-        for i in range(self.trie.number_of_nodes()):
-            viz = {}
-            viz['size'] =  self.trie.nodes[i]['confidence']*20+15
-            lift = self.trie.nodes[i]['lift']
-            green = round(log(lift/lift_max+1,2)*127)
-            if lift>1:
-                viz['color'] = {'a':0, 'r':190-green , 'g':255-green , 'b': 190-green}
+        for _, data in self.trie.nodes(data=True):
+            lift = data["lift"]
+            green = round(log(lift / lift_max + 1, 2) * 127)
+            if lift > 1:
+                color = {"a": 0, "r": 190 - green, "g": 255 - green, "b": 190 - green}
             else:
-                viz['color'] = {'a':(1-lift), 'r': 100+green, 'g':127+green , 'b': 100+green}
+                color = {"a": 1 - lift, "r": 100 + green, "g": 127 + green, "b": 100 + green}
+            data["viz"] = {"size": data["confidence"] * 20 + 15, "color": color}
 
-
-            self.trie.nodes[i]['viz'] = viz#{'size':round((self.trie.nodes[i]['confidence'])*20+15)}
-
-        nx.write_gexf(self.trie,'test.gexf')
+        nx.write_gexf(self.trie, filename)

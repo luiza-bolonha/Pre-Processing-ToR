@@ -1,111 +1,100 @@
-import spacy
+"""Preprocessing for journalistic news articles (Portuguese)."""
+
 import csv
+
 import nltk
+import spacy
 from spacy.matcher import Matcher
 from spacy.util import filter_spans
 
-nlp = spacy.load('pt_core_news_lg')
+nlp = spacy.load("pt_core_news_lg")
 
 try:
-    nltk.corpus.stopwords.words('portuguese')
+    nltk.corpus.stopwords.words("portuguese")
 except Exception:
     try:
-        nltk.download('stopwords', quiet=True)
+        nltk.download("stopwords", quiet=True)
     except Exception:
         pass
-stopwords = set(nltk.corpus.stopwords.words('portuguese'))
-#stopwords = carregar_stopwords_personalizadas()
+stopwords = set(nltk.corpus.stopwords.words("portuguese"))
 
-# Matcher para padrões como "20 mil pessoas" e datas
+# Matcher for quantity expressions such as "20 mil pessoas", "vinte pessoas", "primeiro dia"
 matcher = Matcher(nlp.vocab)
-padrao_cardinal_substantivo = [
+cardinal_noun_pattern = [
     {"LIKE_NUM": True},
     {"LOWER": {"IN": ["mil", "milhão", "milhões", "bilhão", "bilhões"]}, "OP": "?"},
     {"LOWER": "de", "OP": "?"},
-    {"POS": "NOUN"}
+    {"POS": "NOUN"},
 ]
-padrao_num_extenso = [
+spelled_number_pattern = [
     {"POS": "NUM"},
     {"LOWER": "de", "OP": "?"},
-    {"POS": "NOUN"}
+    {"POS": "NOUN"},
 ]
-padrao_ordinal = [
+ordinal_pattern = [
     {"TAG": "ORD"},
     {"LOWER": "de", "OP": "?"},
-    {"POS": "NOUN"}
+    {"POS": "NOUN"},
 ]
-matcher.add("NUM_UNIDADE", [padrao_cardinal_substantivo, padrao_num_extenso, padrao_ordinal])
+matcher.add("NUM_UNIT", [cardinal_noun_pattern, spelled_number_pattern, ordinal_pattern])
 
-def pre_processar_txt(texto):
-    doc = nlp(texto)
 
-    # Identifica spans compostos (ex: "vinte mil pessoas")
-    matches = matcher(doc)
-    spans = [doc[start:end] for _, start, end in matches]
-    spans_filtrados = filter_spans(spans)
+def _is_stopword(text):
+    return text.lower() in stopwords
 
-    # Mapeia início do span -> span para evitar tokenização duplicada
-    spans_dict = {span.start: span for span in spans_filtrados}
-    ent_by_start = {ent.start: ent for ent in doc.ents}
+
+def preprocess_text(text):
+    """
+    Tokenizes a text keeping multi-word units as single tokens:
+    quantity expressions (matcher) and named entities. Other tokens are kept
+    if alphabetic and not stopwords. Returns unique tokens in order.
+    """
+    doc = nlp(text)
+
+    # Index spans by their start token, so each token is consumed only once
+    quantity_spans = {span.start: span for span in filter_spans([doc[s:e] for _, s, e in matcher(doc)])}
+    entities = {ent.start: ent for ent in doc.ents}
 
     tokens = []
     i = 0
     while i < len(doc):
-        if i in spans_dict:
-            span = spans_dict[i]
-            span_text = span.text
-            if span_text.lower() not in stopwords:
-                tokens.append(span_text)
+        span = quantity_spans.get(i) or entities.get(i)
+        if span is not None:
+            if not _is_stopword(span.text):
+                tokens.append(span.text)
             i = span.end
-        elif i in ent_by_start:
-            ent = ent_by_start[i]
-            ent_text = ent.text
-            if ent_text.lower() not in stopwords:
-                tokens.append(ent_text)
-            i = ent.end
         else:
             token = doc[i]
-            if token.is_alpha and token.text.lower() not in stopwords:
+            if token.is_alpha and not _is_stopword(token.text):
                 tokens.append(token.text)
             i += 1
 
     return list(dict.fromkeys(tokens))
 
 
-def pre_processar_txt_simples(texto):
-    doc = nlp(texto)
+def preprocess_text_simple(text):
+    """Single-word tokenization: alphabetic, non-stopword tokens (unique, in order)."""
+    tokens = [t.text for t in nlp(text) if t.is_alpha and not _is_stopword(t.text)]
+    return list(dict.fromkeys(tokens))
 
-    tokens = []
-    for token in doc:
-        if token.is_alpha and token.text.lower() not in stopwords:
-            tokens.append(token.text)
 
-    # Remove duplicados preservando a ordem
-    tokens_unicos = list(dict.fromkeys(tokens))
-    return tokens_unicos
-
-def pre_processing_database(file_path, separar_paragrafos, column="Texto", simples=False):
-    valores_coluna = []
+def pre_processing_database(file_path, split_paragraphs, column="Texto", simple=False):
+    """
+    Reads the news CSV and tokenizes the given column.
+    Returns (transactions, original_texts). With split_paragraphs, each
+    paragraph (line) becomes its own transaction.
+    """
+    blocks = []
     news = []
 
-    with open(file_path, encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for line in reader:
-            texto = line[column]
-            news.append(texto)
-            if(separar_paragrafos):
-                paragrafos = texto.split('\n')  
-                paragrafos = [p.strip() for p in paragrafos if p.strip()]
-                valores_coluna.extend(paragrafos)             
-            else: 
-                valores_coluna.append(texto)
-        
-    valores = []
-    for texto in valores_coluna:
-        if simples:
-            result = pre_processar_txt_simples(texto)
-        else:
-            result = pre_processar_txt(texto)    
-        valores.append(result)
+    with open(file_path, encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            text = row[column]
+            news.append(text)
+            if split_paragraphs:
+                blocks.extend(p.strip() for p in text.split("\n") if p.strip())
+            else:
+                blocks.append(text)
 
-    return valores, news
+    tokenize = preprocess_text_simple if simple else preprocess_text
+    return [tokenize(block) for block in blocks], news

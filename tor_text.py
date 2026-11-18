@@ -20,7 +20,10 @@ os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "matpl
 # Ensure project root is in sys.path
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
-from utils.pipeline import executar_tor_para_texto, garantir_diretorios
+from utils.pipeline import run_tor_for_text, ensure_directories
+
+# Portuguese split-mode names are still accepted for backwards compatibility
+SPLIT_MODE_ALIASES = {"paragrafos": "paragraphs", "frases": "sentences", "linhas": "lines"}
 
 
 def parse_args():
@@ -85,9 +88,9 @@ def parse_args():
     parser.add_argument(
         "--split",
         type=str,
-        default="paragrafos",
-        choices=["paragrafos", "frases", "linhas"],
-        help="How to segment text into transactions: 'paragrafos', 'frases', or 'linhas' (default: paragrafos)."
+        default="paragraphs",
+        choices=["paragraphs", "sentences", "lines", *SPLIT_MODE_ALIASES],
+        help="How to segment text into transactions: 'paragraphs', 'sentences', or 'lines' (default: paragraphs)."
     )
     parser.add_argument(
         "--show",
@@ -98,45 +101,43 @@ def parse_args():
     return parser.parse_args()
 
 
-def obter_texto_interativo():
+def read_interactive_text():
+    """Reads multi-line text from stdin until two consecutive empty lines."""
     print("\n" + "=" * 60)
     print("INTERACTIVE MODE: No text or file provided.")
     print("Type or paste your text below.")
     print("Press Enter twice on an empty line to finish:")
     print("=" * 60 + "\n")
 
-    linhas = []
+    lines = []
     while True:
         try:
-            linha = input()
-            if not linha and (len(linhas) > 0 and linhas[-1] == ""):
-                linhas.pop()
-                break
-            linhas.append(linha)
+            line = input()
         except EOFError:
             break
+        if not line and lines and lines[-1] == "":
+            lines.pop()
+            break
+        lines.append(line)
 
-    texto = "\n".join(linhas).strip()
-    return texto
+    return "\n".join(lines).strip()
 
 
 def main():
     args = parse_args()
-    garantir_diretorios()
-
-    texto_input = None
+    ensure_directories()
 
     if args.text:
-        texto_input = args.text
+        text_input = args.text
     elif args.file:
         if not os.path.exists(args.file):
             print(f"[ERROR] File not found: {args.file}")
             sys.exit(1)
-        texto_input = args.file
+        text_input = args.file
     else:
-        texto_input = obter_texto_interativo()
+        text_input = read_interactive_text()
 
-    if not texto_input or not texto_input.strip():
+    if not text_input or not text_input.strip():
         print("[ERROR] No text provided. Exiting.")
         sys.exit(1)
 
@@ -147,6 +148,8 @@ def main():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_pdf = os.path.join("outputs", f"tor_text_{timestamp}.pdf")
 
+    split_mode = SPLIT_MODE_ALIASES.get(args.split, args.split)
+
     print("\n" + "-" * 60)
     print("Executing TOR for raw text:")
     print(f" - Algorithm: {args.alg}")
@@ -156,13 +159,13 @@ def main():
         print(f" - Target Nodes: ~{args.target_nodes}")
     else:
         print(f" - Dynamic Support Target: {args.target_words} words (min {args.min_nodes} nodes)")
-    print(f" - Split Mode: {args.split}")
+    print(f" - Split Mode: {split_mode}")
     print(f" - PDF Destination: {output_pdf}")
     print("-" * 60)
 
     try:
-        tor, pdf_path = executar_tor_para_texto(
-            texto_ou_arquivo=texto_input,
+        tor, pdf_path = run_tor_for_text(
+            text_or_file=text_input,
             alg=args.alg,
             min_support=args.min_support,
             target_words=args.target_words,
@@ -170,7 +173,7 @@ def main():
             target_nodes=args.target_nodes,
             output_pdf=output_pdf,
             output_png=args.png,
-            modo_divisao=args.split,
+            split_mode=split_mode,
             show=args.show
         )
 

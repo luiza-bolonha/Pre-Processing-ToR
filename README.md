@@ -35,8 +35,10 @@ The project natively supports multiple data modalities:
   - Hierarchical prefix-tree construction annotating rule metrics: **support**, **confidence**, and **lift**.
 
 - **Publication-Ready Network Visualizations**:
-  - Force-directed layout combining **ForceAtlas2** and **Spring Layout** (Gephi-compatible visual aesthetics).
-  - Node sizes mapped linearly to support; color gradients mapped to rule confidence.
+  - Force-directed layout (**ForceAtlas2** + **Spring Layout**), reorganized around the center: single nodes on a compact inner ring, clusters further out in their own sectors.
+  - Node sizes mapped linearly to support; light color gradient mapped to rule confidence, with labels placed below each node.
+  - The artificial `NULL` root is hidden (its edges still converge at the center).
+  - Collision pass: nodes and labels never overlap and edges never pass over other nodes or labels.
   - Export directly to vector **PDF** and high-resolution **PNG**.
 
 - **Network & Semantic Analytics**:
@@ -144,7 +146,7 @@ python tor_text.py
 | `--min-nodes` | `int` | `4` | Minimum number of nodes required in the Trie graph |
 | `--target-nodes` | `int` | `None` | Target exact number of nodes desired in graph (via binary search) |
 | `-a`, `--alg` | `str` | `FP-max` | Algorithm (`FP-max`, `Apriori`, or `FP-growth`) |
-| `--split` | `str` | `paragrafos` | Transaction split mode (`paragrafos`, `frases`, or `linhas`) |
+| `--split` | `str` | `paragraphs` | Transaction split mode (`paragraphs`, `sentences`, or `lines`; the Portuguese names are still accepted) |
 | `--show` | `flag` | `False` | Displays interactive Matplotlib plot window |
 
 ---
